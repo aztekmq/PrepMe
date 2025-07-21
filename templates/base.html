@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100 text-gray-900">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <title>{% block title %}PrepMe{% endblock %}</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+  <!-- Page Content -->
+  <main class="flex-1 px-4 pb-10">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Status Bar -->
+  <footer class="bg-gray-800 text-white p-2 text-center">
+    <span>Current Course: {{ session.get('current_course_name', 'Default - IBM MQ Operations and Administration for Distributed Environments') }}</span>
+  </footer>
+</body>
+</html>

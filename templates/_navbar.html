@@ -1,0 +1,31 @@
+<!-- FILE: templates/_navbar.html -->
+<nav class="bg-white dark:bg-gray-900 shadow-md border-b border-gray-200 dark:border-gray-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex-shrink-0 text-xl font-bold text-blue-600 dark:text-blue-400">
+        <!--a href="{{ url_for('quiz_bp.index') }}">📘 PrepMe</a-->
+        <a href="{{ url_for('quiz_bp.index') }}" style="display: inline-flex; align-items: center; text-decoration: none;">
+            <img src="{{ url_for('static', filename='PrepMe.png') }}" alt="PrepMe" style="height: 16px; width: 16px; margin-right: 6px;">
+            <span style="color: #007bff;">PrepMe</span>
+        </a>
+      </div>
+      <div class="hidden md:flex md:space-x-6">
+        <a href="{{ url_for('quiz_bp.index') }}" class="nav-link">Home</a>
+        <a href="{{ url_for('quiz_bp.scoreboard') }}" class="nav-link">Scoreboard</a>
+        <a href="{{ url_for('manage_questions') }}" class="nav-link">Admin</a>
+        <a href="{{ url_for('select_course') }}" class="nav-link">Select Course</a>
+        <a href="{{ url_for('quiz_bp.help') }}" class="nav-link">Help</a> <!-- New Help link -->
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-sm text-gray-500 dark:text-gray-300">{{ session['username'] }}</span>
+        <a href="{{ url_for('auth_bp.logout') }}" class="text-sm bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-link {
+    @apply text-sm text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md;
+  }
+</style>

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}All Questions – {{ module_title }}{% endblock %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<div class="max-w-5xl mx-auto bg-white p-8 mt-6 rounded shadow-md">
+  <div class="flex justify-between items-center mb-6 flex-wrap gap-4">
+    <h1 class="text-2xl font-bold text-blue-700">All Questions – {{ module_title }}</h1>
+    <div class="space-x-4">
+      <a href="{{ url_for('quiz_bp.index') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Dashboard
+      </a>
+      <button onclick="window.print()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Print All
+      </button>
+    </div>
+  </div>
+
+  {% if questions %}
+    <ol class="space-y-6 list-decimal list-inside">
+      {% for question in questions %}
+        <li class="bg-gray-50 p-4 rounded shadow">
+          <p class="font-semibold mb-2">{{ question.question }}</p>
+          <ul class="space-y-1">
+            {% for option in question.options %}
+              <li>
+                <span class="font-bold">{{ loop.index0 | int | add(65) | int | chr }}.</span> {{ option }}
+              </li>
+            {% endfor %}
+          </ul>
+          {% if question.module_title %}
+            <p class="text-sm text-gray-500 mt-2">Module: {{ question.module_title }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="text-center text-gray-600">No questions found for this module.</p>
+  {% endif %}
+</div>
+{% endblock %}

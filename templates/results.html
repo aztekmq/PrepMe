@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz Results{% endblock %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<div class="max-w-5xl mx-auto mt-6 bg-white p-8 rounded shadow">
+  <h1 class="text-2xl font-bold mb-4 text-blue-700">
+    Quiz Results for {{ quiz_data.module_title }}
+  </h1>
+
+  <div class="mb-6 text-lg">
+    <p>
+      <strong>Score:</strong>
+      {{ quiz_data.correct }} / {{ quiz_data.total }}
+      ({{ ((quiz_data.correct / quiz_data.total) * 100) | round(2) }}%)
+    </p>
+
+    {% if quiz_data.correct == quiz_data.total %}
+      <div class="text-green-700 bg-green-100 p-3 rounded mt-2">
+        🎉 Great job! You answered all questions correctly.
+      </div>
+    {% elif quiz_data.correct == 0 %}
+      <div class="text-red-700 bg-red-100 p-3 rounded mt-2">
+        😞 None correct. Review and try again.
+      </div>
+    {% else %}
+      <div class="text-yellow-700 bg-yellow-100 p-3 rounded mt-2">
+        ✅ You got some correct. Review the details below.
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="w-full text-sm border border-gray-300 rounded-md overflow-hidden">
+      <thead class="bg-gray-200 text-left">
+        <tr>
+          <th class="p-2 border">Question</th>
+          <th class="p-2 border">Your Answer</th>
+          <th class="p-2 border">Correct Answer</th>
+          <th class="p-2 border">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for answer in quiz_data.user_answers %}
+        <tr class="{% if answer.is_correct %}bg-green-50{% else %}bg-red-50{% endif %}">
+          <td class="p-2 border">{{ answer.question }}</td>
+          <td class="p-2 border">
+            {% if answer.your_answer %}
+              {{ answer.your_answer }} – {{ answer.your_answer_text }}
+            {% else %}
+              <em>No answer</em>
+            {% endif %}
+          </td>
+          <td class="p-2 border">
+            {{ answer.correct_answer }} – {{ answer.correct_answer_text }}
+          </td>
+          <td class="p-2 border font-semibold text-center">
+            {% if answer.is_correct %}
+              ✅
+            {% else %}
+              ❌
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-6 flex justify-center gap-4 flex-wrap">
+    <a href="{{ url_for('quiz_bp.index') }}"
+       class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      ← Back to Dashboard
+    </a>
+    {% if quiz_data.attempt_id is defined %}
+      <a href="{{ url_for('quiz_bp.missed_questions_by_attempt', attempt_id=quiz_data.attempt_id) }}"
+         class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600">
+        Review Missed
+      </a>
+    {% endif %}
+    <a href="{{ url_for('quiz_bp.scoreboard') }}"
+       class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+      View Scoreboard
+    </a>
+  </div>
+</div>
+{% endblock %}

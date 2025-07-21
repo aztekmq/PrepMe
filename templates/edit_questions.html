@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Questions - {{ module.title }}{% endblock %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<div class="container mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">
+    Edit Questions – {{ module.title }}
+  </h1>
+
+  <form method="POST" class="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto space-y-8">
+    <input type="hidden" name="total_questions" value="{{ questions|length }}"/>
+
+    {% for question in questions %}
+      {% set q_index = loop.index0 %}
+      <div class="border-b border-gray-300 pb-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">
+          Question {{ loop.index }}
+        </h2>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Question Text</label>
+          <input type="text" name="question_{{ q_index }}" value="{{ question.question }}"
+                 class="mt-1 w-full border border-gray-300 rounded-md shadow-sm p-2" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">Options</label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+            {% for opt in question.options %}
+              <input type="text" name="option_{{ q_index }}_{{ loop.index0 }}" value="{{ opt }}"
+                     class="border border-gray-300 rounded-md shadow-sm p-2" required>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700">
+            Correct Answer (A, B, C, ...)
+          </label>
+          <input type="text" name="answer_{{ q_index }}" value="{{ question.answer }}"
+                 class="mt-1 w-full border border-gray-300 rounded-md shadow-sm p-2 uppercase" required>
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="flex justify-between items-center pt-6">
+      <a href="{{ url_for('quiz_bp.index') }}" class="text-sm text-blue-600 hover:underline">
+        ← Back to Modules
+      </a>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+        Save All Changes
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

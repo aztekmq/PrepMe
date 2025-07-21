@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Help Center{% endblock %}
+
+{% block content %}
+{% include '_navbar.html' %}
+<div class="max-w-3xl mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
+  <h1 class="text-2xl font-bold text-blue-700 mb-6 text-center">📖 Help & FAQ</h1>
+
+  <input type="text" id="searchInput" placeholder="Search help topics..."
+         class="w-full mb-6 px-4 py-2 rounded border border-gray-300">
+
+  <div id="helpList" class="space-y-6">
+    <div class="help-item">
+      <h2 class="text-lg font-semibold text-gray-800">How do I start a quiz?</h2>
+      <p class="text-sm text-gray-600">From the home screen, select a course and module, then choose "Start Quiz." Questions will appear one at a time.</p>
+    </div>
+    <div class="help-item">
+      <h2 class="text-lg font-semibold text-gray-800">Can I skip questions?</h2>
+      <p class="text-sm text-gray-600">Yes, you can click "Skip Question" to move to the next one without answering.</p>
+    </div>
+    <div class="help-item">
+      <h2 class="text-lg font-semibold text-gray-800">How are scores calculated?</h2>
+      <p class="text-sm text-gray-600">Scores are based on the number of correct answers out of the total questions attempted.</p>
+    </div>
+    <div class="help-item">
+      <h2 class="text-lg font-semibold text-gray-800">Where can I review missed questions?</h2>
+      <p class="text-sm text-gray-600">After completing a quiz, click "Review Missed" from the results page or access them via the Scoreboard.</p>
+    </div>
+    <div class="help-item">
+      <h2 class="text-lg font-semibold text-gray-800">How do I change the course?</h2>
+      <p class="text-sm text-gray-600">Click "Select Course" from the homepage or the module selection screen to switch between courses.</p>
+    </div>
+  </div>
+
+  <div class="mt-8 text-center">
+    <a href="{{ url_for('quiz_bp.index') }}" class="text-blue-600 hover:underline">← Back to Home</a>
+  </div>
+</div>
+
+<script>
+  document.getElementById('searchInput')?.addEventListener('input', function (e) {
+    const query = e.target.value.toLowerCase();
+    const items = document.querySelectorAll('.help-item');
+    items.forEach(item => {
+      const text = item.innerText.toLowerCase();
+      item.style.display = text.includes(query) ? 'block' : 'none';
+    });
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Modules{% endblock %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<div class="container mx-auto px-4 py-6">
+  <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Manage Modules</h1>
+
+  <div class="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto space-y-6">
+    {% for module in modules %}
+      <div class="border-b border-gray-200 pb-4">
+        <div class="flex justify-between items-center mb-2">
+          <div class="flex items-center gap-3 flex-wrap">
+            <input type="checkbox" id="enabled-toggle-{{ module.id }}" {% if module.enabled %}checked{% endif %}
+                   onchange="toggleEnabled({{ module.id }})"
+                   class="h-4 w-4 text-blue-600 rounded border-gray-300">
+            
+            <span id="title-text-{{ module.id }}" class="text-lg font-medium">
+              {{ module.title }}
+            </span>
+
+            <input id="title-input-{{ module.id }}"
+                   class="hidden border border-gray-300 px-2 py-1 rounded-md text-sm"
+                   value="{{ module.title }}" />
+
+            <button onclick="toggleEdit({{ module.id }})"
+                    class="text-sm text-blue-600 hover:underline">
+              ✏️
+            </button>
+
+            <button onclick="saveTitle({{ module.id }})"
+                    id="save-btn-{{ module.id }}"
+                    class="hidden text-sm bg-green-600 text-white px-2 py-1 rounded hover:bg-green-700">
+              Save
+            </button>
+          </div>
+
+          <a href="{{ url_for('quiz_bp.edit_module_questions', module_id=module.id) }}"
+             class="text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+            Edit Questions
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="text-center pt-4">
+      <a href="{{ url_for('quiz_bp.index') }}" class="text-blue-600 hover:underline">
+        ← Back to Home
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleEdit(moduleId) {
+    const titleInput = document.getElementById(`title-input-${moduleId}`);
+    const titleText = document.getElementById(`title-text-${moduleId}`);
+    const saveBtn = document.getElementById(`save-btn-${moduleId}`);
+
+    titleInput.classList.toggle('hidden');
+    titleText.classList.toggle('hidden');
+    saveBtn.classList.toggle('hidden');
+  }
+
+  async function saveTitle(moduleId) {
+    const newTitle = document.getElementById(`title-input-${moduleId}`).value;
+    const response = await fetch(`/admin/modules/${moduleId}/rename`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: newTitle }),
+    });
+
+    if (response.ok) {
+      document.getElementById(`title-text-${moduleId}`).innerText = newTitle;
+      toggleEdit(moduleId);
+    } else {
+      alert('Error saving title');
+    }
+  }
+
+  async function toggleEnabled(moduleId) {
+    const checkbox = document.getElementById(`enabled-toggle-${moduleId}`);
+    await fetch(`/admin/modules/${moduleId}/toggle`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ enabled: checkbox.checked }),
+    });
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - PrepMe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glow {
+      text-shadow: 0 0 10px #60a5fa, 0 0 20px #60a5fa, 0 0 30px #60a5fa;
+    }
+    .hover-glow:hover {
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #60a5fa, 0 0 10px #60a5fa; }
+      to { text-shadow: 0 0 20px #60a5fa, 0 0 30px #60a5fa, 0 0 40px #60a5fa; }
+    }
+    .logo-spin {
+      animation: spin 4s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 font-sans text-white">
+  <div class="max-w-md mx-auto mt-20 bg-white/10 backdrop-blur-md p-8 rounded-lg shadow-2xl border border-blue-500/20">
+    <div class="flex justify-center mb-6">
+      <img src="{{ url_for('static', filename='PrepMe.png') }}" alt="PrepMe Logo" class="w-20 h-20 logo-spin">
+    </div>
+    <h2 class="text-3xl font-bold text-center text-blue-400 mb-6 glow">Welcome to PrepMe</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="mb-4">
+          {% for category, message in messages %}
+            <div class="text-sm p-3 rounded-md {% if category == 'error' %}bg-red-900/50 text-red-200{% else %}bg-green-900/50 text-green-200{% endif %}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('auth_bp.do_login') }}" class="space-y-6">
+      <div>
+        <label for="username" class="block text-sm font-medium text-gray-300">Username</label>
+        <input type="text" id="username" name="username" required class="w-full border border-gray-600 bg-gray-800/50 p-3 rounded-md mt-1 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50" />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-300">Password</label>
+        <input type="password" id="password" name="password" required class="w-full border border-gray-600 bg-gray-800/50 p-3 rounded-md mt-1 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50" />
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 hover-glow transition duration-300 transform hover:scale-105">Login</button>
+    </form>
+
+    <div class="mt-6 text-center text-sm text-gray-400 space-y-2">
+      <a href="{{ url_for('auth_bp.register') }}" class="block text-blue-400 hover:text-blue-300 hover:underline">Create New Account</a>
+      <a href="{{ url_for('auth_bp.reset_password') }}" class="block text-blue-400 hover:text-blue-300 hover:underline">Forgot Password?</a>
+    </div>
+  </div>
+</body>
+</html>

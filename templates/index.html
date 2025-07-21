@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}PrepMe - Module Selection{% endblock %}
+
+{% block content %}
+{% include '_navbar.html' %}
+
+<div class="max-w-xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-md">
+  <h1 class="text-3xl font-bold text-center text-blue-600 mb-2">PrepMe</h1>
+  <p class="text-center text-gray-600 mb-2">Welcome, {{ username }}!</p>
+  <p class="text-center text-sm text-gray-500 mb-6">📘 Current Course: {{ current_course_name }}</p>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="mb-4">
+        {% for category, message in messages %}
+          <div class="text-sm p-3 rounded-md {% if category == 'error' %}bg-red-100 text-red-700{% else %}bg-green-100 text-green-700{% endif %}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" action="{{ url_for('quiz_bp.start_quiz') }}" class="space-y-4">
+    <div>
+      <label for="module_id" class="block text-sm font-medium">Select Module</label>
+      <select name="module_id" id="module_id" required class="w-full border p-2 rounded-md mt-1">
+        <option value="random">🎲 Random Module</option>
+        <option value="all">📚 All Modules</option>
+        {% for module in modules %}
+          {% if module.enabled %}
+            <option value="{{ module.id }}">{{ module.title }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+
+    <div>
+      <label for="order" class="block text-sm font-medium">Question Order</label>
+      <select name="order" id="order" required class="w-full border p-2 rounded-md mt-1">
+        <option value="sequential">Sequential</option>
+        <option value="random">Random</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+        Start Quiz
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- Course Selection Modal -->
+<div id="courseModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-10 flex items-center justify-center">
+  <div class="bg-white rounded-lg p-6 max-w-md w-full shadow-xl relative">
+    <h2 class="text-xl font-bold mb-4 text-gray-800">Select Course</h2>
+
+    <form onsubmit="submitSelectedCourse(event); return false;" class="space-y-4">
+      <label for="courseDropdown" class="block text-sm">Available Courses</label>
+      <select id="courseDropdown" class="w-full border p-2 rounded-md">
+        {% for course_file, course_name in course_selection %}
+          <option value="{{ course_file }}">{{ course_name }}</option>
+        {% endfor %}
+      </select>
+
+      <div class="flex justify-between items-center pt-4">
+        <button type="button" onclick="closeCourseModal()" class="text-sm text-gray-600 hover:text-gray-900">Cancel</button>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openCourseModal() {
+    document.getElementById("courseModal").classList.remove("hidden");
+  }
+
+  function closeCourseModal() {
+    document.getElementById("courseModal").classList.add("hidden");
+  }
+
+  function submitSelectedCourse(event) {
+    event.preventDefault();
+    const dropdown = document.getElementById("courseDropdown");
+    const selectedFile = dropdown.value;
+
+    if (!selectedFile) {
+      alert("Please select a course.");
+      return;
+    }
+
+    fetch(`/quiz/select_course/${selectedFile}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = data.redirect; // Redirect to refresh the page
+        } else {
+          alert("Failed to load course.");
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Error selecting course.");
+      });
+  }
+</script>
+{% endblock %}
