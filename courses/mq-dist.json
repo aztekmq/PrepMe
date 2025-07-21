@@ -1,0 +1,1646 @@
+{
+  "course": {
+    "title": "IBM MQ Operations and Administration for Distributed Environments",
+    "duration": "4.5 hours",
+    "audience": [
+      "System administrators",
+      "System architects",
+      "Application developers"
+    ],
+    "prerequisites": "Completion of the Interskill IBM MQ Operations and Administration course or equivalent practical knowledge of IBM MQ fundamentals.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "General Administration",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers the installation, configuration, and basic administration of IBM MQ in distributed environments, focusing on command-line tools and configuration files.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Installing IBM MQ",
+            "overview": "IBM MQ is installed using package managers like rpm (Linux) or MSI (Windows).",
+            "key_steps": [
+              "Download and install the MQ package (e.g., rpm -ivh MQSeries*.rpm).",
+              "Run setmqinst to set the primary installation.",
+              "Verify installation with dspmqver."
+            ],
+            "example": "rpm -ivh MQSeries-9.4.0-0.x86_64.rpm"
+          },
+          {
+            "id": "1.2",
+            "title": "Creating and Starting Queue Managers",
+            "commands": [
+              "crtmqm QM1 to create a queue manager.",
+              "strmqm QM1 to start it.",
+              "endmqm QM1 to stop it (quiesced mode)."
+            ],
+            "example": "crtmqm -u SYSTEM.DEAD.LETTER.QUEUE QM1"
+          },
+          {
+            "id": "1.3",
+            "title": "MQSC Commands",
+            "overview": "Run MQSC commands using runmqsc QM1 for queue manager administration.",
+            "example": "DEFINE QLOCAL(MY.QUEUE) MAXDEPTH(5000)"
+          },
+          {
+            "id": "1.4",
+            "title": "Configuration Files",
+            "qm_ini": {
+              "description": "Queue manager configuration file (qm.ini) for settings like logging.",
+              "example": "Log: LogPrimaryFiles=3 LogFilePages=4096"
+            },
+            "mqclient_ini": {
+              "description": "Client configuration for channel connections.",
+              "example": "CHANNELS: MQServer=SYSTEM.DEF.SVRCONN/TCP/hostname(1414)"
+            }
+          },
+          {
+            "id": "1.5",
+            "title": "MQ Explorer",
+            "description": "GUI tool for managing MQ objects, available on Windows and Linux.",
+            "access": "Launch via desktop shortcut or mqexplorer command."
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What command installs IBM MQ on a Linux system?",
+            "options": [
+              "A: apt-get install mq",
+              "B: rpm -ivh MQSeries*.rpm",
+              "C: yum install mq",
+              "D: dpkg -i MQSeries.deb",
+              "E: installmq"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command verifies the MQ installation version?",
+            "options": [
+              "A: mqver",
+              "B: dspmqver",
+              "C: runmqsc -v",
+              "D: crtmqm -v",
+              "E: strmqm -v"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Which command creates a queue manager named QM1?",
+            "options": [
+              "A: strmqm QM1",
+              "B: crtmqm QM1",
+              "C: runmqsc QM1",
+              "D: endmqm QM1",
+              "E: dspmq QM1"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you start a queue manager named QM1?",
+            "options": [
+              "A: crtmqm QM1",
+              "B: runmqsc QM1",
+              "C: strmqm QM1",
+              "D: endmqm QM1",
+              "E: dspmq QM1"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the purpose of the endmqm command?",
+            "options": [
+              "A: Creates a queue manager",
+              "B: Stops a queue manager",
+              "C: Displays queue manager status",
+              "D: Defines a queue",
+              "E: Starts a listener"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command runs MQSC commands for queue manager QM1?",
+            "options": [
+              "A: crtmqm QM1",
+              "B: runmqsc QM1",
+              "C: strmqm QM1",
+              "D: endmqm QM1",
+              "E: dspmq QM1"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define a local queue named MY.QUEUE in MQSC?",
+            "options": [
+              "A: CREATE QLOCAL(MY.QUEUE)",
+              "B: DEFINE QLOCAL(MY.QUEUE)",
+              "C: ALTER QLOCAL(MY.QUEUE)",
+              "D: START QLOCAL(MY.QUEUE)",
+              "E: DISPLAY QLOCAL(MY.QUEUE)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the qm.ini file?",
+            "options": [
+              "A: Defines client channels",
+              "B: Configures queue manager settings",
+              "C: Stores MQSC commands",
+              "D: Manages SSL certificates",
+              "E: Monitors queue depth"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What setting in qm.ini controls log file size?",
+            "options": [
+              "A: LogFilePages",
+              "B: LogPrimaryFiles",
+              "C: MaxDepth",
+              "D: ChannelMax",
+              "E: QueueSize"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What file configures client channel connections?",
+            "options": [
+              "A: qm.ini",
+              "B: mqclient.ini",
+              "C: mqserver.ini",
+              "D: mqm.ini",
+              "E: client.conf"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the default port for MQ listener in distributed environments?",
+            "options": [
+              "A: 1414",
+              "B: 8080",
+              "C: 443",
+              "D: 5672",
+              "E: 15672"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command displays queue manager status?",
+            "options": [
+              "A: dspmq",
+              "B: runmqsc",
+              "C: strmqm",
+              "D: crtmqm",
+              "E: endmqm"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "How do you access MQ Explorer?",
+            "options": [
+              "A: runmqsc explorer",
+              "B: mqexplorer command or desktop shortcut",
+              "C: dspmq explorer",
+              "D: http://localhost:1414/mq",
+              "E: crtmqm explorer"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the -u option in crtmqm?",
+            "options": [
+              "A: Specifies user ID",
+              "B: Defines dead-letter queue",
+              "C: Sets log size",
+              "D: Enables SSL",
+              "E: Configures channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command stops a queue manager in quiesced mode?",
+            "options": [
+              "A: endmqm QM1",
+              "B: endmqm -i QM1",
+              "C: endmqm -q QM1",
+              "D: endmqm -w QM1",
+              "E: endmqm -s QM1"
+            ],
+            "answer": "D"
+          },
+          {
+            "question": "What is the role of setmqinst?",
+            "options": [
+              "A: Starts queue manager",
+              "B: Sets primary MQ installation",
+              "C: Defines queues",
+              "D: Configures SSL",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define a listener in MQSC?",
+            "options": [
+              "A: DEFINE LISTENER(LISTENER1) TRPTYPE(TCP) PORT(1414)",
+              "B: START LISTENER(LISTENER1)",
+              "C: ALTER LISTENER(LISTENER1)",
+              "D: DISPLAY LISTENER(LISTENER1)",
+              "E: STOP LISTENER(LISTENER1)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is the purpose of the SYSTEM.DEAD.LETTER.QUEUE?",
+            "options": [
+              "A: Stores system logs",
+              "B: Holds undeliverable messages",
+              "C: Manages channels",
+              "D: Configures listeners",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command checks queue depth in MQSC?",
+            "options": [
+              "A: DISPLAY QUEUE(MY.QUEUE) CURDEPTH",
+              "B: DEFINE QUEUE(MY.QUEUE) DEPTH",
+              "C: ALTER QUEUE(MY.QUEUE) DEPTH",
+              "D: START QUEUE(MY.QUEUE)",
+              "E: STOP QUEUE(MY.QUEUE)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a key difference between MQ on distributed systems and z/OS?",
+            "options": [
+              "A: Distributed uses JCL for queue manager startup",
+              "B: Distributed uses file-based logs, z/OS uses VSAM",
+              "C: Distributed requires Coupling Facility",
+              "D: Distributed uses SMP/E for installation",
+              "E: Distributed lacks MQ Explorer support"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Architecture, MQ IPT, Firewall, Gateway QMgrs",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers IBM MQ architecture in distributed environments, including MQ Internet Pass-Thru (IPT), firewall considerations, and Gateway Queue Managers for routing.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "MQ Architecture Overview",
+            "overview": "MQ uses a hub-and-spoke or clustered architecture with queue managers, channels, and queues.",
+            "components": [
+              "Queue Managers: Manage queues and messages.",
+              "Channels: Connect queue managers for message transfer.",
+              "Clusters: Group queue managers for load balancing."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "MQ Internet Pass-Thru (IPT)",
+            "description": "MQ IPT enables secure message transfer over the internet without VPNs.",
+            "configuration": "Configure IPT server with mqs_ipt.ini and run mqs_ipt.",
+            "example": "iptServer: port=1415"
+          },
+          {
+            "id": "2.3",
+            "title": "Firewall Considerations",
+            "requirements": [
+              "Open TCP port 1414 (or custom) for MQ channels.",
+              "Allow MQ IPT ports (e.g., 1415) for internet traffic.",
+              "Use NAT or proxies for secure external access."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Gateway Queue Managers",
+            "description": "Gateway QMgrs route messages between internal and external systems.",
+            "setup": "Define sender/receiver channels and alias queues.",
+            "example": "DEFINE CHANNEL(GATEWAY.CH) CHLTYPE(SDR) CONNAME('external.host(1414)')"
+          },
+          {
+            "id": "2.5",
+            "title": "MQ Clusters",
+            "description": "Clusters simplify administration by sharing queue definitions.",
+            "commands": [
+              "DEFINE QLOCAL(CLUSTER.Q) CLUSTER(MYCLUSTER)",
+              "ALTER QMGR REPOS(MYCLUSTER)"
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a key component of MQ architecture?",
+            "options": [
+              "A: VSAM datasets",
+              "B: Queue Managers",
+              "C: Coupling Facility",
+              "D: SMP/E",
+              "E: JCL scripts"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of channels in MQ architecture?",
+            "options": [
+              "A: Store messages",
+              "B: Connect queue managers",
+              "C: Configure firewalls",
+              "D: Manage logs",
+              "E: Monitor performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does MQ Internet Pass-Thru (IPT) enable?",
+            "options": [
+              "A: Local queue management",
+              "B: Secure message transfer over the internet",
+              "C: Cluster configuration",
+              "D: Log file formatting",
+              "E: SSL certificate management"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What file configures MQ IPT settings?",
+            "options": [
+              "A: qm.ini",
+              "B: mqclient.ini",
+              "C: mqs_ipt.ini",
+              "D: mqm.ini",
+              "E: ipt.conf"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What command starts the MQ IPT server?",
+            "options": [
+              "A: runmqsc ipt",
+              "B: mqs_ipt",
+              "C: strmqm ipt",
+              "D: dspmq ipt",
+              "E: crtmqm ipt"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the default MQ port that must be open in a firewall?",
+            "options": [
+              "A: 8080",
+              "B: 1414",
+              "C: 443",
+              "D: 5672",
+              "E: 15672"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What firewall configuration supports MQ IPT?",
+            "options": [
+              "A: Block all TCP ports",
+              "B: Open port 1415 for IPT traffic",
+              "C: Use UDP for channels",
+              "D: Disable NAT",
+              "E: Block external access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of a Gateway Queue Manager?",
+            "options": [
+              "A: Stores persistent messages",
+              "B: Routes messages between systems",
+              "C: Formats log files",
+              "D: Configures clusters",
+              "E: Monitors queue depth"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define a sender channel for a Gateway QMgr?",
+            "options": [
+              "A: DEFINE CHANNEL(GATEWAY.CH) CHLTYPE(SDR) CONNAME('external.host(1414)')",
+              "B: DEFINE QLOCAL(GATEWAY.CH)",
+              "C: ALTER CHANNEL(GATEWAY.CH) CHLTYPE(RCVR)",
+              "D: START CHANNEL(GATEWAY.CH)",
+              "E: DISPLAY CHANNEL(GATEWAY.CH)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of using MQ clusters?",
+            "options": [
+              "A: Simplifies queue definition sharing",
+              "B: Increases log file size",
+              "C: Enables SSL by default",
+              "D: Reduces channel usage",
+              "E: Formats trace records"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What MQSC command defines a cluster queue?",
+            "options": [
+              "A: DEFINE QLOCAL(CLUSTER.Q) CLUSTER(MYCLUSTER)",
+              "B: ALTER QMGR CLUSTER(MYCLUSTER)",
+              "C: START QLOCAL(CLUSTER.Q)",
+              "D: DISPLAY QLOCAL(CLUSTER.Q)",
+              "E: DEFINE CHANNEL(CLUSTER.Q)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "How do you designate a queue manager as a cluster repository?",
+            "options": [
+              "A: DEFINE QMGR REPOS(MYCLUSTER)",
+              "B: ALTER QMGR REPOS(MYCLUSTER)",
+              "C: START QMGR REPOS(MYCLUSTER)",
+              "D: DISPLAY QMGR REPOS",
+              "E: SET QMGR REPOS(MYCLUSTER)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a key firewall consideration for MQ channels?",
+            "options": [
+              "A: Open port 1414 for TCP",
+              "B: Use UDP for message transfer",
+              "C: Block all inbound traffic",
+              "D: Disable NAT for IPT",
+              "E: Use port 8080 for channels"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is the purpose of an alias queue in a Gateway QMgr?",
+            "options": [
+              "A: Stores log files",
+              "B: Routes messages to target queues",
+              "C: Configures SSL",
+              "D: Monitors performance",
+              "E: Formats traces"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command displays cluster queue status?",
+            "options": [
+              "A: DISPLAY QLOCAL(CLUSTER.Q) ALL",
+              "B: DEFINE QLOCAL(CLUSTER.Q)",
+              "C: ALTER QLOCAL(CLUSTER.Q)",
+              "D: START QLOCAL(CLUSTER.Q)",
+              "E: STOP QLOCAL(CLUSTER.Q)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does MQ IPT eliminate the need for?",
+            "options": [
+              "A: Queue Managers",
+              "B: VPNs for secure internet transfer",
+              "C: Local queues",
+              "D: Log files",
+              "E: Clusters"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define a receiver channel for a Gateway QMgr?",
+            "options": [
+              "A: DEFINE CHANNEL(GATEWAY.CH) CHLTYPE(RCVR)",
+              "B: DEFINE CHANNEL(GATEWAY.CH) CHLTYPE(SDR)",
+              "C: ALTER CHANNEL(GATEWAY.CH) CHLTYPE(CLNTCONN)",
+              "D: START CHANNEL(GATEWAY.CH)",
+              "E: DISPLAY CHANNEL(GATEWAY.CH)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a key difference between MQ clusters and Gateway QMgrs?",
+            "options": [
+              "A: Clusters use VSAM, Gateway QMgrs use files",
+              "B: Clusters share queues, Gateway QMgrs route messages",
+              "C: Clusters require IPT, Gateway QMgrs use VPNs",
+              "D: Clusters use JCL, Gateway QMgrs use MQSC",
+              "E: Clusters disable channels, Gateway QMgrs enable them"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What port is commonly used for MQ IPT traffic?",
+            "options": [
+              "A: 1414",
+              "B: 1415",
+              "C: 443",
+              "D: 8080",
+              "E: 5672"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Gateway QMgrs in a distributed environment?",
+            "options": [
+              "A: Simplifies log management",
+              "B: Isolates internal and external messaging",
+              "C: Enables file-based logging",
+              "D: Reduces queue depth",
+              "E: Formats SMF records"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Security, SSL/TLS, and Miscellaneous Objects",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers securing IBM MQ in distributed environments, including SSL/TLS configuration, user authentication, and managing miscellaneous objects like topics and subscriptions.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "User Authentication",
+            "description": "Use OS user accounts or MQ authentication (e.g., CHCKCLNT).",
+            "example": "ALTER QMGR CHCKCLNT(REQUIRED) to enforce client authentication."
+          },
+          {
+            "id": "3.2",
+            "title": "SSL/TLS Configuration",
+            "description": "Secure channels using SSL/TLS with certificates stored in a keystore.",
+            "commands": [
+              "runmqckm to manage certificates.",
+              "ALTER CHANNEL(MYCHAN) CHLTYPE(SDR) SSLCIPH(TLS_RSA_WITH_AES_256_CBC_SHA256)"
+            ],
+            "example": "runmqckm -cert -create -db keystore.kdb -label ibmwebspheremq"
+          },
+          {
+            "id": "3.3",
+            "title": "Channel Authentication Records (CHLAUTH)",
+            "description": "Control channel access using CHLAUTH rules.",
+            "example": "SET CHLAUTH(MYCHAN) TYPE(ADDRESSMAP) ADDRESS('*') USERSRC(NOACCESS)"
+          },
+          {
+            "id": "3.4",
+            "title": "Topics and Subscriptions",
+            "description": "Manage publish/subscribe messaging with topics and subscriptions.",
+            "commands": [
+              "DEFINE TOPIC(MYTOPIC) TOPICSTR('news/sports')",
+              "DEFINE SUB(MYSUB) TOPIC(MYTOPIC) DEST(MY.QUEUE)"
+            ]
+          },
+          {
+            "id": "3.5",
+            "title": "Advanced Message Security (AMS)",
+            "description": "Encrypts message content at the queue level.",
+            "example": "SET POLICY(MY.QUEUE) SIGNER('CN=User1,O=IBM') ENCALG(AES256)"
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What MQSC command enforces client authentication?",
+            "options": [
+              "A: ALTER QMGR CHCKCLNT(REQUIRED)",
+              "B: DEFINE QMGR CHCKCLNT",
+              "C: SET QMGR AUTH(REQUIRED)",
+              "D: ALTER CHANNEL AUTH",
+              "E: DISPLAY QMGR CHCKCLNT"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command manages SSL certificates in MQ?",
+            "options": [
+              "A: runmqsc",
+              "B: runmqckm",
+              "C: strmqm",
+              "D: dspmq",
+              "E: crtmqm"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of a keystore in MQ?",
+            "options": [
+              "A: Stores log files",
+              "B: Stores SSL/TLS certificates",
+              "C: Manages queues",
+              "D: Configures clusters",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQSC command secures a sender channel with SSL?",
+            "options": [
+              "A: DEFINE CHANNEL(MYCHAN) SSL",
+              "B: ALTER CHANNEL(MYCHAN) CHLTYPE(SDR) SSLCIPH(TLS_RSA_WITH_AES_256_CBC_SHA256)",
+              "C: START CHANNEL(MYCHAN) SSL",
+              "D: SET CHANNEL(MYCHAN) SSL",
+              "E: DISPLAY CHANNEL(MYCHAN) SSL"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CHLAUTH do in MQ security?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Controls channel access",
+              "C: Manages log files",
+              "D: Configures topics",
+              "E: Monitors queue depth"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you block all access to a channel using CHLAUTH?",
+            "options": [
+              "A: SET CHLAUTH(MYCHAN) TYPE(ADDRESSMAP) ADDRESS('*') USERSRC(NOACCESS)",
+              "B: DEFINE CHLAUTH(MYCHAN) NOACCESS",
+              "C: ALTER CHANNEL(MYCHAN) NOACCESS",
+              "D: START CHLAUTH(MYCHAN) NOACCESS",
+              "E: DISPLAY CHLAUTH(MYCHAN)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is the purpose of Advanced Message Security (AMS)?",
+            "options": [
+              "A: Secures channels",
+              "B: Encrypts message content in queues",
+              "C: Manages clusters",
+              "D: Configures listeners",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define a topic in MQSC?",
+            "options": [
+              "A: DEFINE TOPIC(MYTOPIC) TOPICSTR('news/sports')",
+              "B: ALTER TOPIC(MYTOPIC) TOPICSTR",
+              "C: START TOPIC(MYTOPIC)",
+              "D: DISPLAY TOPIC(MYTOPIC)",
+              "E: SET TOPIC(MYTOPIC)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What MQSC command creates a subscription?",
+            "options": [
+              "A: DEFINE SUB(MYSUB) TOPIC(MYTOPIC) DEST(MY.QUEUE)",
+              "B: ALTER SUB(MYSUB) TOPIC(MYTOPIC)",
+              "C: START SUB(MYSUB)",
+              "D: DISPLAY SUB(MYSUB)",
+              "E: SET SUB(MYSUB)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a cipher suite in SSL/TLS configuration?",
+            "options": [
+              "A: Manages queue depth",
+              "B: Specifies encryption algorithm",
+              "C: Configures clusters",
+              "D: Formats log files",
+              "E: Monitors channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command displays channel authentication rules?",
+            "options": [
+              "A: DISPLAY CHLAUTH(*)",
+              "B: DEFINE CHLAUTH(*)",
+              "C: ALTER CHLAUTH(*)",
+              "D: START CHLAUTH(*)",
+              "E: SET CHLAUTH(*)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "How do you enable AMS for a queue?",
+            "options": [
+              "A: SET POLICY(MY.QUEUE) SIGNER('CN=User1,O=IBM') ENCALG(AES256)",
+              "B: ALTER QUEUE(MY.QUEUE) AMS",
+              "C: DEFINE QUEUE(MY.QUEUE) AMS",
+              "D: START QUEUE(MY.QUEUE) AMS",
+              "E: DISPLAY QUEUE(MY.QUEUE) AMS"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does the CHCKCLNT(REQUIRED) setting do?",
+            "options": [
+              "A: Disables client authentication",
+              "B: Enforces client authentication",
+              "C: Configures SSL",
+              "D: Manages topics",
+              "E: Monitors queues"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a topic string used for?",
+            "options": [
+              "A: Defines queue depth",
+              "B: Organizes publish/subscribe messaging",
+              "C: Configures channels",
+              "D: Manages logs",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command checks subscription status?",
+            "options": [
+              "A: DEFINE SUB(MYSUB)",
+              "B: ALTER SUB(MYSUB)",
+              "C: DISPLAY SUB(MYSUB)",
+              "D: START SUB(MYSUB)",
+              "E: STOP SUB(MYSUB)"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the default location for the keystore file?",
+            "options": [
+              "A: /var/mqm/qmgrs/QM1/ssl",
+              "B: /etc/mqm/ssl",
+              "C: /var/mqm/keystore",
+              "D: /home/mqm/ssl",
+              "E: /tmp/mqm/ssl"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does the SSLCIPH parameter specify?",
+            "options": [
+              "A: Queue depth",
+              "B: SSL/TLS cipher suite",
+              "C: Channel type",
+              "D: Log file size",
+              "E: Cluster name"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you restrict channel access to a specific IP?",
+            "options": [
+              "A: SET CHLAUTH(MYCHAN) TYPE(ADDRESSMAP) ADDRESS('192.168.1.1') USERSRC(CHANNEL)",
+              "B: ALTER CHANNEL(MYCHAN) IP('192.168.1.1')",
+              "C: DEFINE CHANNEL(MYCHAN) IP('192.168.1.1')",
+              "D: START CHANNEL(MYCHAN) IP('192.168.1.1')",
+              "E: DISPLAY CHANNEL(MYCHAN) IP"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of using topics in MQ?",
+            "options": [
+              "A: Simplifies log management",
+              "B: Enables publish/subscribe messaging",
+              "C: Reduces channel usage",
+              "D: Increases queue depth",
+              "E: Formats traces"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool is used to create an SSL certificate for MQ?",
+            "options": [
+              "A: runmqsc",
+              "B: runmqckm",
+              "C: dspmq",
+              "D: strmqm",
+              "E: crtmqm"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Development and Programming",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers developing applications for IBM MQ in distributed environments, including APIs, message formats, and programming best practices.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "MQ APIs",
+            "description": "Use MQI, JMS, or REST APIs for MQ interactions.",
+            "examples": [
+              "MQI: MQCONN, MQPUT, MQGET",
+              "JMS: QueueConnectionFactory, QueueSender"
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Message Formats",
+            "description": "Messages can be text, binary, or structured (e.g., JSON, XML).",
+            "properties": [
+              "MQMD: Message descriptor for headers.",
+              "RFH2: Rules and Formatting Header for advanced messaging."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Client Connections",
+            "description": "Connect applications to MQ using client channels.",
+            "example": "MQCONNX with MQCNO for client connection options."
+          },
+          {
+            "id": "4.4",
+            "title": "Publish/Subscribe Programming",
+            "description": "Use JMS or MQI for pub/sub messaging with topics.",
+            "example": "MQSUB to subscribe to a topic."
+          },
+          {
+            "id": "4.5",
+            "title": "Best Practices",
+            "practices": [
+              "Use connection pooling for performance.",
+              "Handle MQRC errors gracefully.",
+              "Set message persistence appropriately."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the primary API for MQ programming in C?",
+            "options": [
+              "A: JMS",
+              "B: MQI",
+              "C: REST",
+              "D: SOAP",
+              "E: JSON"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQI call connects to a queue manager?",
+            "options": [
+              "A: MQPUT",
+              "B: MQGET",
+              "C: MQCONN",
+              "D: MQSUB",
+              "E: MQOPEN"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the purpose of the MQMD structure?",
+            "options": [
+              "A: Defines message headers",
+              "B: Configures channels",
+              "C: Manages logs",
+              "D: Encrypts messages",
+              "E: Monitors queues"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does the RFH2 header support?",
+            "options": [
+              "A: Log file formatting",
+              "B: Advanced message formatting",
+              "C: Channel security",
+              "D: Queue depth monitoring",
+              "E: Cluster configuration"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQI call puts a message on a queue?",
+            "options": [
+              "A: MQGET",
+              "B: MQPUT",
+              "C: MQCONN",
+              "D: MQSUB",
+              "E: MQOPEN"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is used for pub/sub messaging in MQ?",
+            "options": [
+              "A: Local queues",
+              "B: Topics and subscriptions",
+              "C: Channels",
+              "D: Log files",
+              "E: SSL certificates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQI call subscribes to a topic?",
+            "options": [
+              "A: MQPUT",
+              "B: MQGET",
+              "C: MQSUB",
+              "D: MQOPEN",
+              "E: MQCONN"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What JMS component sends messages to a queue?",
+            "options": [
+              "A: QueueConnectionFactory",
+              "B: QueueSender",
+              "C: QueueReceiver",
+              "D: TopicSubscriber",
+              "E: MessageConsumer"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a best practice for MQ programming?",
+            "options": [
+              "A: Disable connection pooling",
+              "B: Ignore MQRC errors",
+              "C: Use connection pooling",
+              "D: Set all messages to non-persistent",
+              "E: Avoid exception handling"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What MQI call opens a queue?",
+            "options": [
+              "A: MQCONN",
+              "B: MQOPEN",
+              "C: MQPUT",
+              "D: MQGET",
+              "E: MQSUB"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does MQCONNX provide over MQCONN?",
+            "options": [
+              "A: Basic queue connection",
+              "B: Advanced client connection options",
+              "C: Message encryption",
+              "D: Log file access",
+              "E: Queue depth monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What message property controls persistence?",
+            "options": [
+              "A: MQMD.Format",
+              "B: MQMD.Persistence",
+              "C: MQMD.MessageId",
+              "D: MQMD.CorrelId",
+              "E: MQMD.ReplyToQ"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common message format for MQ applications?",
+            "options": [
+              "A: HTML",
+              "B: JSON",
+              "C: CSS",
+              "D: YAML",
+              "E: SQL"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the JMS QueueConnectionFactory do?",
+            "options": [
+              "A: Sends messages",
+              "B: Creates connections to queues",
+              "C: Subscribes to topics",
+              "D: Manages logs",
+              "E: Configures SSL"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common MQRC error code for connection failure?",
+            "options": [
+              "A: 2009",
+              "B: 2058",
+              "C: 2085",
+              "D: 2279",
+              "E: 2538"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What API supports REST-based MQ interactions?",
+            "options": [
+              "A: MQI",
+              "B: JMS",
+              "C: MQ REST API",
+              "D: SOAP",
+              "E: JDBC"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is a benefit of setting message persistence?",
+            "options": [
+              "A: Reduces log size",
+              "B: Ensures message delivery",
+              "C: Simplifies channel setup",
+              "D: Disables SSL",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQI call retrieves a message from a queue?",
+            "options": [
+              "A: MQPUT",
+              "B: MQGET",
+              "C: MQCONN",
+              "D: MQSUB",
+              "E: MQOPEN"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the MQMD.MessageId field do?",
+            "options": [
+              "A: Specifies message format",
+              "B: Uniquely identifies a message",
+              "C: Sets queue depth",
+              "D: Configures SSL",
+              "E: Manages channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a key consideration for client connections?",
+            "options": [
+              "A: Use local queues only",
+              "B: Configure client channels correctly",
+              "C: Disable persistence",
+              "D: Avoid connection pooling",
+              "E: Ignore MQRC errors"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "MQ Troubleshooting",
+        "enabled": true,
+        "duration": "30 minutes",
+        "description": "This module covers diagnosing and resolving common IBM MQ issues in distributed environments, including log analysis, error codes, and channel issues.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "Common Error Codes",
+            "description": "Key MQRC codes include 2058 (QMgr not available), 2085 (unknown object).",
+            "example": "Check logs for MQRC 2058 and verify QMgr status with dspmq."
+          },
+          {
+            "id": "5.2",
+            "title": "Log Analysis",
+            "description": "Errors logged in /var/mqm/errors and /var/mqm/qmgrs/QM1/errors.",
+            "example": "AMQERR01.LOG contains queue manager errors."
+          },
+          {
+            "id": "5.3",
+            "title": "Channel Issues",
+            "description": "Diagnose channel failures (e.g., AMQ9504 for connection refused).",
+            "commands": [
+              "DISPLAY CHSTATUS(MYCHAN)",
+              "PING CHANNEL(MYCHAN)"
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Queue Issues",
+            "description": "Check for inhibited queues or full queues.",
+            "example": "DISPLAY QUEUE(MY.QUEUE) CURDEPTH"
+          },
+          {
+            "id": "5.5",
+            "title": "Tracing",
+            "description": "Enable tracing with strmqtrc and format with dspmqtrc.",
+            "example": "strmqtrc -m QM1 -t detail"
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does MQRC 2058 indicate?",
+            "options": [
+              "A: Unknown object",
+              "B: Queue manager not available",
+              "C: Channel failure",
+              "D: Queue full",
+              "E: SSL error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Where are queue manager errors logged?",
+            "options": [
+              "A: /var/mqm/qmgrs/QM1/errors/AMQERR01.LOG",
+              "B: /var/mqm/logs/AMQERR01.LOG",
+              "C: /etc/mqm/errors",
+              "D: /tmp/mqm/errors",
+              "E: /var/mqm/trace"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command checks channel status?",
+            "options": [
+              "A: DISPLAY CHSTATUS(MYCHAN)",
+              "B: DEFINE CHSTATUS(MYCHAN)",
+              "C: ALTER CHANNEL(MYCHAN)",
+              "D: START CHANNEL(MYCHAN)",
+              "E: STOP CHANNEL(MYCHAN)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does MQRC 2085 indicate?",
+            "options": [
+              "A: Queue manager not available",
+              "B: Unknown object",
+              "C: Channel failure",
+              "D: Queue full",
+              "E: SSL error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command pings a channel to test connectivity?",
+            "options": [
+              "A: PING CHANNEL(MYCHAN)",
+              "B: TEST CHANNEL(MYCHAN)",
+              "C: CHECK CHANNEL(MYCHAN)",
+              "D: DISPLAY CHANNEL(MYCHAN)",
+              "E: ALTER CHANNEL(MYCHAN)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common cause of AMQ9504 channel errors?",
+            "options": [
+              "A: Queue full",
+              "B: Connection refused",
+              "C: Unknown object",
+              "D: Log file full",
+              "E: SSL mismatch"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you check if a queue is inhibited?",
+            "options": [
+              "A: DISPLAY QUEUE(MY.QUEUE) INHIBIT",
+              "B: ALTER QUEUE(MY.QUEUE) INHIBIT",
+              "C: DEFINE QUEUE(MY.QUEUE) INHIBIT",
+              "D: START QUEUE(MY.QUEUE)",
+              "E: STOP QUEUE(MY.QUEUE)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command enables MQ tracing?",
+            "options": [
+              "A: strmqtrc -m QM1",
+              "B: dspmqtrc -m QM1",
+              "C: runmqsc -t QM1",
+              "D: crtmqm -t QM1",
+              "E: endmqm -t QM1"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command formats MQ trace files?",
+            "options": [
+              "A: strmqtrc",
+              "B: dspmqtrc",
+              "C: runmqsc",
+              "D: dspmq",
+              "E: crtmqm"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a full queue cause in MQ?",
+            "options": [
+              "A: MQRC 2053",
+              "B: MQRC 2085",
+              "C: MQRC 2058",
+              "D: MQRC 2033",
+              "E: MQRC 2009"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "Where are global MQ errors logged?",
+            "options": [
+              "A: /var/mqm/errors/AMQERR01.LOG",
+              "B: /var/mqm/qmgrs/QM1/errors",
+              "C: /etc/mqm/logs",
+              "D: /tmp/mqm/errors",
+              "E: /var/mqm/trace"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command resolves a queue full issue?",
+            "options": [
+              "A: ALTER QLOCAL(MY.QUEUE) MAXDEPTH(10000)",
+              "B: DEFINE QLOCAL(MY.QUEUE) MAXDEPTH",
+              "C: START QLOCAL(MY.QUEUE)",
+              "D: DISPLAY QLOCAL(MY.QUEUE) MAXDEPTH",
+              "E: STOP QLOCAL(MY.QUEUE)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common fix for MQRC 2058?",
+            "options": [
+              "A: Increase queue depth",
+              "B: Verify queue manager is running",
+              "C: Redefine channels",
+              "D: Format logs",
+              "E: Disable SSL"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DISPLAY QUEUE(MY.QUEUE) CURDEPTH show?",
+            "options": [
+              "A: Queue manager status",
+              "B: Current number of messages in queue",
+              "C: Channel status",
+              "D: Log file size",
+              "E: SSL configuration"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a symptom of a channel connection failure?",
+            "options": [
+              "A: MQRC 2085",
+              "B: AMQ9504 in logs",
+              "C: MQRC 2053",
+              "D: MQRC 2033",
+              "E: MQRC 2009"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What should you check for an SSL-related channel error?",
+            "options": [
+              "A: Queue depth",
+              "B: Cipher suite mismatch",
+              "C: Log file size",
+              "D: Cluster configuration",
+              "E: Topic string"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does MQRC 2033 indicate?",
+            "options": [
+              "A: Queue manager not available",
+              "B: No message available",
+              "C: Unknown object",
+              "D: Queue full",
+              "E: Channel failure"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you verify a queue manager is running?",
+            "options": [
+              "A: runmqsc QM1",
+              "B: dspmq -m QM1",
+              "C: strmqm QM1",
+              "D: crtmqm QM1",
+              "E: endmqm QM1"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common cause of inhibited queues?",
+            "options": [
+              "A: Incorrect SSL configuration",
+              "B: Administrative action or error",
+              "C: Log file corruption",
+              "D: Cluster misconfiguration",
+              "E: Firewall blockage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool helps analyze MQ trace files?",
+            "options": [
+              "A: runmqsc",
+              "B: dspmqtrc",
+              "C: strmqtrc",
+              "D: dspmq",
+              "E: runmqckm"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Alerts and Metric Collection",
+        "enabled": true,
+        "duration": "30 minutes",
+        "description": "This module covers configuring alerts and collecting performance metrics in IBM MQ distributed environments, using tools like MQ events and external monitoring systems.",
+        "sections": [
+          {
+            "id": "6.1",
+            "title": "MQ Event Messages",
+            "description": "Enable queue manager and channel event messages for monitoring.",
+            "commands": [
+              "ALTER QMGR QMREVENT(ENABLED)",
+              "ALTER QMGR CHLEVENT(ENABLED)"
+            ]
+          },
+          {
+            "id": "6.2",
+            "title": "Performance Metrics",
+            "description": "Collect metrics using DISPLAY commands or external tools like Tivoli.",
+            "example": "DISPLAY QLOCAL(MY.QUEUE) CURDEPTH"
+          },
+          {
+            "id": "6.3",
+            "title": "Monitoring Tools",
+            "tools": [
+              "MQ Explorer: GUI-based monitoring.",
+              "Tivoli Monitoring: Enterprise performance tracking.",
+              "Prometheus with MQ Exporter: Open-source metric collection."
+            ]
+          },
+          {
+            "id": "6.4",
+            "title": "Alert Configuration",
+            "description": "Configure queue depth alerts or channel status alerts.",
+            "example": "ALTER QLOCAL(MY.QUEUE) MAXDEPTH(5000) QDPHIEV(ENABLED)"
+          },
+          {
+            "id": "6.5",
+            "title": "Log and Event Analysis",
+            "description": "Analyze AMQERR logs and event queues for issues.",
+            "example": "DISPLAY QUEUE(SYSTEM.ADMIN.QMGR.EVENT)"
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What MQSC command enables queue manager event messages?",
+            "options": [
+              "A: ALTER QMGR QMREVENT(ENABLED)",
+              "B: DEFINE QMGR QMREVENT",
+              "C: START QMGR QMREVENT",
+              "D: DISPLAY QMGR QMREVENT",
+              "E: SET QMGR QMREVENT"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command enables channel event messages?",
+            "options": [
+              "A: ALTER QMGR CHLEVENT(ENABLED)",
+              "B: DEFINE CHANNEL CHLEVENT",
+              "C: START CHANNEL CHLEVENT",
+              "D: DISPLAY CHANNEL CHLEVENT",
+              "E: SET CHANNEL CHLEVENT"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What queue stores queue manager event messages?",
+            "options": [
+              "A: SYSTEM.ADMIN.QMGR.EVENT",
+              "B: SYSTEM.DEAD.LETTER.QUEUE",
+              "C: SYSTEM.ADMIN.CHANNEL.EVENT",
+              "D: SYSTEM.LOG.QUEUE",
+              "E: SYSTEM.MY.QUEUE"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command monitors queue depth?",
+            "options": [
+              "A: DISPLAY QLOCAL(MY.QUEUE) CURDEPTH",
+              "B: DEFINE QLOCAL(MY.QUEUE) DEPTH",
+              "C: ALTER QLOCAL(MY.QUEUE) DEPTH",
+              "D: START QLOCAL(MY.QUEUE)",
+              "E: STOP QLOCAL(MY.QUEUE)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What tool provides GUI-based MQ monitoring?",
+            "options": [
+              "A: runmqsc",
+              "B: MQ Explorer",
+              "C: dspmq",
+              "D: Tivoli Monitoring",
+              "E: Prometheus"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common external monitoring tool for MQ?",
+            "options": [
+              "A: MQ Explorer",
+              "B: Tivoli Monitoring",
+              "C: runmqsc",
+              "D: dspmqtrc",
+              "E: crtmqm"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you enable queue depth high alerts?",
+            "options": [
+              "A: ALTER QLOCAL(MY.QUEUE) MAXDEPTH(5000) QDPHIEV(ENABLED)",
+              "B: DEFINE QLOCAL(MY.QUEUE) QDPHIEV",
+              "C: START QLOCAL(MY.QUEUE) QDPHIEV",
+              "D: DISPLAY QLOCAL(MY.QUEUE) QDPHIEV",
+              "E: SET QLOCAL(MY.QUEUE) QDPHIEV"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What queue stores channel event messages?",
+            "options": [
+              "A: SYSTEM.ADMIN.QMGR.EVENT",
+              "B: SYSTEM.ADMIN.CHANNEL.EVENT",
+              "C: SYSTEM.DEAD.LETTER.QUEUE",
+              "D: SYSTEM.LOG.QUEUE",
+              "E: SYSTEM.MY.QUEUE"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of enabling event messages?",
+            "options": [
+              "A: Reduces queue depth",
+              "B: Provides real-time issue alerts",
+              "C: Configures SSL",
+              "D: Formats logs",
+              "E: Manages clusters"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command checks event queue status?",
+            "options": [
+              "A: DISPLAY QUEUE(SYSTEM.ADMIN.QMGR.EVENT)",
+              "B: DEFINE QUEUE(SYSTEM.ADMIN.QMGR.EVENT)",
+              "C: ALTER QUEUE(SYSTEM.ADMIN.QMGR.EVENT)",
+              "D: START QUEUE(SYSTEM.ADMIN.QMGR.EVENT)",
+              "E: STOP QUEUE(SYSTEM.ADMIN.QMGR.EVENT)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What open-source tool collects MQ metrics?",
+            "options": [
+              "A: MQ Explorer",
+              "B: Tivoli Monitoring",
+              "C: Prometheus with MQ Exporter",
+              "D: runmqsc",
+              "E: dspmqtrc"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What does QDPHIEV(ENABLED) do?",
+            "options": [
+              "A: Disables queue depth monitoring",
+              "B: Enables queue depth high alerts",
+              "C: Configures SSL",
+              "D: Manages channels",
+              "E: Formats logs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What log file contains queue manager errors?",
+            "options": [
+              "A: /var/mqm/errors/AMQERR01.LOG",
+              "B: /var/mqm/trace/AMQERR01.LOG",
+              "C: /etc/mqm/errors",
+              "D: /tmp/mqm/logs",
+              "E: /var/mqm/qmgrs/QM1/logs"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a key metric to monitor in MQ?",
+            "options": [
+              "A: Queue depth",
+              "B: Log file size",
+              "C: SSL certificate expiry",
+              "D: Cluster name",
+              "E: Topic string"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command displays channel event status?",
+            "options": [
+              "A: DISPLAY QUEUE(SYSTEM.ADMIN.CHANNEL.EVENT)",
+              "B: DEFINE QUEUE(SYSTEM.ADMIN.CHANNEL.EVENT)",
+              "C: ALTER QUEUE(SYSTEM.ADMIN.CHANNEL.EVENT)",
+              "D: START QUEUE(SYSTEM.ADMIN.CHANNEL.EVENT)",
+              "E: STOP QUEUE(SYSTEM.ADMIN.CHANNEL.EVENT)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of using Prometheus with MQ Exporter?",
+            "options": [
+              "A: Configures SSL",
+              "B: Collects metrics for dashboards",
+              "C: Manages queues",
+              "D: Formats traces",
+              "E: Defines clusters"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ALTER QMGR QMREVENT(ENABLED) do?",
+            "options": [
+              "A: Disables event messages",
+              "B: Enables queue manager event messages",
+              "C: Configures channels",
+              "D: Manages logs",
+              "E: Monitors queue depth"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool is used for enterprise MQ monitoring?",
+            "options": [
+              "A: MQ Explorer",
+              "B: Tivoli Monitoring",
+              "C: runmqsc",
+              "D: dspmqtrc",
+              "E: crtmqm"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command sets the maximum queue depth for alerts?",
+            "options": [
+              "A: ALTER QLOCAL(MY.QUEUE) MAXDEPTH(5000)",
+              "B: DEFINE QLOCAL(MY.QUEUE) MAXDEPTH",
+              "C: START QLOCAL(MY.QUEUE) MAXDEPTH",
+              "D: DISPLAY QLOCAL(MY.QUEUE) MAXDEPTH",
+              "E: SET QLOCAL(MY.QUEUE) MAXDEPTH"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common use of event queues?",
+            "options": [
+              "A: Store persistent messages",
+              "B: Monitor system issues",
+              "C: Configure SSL",
+              "D: Manage clusters",
+              "E: Format logs"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Install IBM MQ on a Linux system and create a queue manager.",
+        "Configure a sender/receiver channel pair with SSL/TLS.",
+        "Set up a Gateway Queue Manager and test message routing.",
+        "Create a topic and subscription for pub/sub messaging.",
+        "Enable queue depth alerts and monitor using MQ Explorer."
+      ],
+      "resources": [
+        "IBM MQ Knowledge Center (v9.4).",
+        "Sample MQSC scripts and configuration files provided in course materials."
+      ],
+      "environment": "Access to a Linux or Windows system with IBM MQ installed for labs."
+    }
+  }
+}

@@ -7,5 +7,4 @@ source venv/bin/activate
 
 python prepMe.py
 
-
 deactivate

@@ -1,0 +1,1653 @@
+{
+  "course": {
+    "title": "IBM MQ Operations and Administration for z/OS",
+    "duration": "4.5 hours",
+    "audience": [
+      "System administrators",
+      "System architects",
+      "Application developers"
+    ],
+    "prerequisites": "Completion of the Interskill IBM MQ Operations and Administration course or equivalent practical knowledge of IBM MQ fundamentals.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "MQ Installation and Configuration on z/OS",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers the installation and configuration of IBM MQ on z/OS, focusing on z/OS-specific datasets, procedures, and components that differ from traditional MQ environments.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Using SMP/E to Install MQ on z/OS",
+            "overview": "IBM MQ for z/OS is installed using System Modification Program/Extended (SMP/E), a z/OS-specific tool for managing software installation and maintenance.",
+            "key_steps": [
+              "Receive the MQ product using SMP/E’s RECEIVE command.",
+              "Apply the installation using APPLY CHECK and APPLY.",
+              "Accept the installation with ACCEPT to make it permanent."
+            ],
+            "example": "GIMSMP //SMPJCL DD * SET BDY(GLOBAL). RECEIVE SYSMODS.",
+            "difference_from_traditional_mq": "Traditional MQ (e.g., on Linux) uses package managers like rpm or apt, whereas z/OS relies on SMP/E for dataset-based installation."
+          },
+          {
+            "id": "1.2",
+            "title": "Early Code",
+            "purpose": "Early code enables testing of MQ features before general availability.",
+            "usage": "Installed in a separate SMP/E target zone for isolated testing.",
+            "example": "Define a test queue manager with early code to validate new channel features."
+          },
+          {
+            "id": "1.3",
+            "title": "IBM MQ Console",
+            "description": "A web-based interface for managing MQ objects on z/OS, replacing some traditional TSO/ISPF tasks.",
+            "access": "Configured via z/OS HTTP server, accessed at http://<host>:port/ibmmq/console.",
+            "difference_from_traditional_mq": "Traditional MQ often uses MQ Explorer, while z/OS emphasizes the IBM MQ Console for centralized management."
+          },
+          {
+            "id": "1.4",
+            "title": "Queue Manager and Channel Initiator Procedures",
+            "queue_manager_jcl": {
+              "description": "Defines datasets for logs, page sets, and BSDS.",
+              "example": "//CSQ1MSTR EXEC PGM=CSQYMSTR,REGION=0M\n//STEPLIB  DD DSN=IBM.MQ.SCSQANLE,DISP=SHR\n//         DD DSN=IBM.MQ.SCSQAUTH,DISP=SHR\n//CSQP0000 DD DSN=QMGR.PAGESET0,DISP=SHR\n//CSQLOG   DD DSN=QMGR.LOG1,DISP=SHR"
+            },
+            "channel_initiator_jcl": {
+              "description": "Starts the channel initiator for distributed queuing.",
+              "example": "//CSQ1CHIN EXEC PGM=CSQYCHIN,PARM='QMGR1'"
+            },
+            "difference": "Traditional MQ uses command-line scripts (e.g., crtmqm, strmqm), while z/OS uses JCL for batch execution."
+          },
+          {
+            "id": "1.5",
+            "title": "Logging, Bootstrap Dataset, and Page Sets",
+            "logging": {
+              "description": "z/OS uses active and archive logs stored in VSAM datasets. Dual logging enhances reliability.",
+              "example": "Define logs with CSQJUFMT utility."
+            },
+            "bootstrap_dataset": {
+              "description": "Tracks log datasets for recovery.",
+              "example": "//CSQB001 DD DSN=QMGR.BSDS01,DISP=SHR"
+            },
+            "page_sets": {
+              "description": "VSAM datasets for persistent messages.",
+              "example": "Define with DEFINE PSID(00) DSN(QMGR.PAGESET0)"
+            },
+            "difference": "Traditional MQ uses file-based logs, while z/OS leverages VSAM for high-performance storage."
+          },
+          {
+            "id": "1.6",
+            "title": "Buffer Pools and System Parameters",
+            "buffer_pools": {
+              "description": "Memory areas for caching messages.",
+              "example": "DEFINE BUFFPOOL(0) BUFFERS(1000)"
+            },
+            "zparm_library": {
+              "description": "Contains system parameters (e.g., CSQZPARM) for queue manager customization.",
+              "example": "Set LOGLOAD=500000 for log checkpoint frequency."
+            },
+            "difference": "Traditional MQ uses configuration files (e.g., qm.ini), while z/OS uses ZPARM datasets."
+          },
+          {
+            "id": "1.7",
+            "title": "Queue Sharing Groups (QSGs)",
+            "description": "Enables multiple queue managers to share queues via the z/OS Coupling Facility.",
+            "setup": "Define QSG with CSQ5PQSG utility.",
+            "difference": "Unique to z/OS, leveraging Parallel Sysplex for high availability, unlike traditional MQ’s single-queue-manager model."
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the primary function of SMP/E in IBM MQ installation on z/OS?",
+            "options": [
+              "A: Manages software installation and maintenance",
+              "B: Configures queue managers",
+              "C: Formats log datasets",
+              "D: Defines shared queues",
+              "E: Monitors performance"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "How does the RECEIVE command in SMP/E contribute to the installation process?",
+            "options": [
+              "A: Applies software updates",
+              "B: Loads MQ product into global zone",
+              "C: Accepts permanent installation",
+              "D: Configures ZPARM parameters",
+              "E: Starts the queue manager"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the early code in MQ for z/OS?",
+            "options": [
+              "A: Enhances channel security",
+              "B: Tests new features pre-release",
+              "C: Formats page sets",
+              "D: Manages Coupling Facility",
+              "E: Enables SMF statistics"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you access the IBM MQ Console on a z/OS system?",
+            "options": [
+              "A: Via runmqsc command",
+              "B: Through MQ Explorer",
+              "C: At http://<host>:port/ibmmq/console",
+              "D: Using CSQUTIL",
+              "E: Via JCL submission"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the key difference between the IBM MQ Console and MQ Explorer?",
+            "options": [
+              "A: MQ Console is desktop-based",
+              "B: MQ Console is web-based for z/OS",
+              "C: MQ Explorer is for z/OS only",
+              "D: MQ Console uses SMP/E",
+              "E: MQ Explorer supports QSGs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of JCL in starting a queue manager on z/OS?",
+            "options": [
+              "A: Defines execution environment and datasets",
+              "B: Configures SSL channels",
+              "C: Monitors queue depth",
+              "D: Formats trace records",
+              "E: Manages shared queues"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "Name two datasets defined in a queue manager JCL and their purposes.",
+            "options": [
+              "A: CSQP0000 (page set), CSQLOG (log)",
+              "B: CSQUTIL (utility), CSQWDMP (trace)",
+              "C: ZPARM (parameters), BSDS (logs)",
+              "D: CSQ1CHIN (channel), CSQ1MSTR (manager)",
+              "E: SYSTEM.DEAD.QUEUE (DLQ), MYQUEUE"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does the CSQ1CHIN program do in the channel initiator JCL?",
+            "options": [
+              "A: Formats logs",
+              "B: Manages distributed queuing",
+              "C: Defines page sets",
+              "D: Configures RACF",
+              "E: Monitors SMF"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How does dual logging enhance reliability in MQ for z/OS?",
+            "options": [
+              "A: Increases buffer pool size",
+              "B: Creates two log copies for recovery",
+              "C: Enables shared queues",
+              "D: Configures SSL channels",
+              "E: Monitors performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What utility is used to format log datasets, and what is its name?",
+            "options": [
+              "A: CSQUTIL",
+              "B: CSQ5PQSG",
+              "C: CSQJUFMT",
+              "D: CSQWDMP",
+              "E: CSQ6SYSP"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the Bootstrap Dataset (BSDS), and why is it critical?",
+            "options": [
+              "A: Stores messages, critical for queuing",
+              "B: Tracks logs, critical for recovery",
+              "C: Defines channels, critical for security",
+              "D: Manages buffers, critical for performance",
+              "E: Configures QSGs, critical for sharing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define a page set using an MQSC command?",
+            "options": [
+              "A: DEFINE QLOCAL(MYQUEUE)",
+              "B: ALTER QMGR PSID(00)",
+              "C: DEFINE PSID(00) DSN(QMGR.PAGESET0)",
+              "D: START PAGESET(00)",
+              "E: DISPLAY PSID(00)"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the purpose of buffer pools in MQ for z/OS?",
+            "options": [
+              "A: Store persistent messages",
+              "B: Cache messages to reduce disk I/O",
+              "C: Configure SSL channels",
+              "D: Manage shared queues",
+              "E: Format log datasets"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How many buffers would DEFINE BUFFPOOL(0) BUFFERS(1000) allocate?",
+            "options": [
+              "A: 500",
+              "B: 1000",
+              "C: 2000",
+              "D: 0",
+              "E: 1500"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the ZPARM library, and what does it contain?",
+            "options": [
+              "A: Stores logs for recovery",
+              "B: Contains CSQZPARM for customization",
+              "C: Manages shared queues",
+              "D: Formats trace records",
+              "E: Configures channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the LOGLOAD parameter in ZPARM control?",
+            "options": [
+              "A: Buffer pool size",
+              "B: Log checkpoint frequency",
+              "C: Channel batch size",
+              "D: SMF statistics interval",
+              "E: Queue depth monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a queue sharing group (QSG), and how does it improve availability?",
+            "options": [
+              "A: Manages logs, improves recovery",
+              "B: Shares queues, enables failover",
+              "C: Configures SSL, enhances security",
+              "D: Formats traces, aids debugging",
+              "E: Monitors performance, optimizes throughput"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What z/OS feature does a QSG leverage for shared queue access?",
+            "options": [
+              "A: VSAM datasets",
+              "B: Coupling Facility",
+              "C: SMF records",
+              "D: RACF profiles",
+              "E: Buffer pools"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What utility is used to define a QSG, and what is its name?",
+            "options": [
+              "A: CSQUTIL",
+              "B: CSQJUFMT",
+              "C: CSQWDMP",
+              "D: CSQ5PQSG",
+              "E: CSQ6SYSP"
+            ],
+            "answer": "D"
+          },
+          {
+            "question": "Why are QSGs unique to MQ for z/OS compared to traditional MQ?",
+            "options": [
+              "A: Use file-based logs",
+              "B: Leverage Parallel Sysplex",
+              "C: Support MQ Explorer",
+              "D: Use RPM packages",
+              "E: Require CSQUTIL"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "MQ Operations and Resources on z/OS",
+        "enabled": true,
+        "duration": "1.5 hours",
+        "description": "This module focuses on operating MQ on z/OS, mapping commands, managing resources, and using z/OS-specific utilities.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Mapping MQ Commands to z/OS",
+            "overview": "MQSC commands are issued via z/OS console or ISPF, unlike traditional MQ’s command-line interface.",
+            "examples": [
+              "Traditional: runmqsc QMGR1 → DISPLAY QMGR.",
+              "z/OS: F CSQ1MSTR,DISPLAY QMGR via z/OS console."
+            ],
+            "difference": "z/OS integrates with system console and JCL, while traditional MQ uses shell scripts."
+          },
+          {
+            "id": "2.2",
+            "title": "Issuing MQSC Commands",
+            "console": "Use MODIFY (F) command, e.g., F CSQ1MSTR,DEFINE QLOCAL(MYQUEUE).",
+            "ispf": "Use CSQOREXX panels to issue MQSC commands interactively.",
+            "example": "Display queue status: DISPLAY QUEUE(MYQUEUE) ALL."
+          },
+          {
+            "id": "2.3",
+            "title": "Managing MQ Resources Using ISPF",
+            "description": "ISPF Panels: Provide a menu-driven interface for managing queues, channels, and listeners.",
+            "navigation": "Access via CSQOREXX exec, select queue manager, and manage objects.",
+            "difference": "Traditional MQ relies on MQ Explorer or scripts, while ISPF is z/OS-specific."
+          },
+          {
+            "id": "2.4",
+            "title": "Issuing MQ Commands from Batch Jobs",
+            "description": "CSQUTIL: Batch utility for queue management tasks.",
+            "example_jcl": "//CSQUTIL  EXEC PGM=CSQUTIL,PARM='CSQ1'\n//STEPLIB  DD DSN=IBM.MQ.SCSQANLE,DISP=SHR\n//SYSPRINT DD SYSOUT=*\n//SYSIN    DD *\nCOPY QLOCAL(SOURCE.Q) TO QLOCAL(TARGET.Q)\n/*",
+            "use_case": "Automate queue backups or object definitions."
+          },
+          {
+            "id": "2.5",
+            "title": "Starting and Stopping Queue Manager and Channel Initiator",
+            "start_queue_manager": "S CSQ1MSTR via z/OS console.",
+            "stop_queue_manager": "F CSQ1MSTR,STOP QMGR MODE(QUIESCE).",
+            "channel_initiator": "S CSQ1CHIN and F CSQ1CHIN,STOP."
+          },
+          {
+            "id": "2.6",
+            "title": "z/OS-Specific MQ Commands",
+            "examples": [
+              "DISPLAY QSG to view queue sharing group status.",
+              "RECOVER BSDS to restore Bootstrap Dataset."
+            ],
+            "difference": "These commands leverage z/OS Coupling Facility, unavailable in traditional MQ."
+          },
+          {
+            "id": "2.7",
+            "title": "Managing MQ in a Coupling Facility Structure",
+            "shared_queues": "Configured with DEFINE QLOCAL(MYQUEUE) QSGDISP(SHARED).",
+            "coupling_facility": "Use CSQ5PQSG to define structures.",
+            "intra_group_queuing": "Enables queue manager communication within QSG without channels."
+          },
+          {
+            "id": "2.8",
+            "title": "Managing z/OS Listener Resources",
+            "listener_configuration": "DEFINE LISTENER(LISTENER1) PORT(1414).",
+            "monitoring": "DISPLAY LSSTATUS(LISTENER1)."
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "How do MQSC commands differ in execution between z/OS and traditional MQ?",
+            "options": [
+              "A: z/OS uses runmqsc, traditional uses console",
+              "B: z/OS uses console/ISPF, traditional uses runmqsc",
+              "C: Both use MQ Explorer",
+              "D: z/OS uses CSQUTIL, traditional uses ISPF",
+              "E: Both use JCL"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What z/OS console command is used to issue an MQSC command?",
+            "options": [
+              "A: S CSQ1MSTR",
+              "B: F CSQ1MSTR,DEFINE QLOCAL(MYQUEUE)",
+              "C: DISPLAY QMGR",
+              "D: CSQUTIL EXEC",
+              "E: START QMGR"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the syntax to define a local queue via the z/OS console?",
+            "options": [
+              "A: DEFINE QLOCAL(MYQUEUE)",
+              "B: F CSQ1MSTR,DEFINE QLOCAL(MYQUEUE)",
+              "C: START QLOCAL(MYQUEUE)",
+              "D: ALTER QMGR MYQUEUE",
+              "E: DISPLAY QUEUE(MYQUEUE)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of CSQOREXX in ISPF for MQ management?",
+            "options": [
+              "A: Formats log datasets",
+              "B: Provides REXX execs for ISPF panels",
+              "C: Starts queue managers",
+              "D: Configures SSL channels",
+              "E: Monitors SMF statistics"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you navigate to MQ resource management in ISPF?",
+            "options": [
+              "A: Run runmqsc",
+              "B: Execute CSQOREXX and select queue manager",
+              "C: Use MQ Console",
+              "D: Submit JCL batch job",
+              "E: Access via SMP/E"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the CSQUTIL utility?",
+            "options": [
+              "A: Defines QSGs",
+              "B: Manages queues in batch",
+              "C: Formats trace records",
+              "D: Configures SSL",
+              "E: Monitors listeners"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Write a JCL snippet to copy a queue using CSQUTIL.",
+            "options": [
+              "A: //CSQUTIL EXEC PGM=CSQUTIL,PARM='CSQ1'\nCOPY QLOCAL(SOURCE.Q) TO QLOCAL(TARGET.Q)",
+              "B: //CSQUTIL EXEC PGM=CSQYMSTR\nCOPY QLOCAL(SOURCE.Q)",
+              "C: //CSQUTIL EXEC PGM=CSQUTIL\nDEFINE QLOCAL(TARGET.Q)",
+              "D: //CSQUTIL EXEC PGM=CSQUTIL,PARM='CSQ1'\n//STEPLIB DD DSN=IBM.MQ.SCSQANLE,DISP=SHR\n//SYSPRINT DD SYSOUT=*\n//SYSIN DD *\nCOPY QLOCAL(SOURCE.Q) TO QLOCAL(TARGET.Q)\n/*",
+              "E: //CSQUTIL EXEC PGM=CSQJUFMT\nCOPY QLOCAL(SOURCE.Q)"
+            ],
+            "answer": "D"
+          },
+          {
+            "question": "What is the z/OS console command to start a queue manager?",
+            "options": [
+              "A: F CSQ1MSTR,START QMGR",
+              "B: S CSQ1MSTR",
+              "C: START CSQ1MSTR",
+              "D: DEFINE QMGR CSQ1",
+              "E: DISPLAY QMGR"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you stop a queue manager gracefully on z/OS?",
+            "options": [
+              "A: S CSQ1MSTR",
+              "B: F CSQ1MSTR,STOP QMGR MODE(QUIESCE)",
+              "C: STOP CSQ1MSTR",
+              "D: ALTER QMGR STOP",
+              "E: END QMGR"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command starts the channel initiator on z/OS?",
+            "options": [
+              "A: F CSQ1CHIN,START",
+              "B: S CSQ1CHIN",
+              "C: START CSQ1CHIN",
+              "D: DEFINE CHINIT",
+              "E: DISPLAY CHINIT"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the DISPLAY QSG command?",
+            "options": [
+              "A: Displays queue depth",
+              "B: Displays QSG status",
+              "C: Displays channel status",
+              "D: Displays listener status",
+              "E: Displays log status"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How does the RECOVER BSDS command assist in recovery?",
+            "options": [
+              "A: Restores page sets",
+              "B: Restores Bootstrap Dataset",
+              "C: Recovers shared queues",
+              "D: Formats log datasets",
+              "E: Configures SSL channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a shared queue, and how is it defined in MQSC?",
+            "options": [
+              "A: Queue for single QMgr, DEFINE QLOCAL(MYQUEUE)",
+              "B: Queue for multiple QMgrs, DEFINE QLOCAL(MYQUEUE) QSGDISP(SHARED)",
+              "C: Queue for channels, DEFINE CHANNEL(MYQUEUE)",
+              "D: Queue for logs, DEFINE QLOCAL(MYQUEUE) LOG",
+              "E: Queue for DLQ, ALTER QMGR DEADQ"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What z/OS component is required for shared queue functionality?",
+            "options": [
+              "A: VSAM datasets",
+              "B: Coupling Facility",
+              "C: SMF records",
+              "D: RACF profiles",
+              "E: Buffer pools"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is intra-group queuing (IGQ), and how does it work?",
+            "options": [
+              "A: Uses channels for QSG communication",
+              "B: Direct messaging within QSG via Coupling Facility",
+              "C: Configures SSL for queues",
+              "D: Manages log datasets",
+              "E: Monitors queue depth"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How does IGQ differ from traditional MQ channel communication?",
+            "options": [
+              "A: Uses channels for intra-QSG messaging",
+              "B: Bypasses channels for intra-QSG messaging",
+              "C: Requires MQ Explorer",
+              "D: Uses file-based logs",
+              "E: Configures page sets"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQSC command defines a listener on z/OS?",
+            "options": [
+              "A: START LISTENER(LISTENER1)",
+              "B: DEFINE LISTENER(LISTENER1) PORT(1414)",
+              "C: ALTER LISTENER(LISTENER1)",
+              "D: DISPLAY LSSTATUS(LISTENER1)",
+              "E: STOP LISTENER(LISTENER1)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you check the status of a listener using MQSC?",
+            "options": [
+              "A: START LISTENER(LISTENER1)",
+              "B: DEFINE LISTENER(LISTENER1)",
+              "C: DISPLAY LSSTATUS(LISTENER1)",
+              "D: ALTER LISTENER(LISTENER1)",
+              "E: STOP LISTENER(LISTENER1)"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the benefit of using ISPF over MQ Explorer for z/OS MQ management?",
+            "options": [
+              "A: Supports RPM installation",
+              "B: Integrates with z/OS native tools",
+              "C: Uses web-based interface",
+              "D: Formats trace records",
+              "E: Configures shared queues"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Why are z/OS-specific MQ commands like DISPLAY QSG unavailable in traditional MQ?",
+            "options": [
+              "A: Depend on Coupling Facility",
+              "B: Use file-based logs",
+              "C: Require MQ Explorer",
+              "D: Use RPM packages",
+              "E: Lack CSQUTIL support"
+            ],
+            "answer": "A"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "MQ Security, Monitoring, and Performance",
+        "enabled": true,
+        "duration": "1.5 hours",
+        "description": "This module covers securing MQ resources, monitoring queue manager activity, and optimizing performance on z/OS.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "Security",
+            "authenticating_users": {
+              "description": "Use RACF to define MQ resources.",
+              "examples": [
+                "RDEFINE MQQUEUE CSQ1.MYQUEUE UACC(NONE)",
+                "PERMIT CSQ1.MYQUEUE CLASS(MQQUEUE) ID(USER1) ACCESS(UPDATE)"
+              ]
+            },
+            "channel_security": {
+              "description": "Enable SSL for secure communication.",
+              "example": "ALTER CHANNEL(MYCHAN) CHLTYPE(SDR) SSLCIPH(TLS_RSA_WITH_AES_256_CBC_SHA256)",
+              "additional": "Configure certificates in RACF keyring."
+            },
+            "encryption": "Use Advanced Message Security (AMS) for message-level encryption.",
+            "security_violation_messages": "Example: CSQX599E indicates unauthorized access.",
+            "difference": "z/OS integrates with RACF, while traditional MQ uses OS user authentication or MQ-specific profiles."
+          },
+          {
+            "id": "3.2",
+            "title": "Monitoring and Messages",
+            "queue_manager_messages": "Logged to z/OS console, e.g., CSQ9022I for successful command completion.",
+            "interpreting_messages": "Use IBM MQ Messages manual to decode, e.g., CSQJ103E for log issues.",
+            "dead_letter_queue": {
+              "configure": "ALTER QMGR DEADQ(SYSTEM.DEAD.QUEUE).",
+              "monitor": "DISPLAY QUEUE(SYSTEM.DEAD.QUEUE) CURDEPTH."
+            }
+          },
+          {
+            "id": "3.3",
+            "title": "MQ Traces",
+            "enable_trace": "F CSQ1MSTR,START TRACE(GLOBAL) DEST(SMF).",
+            "format_trace": "Use CSQWDMP to format trace records.",
+            "difference": "z/OS traces integrate with SMF, unlike traditional MQ’s file-based traces."
+          },
+          {
+            "id": "3.4",
+            "title": "SMF for Statistics and Accounting",
+            "enable_smf": "Set STATIME=30 in ZPARM for 30-minute intervals.",
+            "records": [
+              "SMF Type 115 (queue manager stats)",
+              "SMF Type 116 (channel stats)"
+            ],
+            "analysis": "Use CSQ6SYSP to extract SMF data.",
+            "example": "DISPLAY SMFSTATS to view real-time stats."
+          },
+          {
+            "id": "3.5",
+            "title": "Performance Optimization",
+            "key_areas": [
+              "Buffer Pools: Increase buffers for high-throughput queues.",
+              "Log Management: Optimize LOGLOAD to reduce checkpoints.",
+              "Channel Tuning: Adjust BATCHSZ and DISCINT for channel performance."
+            ],
+            "tools": [
+              "IBM MQ Console",
+              "SMF reports",
+              "Third-party tools like IBM Omegamon"
+            ],
+            "difference": "z/OS performance leverages Coupling Facility and VSAM, unlike traditional MQ’s file system optimizations."
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is RACF, and how is it used for MQ authentication on z/OS?",
+            "options": [
+              "A: Formats logs for recovery",
+              "B: Authenticates users via profiles",
+              "C: Configures shared queues",
+              "D: Monitors SMF statistics",
+              "E: Manages buffer pools"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you define an MQ queue resource in RACF?",
+            "options": [
+              "A: DEFINE MQQUEUE CSQ1.MYQUEUE",
+              "B: RDEFINE MQQUEUE CSQ1.MYQUEUE UACC(NONE)",
+              "C: ALTER MQQUEUE CSQ1.MYQUEUE",
+              "D: PERMIT MQQUEUE CSQ1.MYQUEUE",
+              "E: DISPLAY MQQUEUE CSQ1.MYQUEUE"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQSC command grants a user access to a queue in RACF?",
+            "options": [
+              "A: ALTER QMGR ACCESS(USER1)",
+              "B: DEFINE ACCESS USER1",
+              "C: None; use RACF PERMIT command",
+              "D: GRANT MQQUEUE USER1",
+              "E: SET MQQUEUE USER1"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "How do you enable SSL for a channel in MQ for z/OS?",
+            "options": [
+              "A: DEFINE CHANNEL(MYCHAN) SSL",
+              "B: ALTER CHANNEL(MYCHAN) CHLTYPE(SDR) SSLCIPH(TLS_RSA_WITH_AES_256_CBC_SHA256)",
+              "C: START CHANNEL(MYCHAN) SSL",
+              "D: SET CHANNEL(MYCHAN) SSL",
+              "E: DISPLAY CHANNEL(MYCHAN) SSL"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a cipher suite, and why is it important for channel security?",
+            "options": [
+              "A: Manages queue depth",
+              "B: Specifies encryption algorithm for SSL/TLS",
+              "C: Formats log datasets",
+              "D: Defines shared queues",
+              "E: Monitors SMF statistics"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is Advanced Message Security (AMS), and what does it protect?",
+            "options": [
+              "A: Protects channels",
+              "B: Protects message content in queues",
+              "C: Manages logs",
+              "D: Configures QSGs",
+              "E: Monitors listeners"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the CSQX599E message indicate?",
+            "options": [
+              "A: Successful command completion",
+              "B: Log dataset issue",
+              "C: Unauthorized access attempt",
+              "D: Channel failure",
+              "E: Buffer pool error"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "How would you resolve a CSQX599E security violation?",
+            "options": [
+              "A: Restart the queue manager",
+              "B: Format log datasets",
+              "C: Verify and grant RACF permissions",
+              "D: Define a new page set",
+              "E: Configure a shared queue"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is the purpose of the CSQ9022I message?",
+            "options": [
+              "A: Indicates log error",
+              "B: Indicates successful command completion",
+              "C: Indicates security violation",
+              "D: Indicates channel failure",
+              "E: Indicates trace activation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the CSQJ103E message signify, and how is it addressed?",
+            "options": [
+              "A: Security violation, grant RACF access",
+              "B: Log dataset issue, allocate more space",
+              "C: Channel failure, restart channel",
+              "D: Buffer pool error, increase buffers",
+              "E: QSG issue, redefine QSG"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you configure a dead-letter queue (DLQ) for a queue manager?",
+            "options": [
+              "A: DEFINE QLOCAL(SYSTEM.DEAD.QUEUE)",
+              "B: ALTER QMGR DEADQ(SYSTEM.DEAD.QUEUE)",
+              "C: START QUEUE(SYSTEM.DEAD.QUEUE)",
+              "D: DISPLAY QUEUE(SYSTEM.DEAD.QUEUE)",
+              "E: SET QMGR DLQ(SYSTEM.DEAD.QUEUE)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQSC command checks the current depth of the DLQ?",
+            "options": [
+              "A: ALTER QUEUE(SYSTEM.DEAD.QUEUE)",
+              "B: DISPLAY QUEUE(SYSTEM.DEAD.QUEUE) CURDEPTH",
+              "C: DEFINE QUEUE(SYSTEM.DEAD.QUEUE)",
+              "D: START QUEUE(SYSTEM.DEAD.QUEUE)",
+              "E: STOP QUEUE(SYSTEM.DEAD.QUEUE)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How do you start a global trace on a queue manager?",
+            "options": [
+              "A: START TRACE(GLOBAL) DEST(SMF)",
+              "B: F CSQ1MSTR,START TRACE(GLOBAL) DEST(SMF)",
+              "C: DEFINE TRACE(GLOBAL)",
+              "D: DISPLAY TRACE(GLOBAL)",
+              "E: ALTER TRACE(GLOBAL)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of the CSQWDMP utility in trace management?",
+            "options": [
+              "A: Defines QSGs",
+              "B: Formats trace records",
+              "C: Manages queues",
+              "D: Configures SSL",
+              "E: Monitors SMF"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How does z/OS trace integration with SMF differ from traditional MQ?",
+            "options": [
+              "A: Uses file-based traces",
+              "B: Stores traces in SMF datasets",
+              "C: Requires MQ Explorer",
+              "D: Uses RPM packages",
+              "E: Lacks trace support"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What ZPARM parameter controls SMF statistics collection intervals?",
+            "options": [
+              "A: LOGLOAD",
+              "B: STATIME",
+              "C: BATCHSZ",
+              "D: DISCINT",
+              "E: BUFFERS"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What are SMF Type 115 and Type 116 records used for?",
+            "options": [
+              "A: Type 115: channel stats, Type 116: QMgr stats",
+              "B: Type 115: QMgr stats, Type 116: channel stats",
+              "C: Type 115: log stats, Type 116: trace stats",
+              "D: Type 115: security stats, Type 116: queue stats",
+              "E: Type 115: buffer stats, Type 116: QSG stats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How does buffer pool sizing impact MQ performance on z/OS?",
+            "options": [
+              "A: Increases log checkpoints",
+              "B: Reduces disk I/O",
+              "C: Configures SSL",
+              "D: Manages shared queues",
+              "E: Formats traces"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What channel parameters can be tuned for better performance?",
+            "options": [
+              "A: LOGLOAD, STATIME",
+              "B: BATCHSZ, DISCINT",
+              "C: PSID, BUFFERS",
+              "D: QSGDISP, PORT",
+              "E: CSQUTIL, CSQWDMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Name two tools for monitoring MQ performance on z/OS.",
+            "options": [
+              "A: CSQUTIL, CSQJUFMT",
+              "B: MQ Console, Omegamon",
+              "C: CSQ5PQSG, CSQ6SYSP",
+              "D: runmqsc, ISPF",
+              "E: SMP/E, RACF"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Mastery Test",
+        "enabled": true,
+        "duration": "30 minutes",
+        "format": "30 questions (all multiple-choice)",
+        "questions": [
+          {
+            "type": "multiple_choice",
+            "question": "What utility formats log datasets for MQ on z/OS?",
+            "options": [
+              "A: CSQUTIL",
+              "B: CSQJUFMT",
+              "C: CSQWDMP",
+              "D: CSQ5PQSG",
+              "E: CSQ6SYSP"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Which command defines a buffer pool?",
+            "options": [
+              "A: DEFINE BUFFPOOL(0) BUFFERS(1000)",
+              "B: ALTER BUFFPOOL(0)",
+              "C: DISPLAY BUFFPOOL",
+              "D: SET BUFFPOOL",
+              "E: START BUFFPOOL"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What is the purpose of the DISPLAY QSG command?",
+            "options": [
+              "A: Displays queue status",
+              "B: Displays queue sharing group status",
+              "C: Displays channel status",
+              "D: Displays listener status",
+              "E: Displays log status"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What does the CSQ9022I message indicate?",
+            "options": [
+              "A: Security violation",
+              "B: Successful command completion",
+              "C: Log error",
+              "D: Channel failure",
+              "E: Buffer pool error"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Which SMF record type provides channel statistics?",
+            "options": [
+              "A: Type 115",
+              "B: Type 116",
+              "C: Type 117",
+              "D: Type 118",
+              "E: Type 119"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What is the role of the Coupling Facility in MQ for z/OS?",
+            "options": [
+              "A: Message encryption",
+              "B: Shared queue management",
+              "C: Log storage",
+              "D: Channel initiation",
+              "E: Performance monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "How is intra-group queuing (IGQ) enabled?",
+            "options": [
+              "A: By defining channels",
+              "B: By using a QSG",
+              "C: By configuring listeners",
+              "D: By enabling SSL",
+              "E: By formatting logs"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What utility defines a QSG structure?",
+            "options": [
+              "A: CSQUTIL",
+              "B: CSQ5PQSG",
+              "C: CSQWDMP",
+              "D: CSQJUFMT",
+              "E: CSQ6SYSP"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Which command starts a listener?",
+            "options": [
+              "A: START LISTENER(LISTENER1)",
+              "B: DEFINE LISTENER(LISTENER1)",
+              "C: ALTER LISTENER(LISTENER1)",
+              "D: DISPLAY LSSTATUS(LISTENER1)",
+              "E: STOP LISTENER(LISTENER1)"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What does the LOGLOAD parameter control?",
+            "options": [
+              "A: Buffer pool size",
+              "B: Log checkpoint frequency",
+              "C: Channel batch size",
+              "D: SMF interval",
+              "E: Queue depth"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What is the purpose of CSQUTIL?",
+            "options": [
+              "A: Formats traces",
+              "B: Manages queues in batch",
+              "C: Defines QSGs",
+              "D: Enables SSL",
+              "E: Monitors listeners"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "How do you stop a channel initiator?",
+            "options": [
+              "A: F CSQ1CHIN,STOP",
+              "B: S CSQ1CHIN",
+              "C: STOP CHINIT",
+              "D: ALTER CHINIT STOP",
+              "E: DISPLAY CHINIT"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What RACF command restricts queue access?",
+            "options": [
+              "A: RDEFINE MQQUEUE",
+              "B: ALTER MQQUEUE",
+              "C: DISPLAY MQQUEUE",
+              "D: SET MQQUEUE",
+              "E: DEFINE MQQUEUE"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What is the default DLQ name?",
+            "options": [
+              "A: SYSTEM.ADMIN.QUEUE",
+              "B: SYSTEM.DEAD.QUEUE",
+              "C: SYSTEM.LOG.QUEUE",
+              "D: SYSTEM.CHANNEL.QUEUE",
+              "E: SYSTEM.MYQUEUE"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Which tool formats SMF data for MQ?",
+            "options": [
+              "A: CSQ6SYSP",
+              "B: CSQWDMP",
+              "C: CSQUTIL",
+              "D: CSQ5PQSG",
+              "E: CSQJUFMT"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a JCL snippet to start a queue manager named CSQ1.",
+            "options": [
+              "A: //CSQ1MSTR EXEC PGM=CSQYMSTR,REGION=0M\n//STEPLIB DD DSN=IBM.MQ.SCSQANLE,DISP=SHR\n//CSQP0000 DD DSN=CSQ1.PAGESET0,DISP=SHR\n//CSQLOG DD DSN=CSQ1.LOG1,DISP=SHR\n//CSQB001 DD DSN=CSQ1.BSDS01,DISP=SHR",
+              "B: //CSQ1MSTR EXEC PGM=CSQUTIL\n//STEPLIB DD DSN=IBM.MQ.SCSQANLE",
+              "C: //CSQ1MSTR EXEC PGM=CSQYMSTR\n//SYSIN DD * START QMGR",
+              "D: //CSQ1MSTR EXEC PGM=CSQJUFMT\n//CSQLOG DD DSN=CSQ1.LOG1",
+              "E: //CSQ1MSTR EXEC PGM=CSQYMSTR\n//STEPLIB DD DSN=CSQ1.PAGESET0"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Define a local queue named TEST.Q using MQSC via the z/OS console.",
+            "options": [
+              "A: DEFINE QLOCAL(TEST.Q)",
+              "B: F CSQ1MSTR,DEFINE QLOCAL(TEST.Q)",
+              "C: ALTER QMGR TEST.Q",
+              "D: START QLOCAL(TEST.Q)",
+              "E: DISPLAY QLOCAL(TEST.Q)"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a CSQUTIL JCL to copy QLOCAL(SOURCE.Q) to QLOCAL(TARGET.Q).",
+            "options": [
+              "A: //CSQUTIL EXEC PGM=CSQUTIL,PARM='CSQ1'\n//STEPLIB DD DSN=IBM.MQ.SCSQANLE,DISP=SHR\n//SYSPRINT DD SYSOUT=*\n//SYSIN DD *\nCOPY QLOCAL(SOURCE.Q) TO QLOCAL(TARGET.Q)\n/*",
+              "B: //CSQUTIL EXEC PGM=CSQYMSTR\n//SYSIN DD * COPY QLOCAL",
+              "C: //CSQUTIL EXEC PGM=CSQUTIL\n//SYSIN DD * DEFINE QLOCAL(TARGET.Q)",
+              "D: //CSQUTIL EXEC PGM=CSQJUFMT\n//COPY QLOCAL(SOURCE.Q)",
+              "E: //CSQUTIL EXEC PGM=CSQUTIL\n//STEPLIB DD DSN=CSQ1.PAGESET0"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Configure RACF to grant USER1 update access to queue CSQ1.MYQUEUE.",
+            "options": [
+              "A: RDEFINE MQQUEUE CSQ1.MYQUEUE UACC(NONE)\nPERMIT CSQ1.MYQUEUE CLASS(MQQUEUE) ID(USER1) ACCESS(UPDATE)\nSETROPTS RACLIST(MQQUEUE) REFRESH",
+              "B: ALTER MQQUEUE CSQ1.MYQUEUE USER1",
+              "C: DEFINE MQQUEUE CSQ1.MYQUEUE USER1",
+              "D: GRANT MQQUEUE CSQ1.MYQUEUE TO USER1",
+              "E: SET MQQUEUE CSQ1.MYQUEUE USER1"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write an MQSC command to enable SSL for a sender channel MYCHAN.",
+            "options": [
+              "A: DEFINE CHANNEL(MYCHAN) SSL",
+              "B: ALTER CHANNEL(MYCHAN) CHLTYPE(SDR) SSLCIPH(TLS_RSA_WITH_AES_256_CBC_SHA256)",
+              "C: START CHANNEL(MYCHAN) SSL",
+              "D: SET CHANNEL(MYCHAN) SSL",
+              "E: DISPLAY CHANNEL(MYCHAN) SSL"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Define a page set with PSID(01) and dataset QMGR.PAGESET1.",
+            "options": [
+              "A: DEFINE QLOCAL(QMGR.PAGESET1)",
+              "B: ALTER QMGR PSID(01)",
+              "C: DEFINE PSID(01) DSN(QMGR.PAGESET1)",
+              "D: START PAGESET(01)",
+              "E: DISPLAY PSID(01)"
+            ],
+            "answer": "C"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a command to start a global trace to SMF for queue manager CSQ1.",
+            "options": [
+              "A: START TRACE(GLOBAL) DEST(SMF)",
+              "B: F CSQ1MSTR,START TRACE(GLOBAL) DEST(SMF)",
+              "C: DEFINE TRACE(GLOBAL)",
+              "D: DISPLAY TRACE(GLOBAL)",
+              "E: ALTER TRACE(GLOBAL)"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Configure a listener named LISTENER1 on port 1415 using MQSC.",
+            "options": [
+              "A: START LISTENER(LISTENER1) PORT(1415)",
+              "B: DEFINE LISTENER(LISTENER1) PORT(1415)",
+              "C: ALTER LISTENER(LISTENER1) PORT(1415)",
+              "D: DISPLAY LSSTATUS(LISTENER1)",
+              "E: STOP LISTENER(LISTENER1)"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a JCL snippet to format a log dataset using CSQJUFMT.",
+            "options": [
+              "A: //CSQJUFMT EXEC PGM=CSQJUFMT\n//STEPLIB DD DSN=IBM.MQ.SCSQANLE,DISP=SHR\n//SYSPRINT DD SYSOUT=*\n//CSQLOG DD DSN=CSQ1.LOG1,DISP=SHR",
+              "B: //CSQJUFMT EXEC PGM=CSQYMSTR\n//CSQLOG DD DSN=CSQ1.LOG1",
+              "C: //CSQJUFMT EXEC PGM=CSQUTIL\n//SYSIN DD * FORMAT LOG",
+              "D: //CSQJUFMT EXEC PGM=CSQJUFMT\n//STEPLIB DD DSN=CSQ1.PAGESET0",
+              "E: //CSQJUFMT EXEC PGM=CSQWDMP\n//CSQLOG DD DSN=CSQ1.LOG1"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Define a shared queue MY.SHARED.Q in a QSG using MQSC.",
+            "options": [
+              "A: DEFINE QLOCAL(MY.SHARED.Q)",
+              "B: DEFINE QLOCAL(MY.SHARED.Q) QSGDISP(SHARED)",
+              "C: ALTER QMGR MY.SHARED.Q",
+              "D: START QLOCAL(MY.SHARED.Q)",
+              "E: DISPLAY QLOCAL(MY.SHARED.Q)"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a command to display the status of listener LISTENER1.",
+            "options": [
+              "A: START LISTENER(LISTENER1)",
+              "B: DEFINE LISTENER(LISTENER1)",
+              "C: DISPLAY LSSTATUS(LISTENER1)",
+              "D: ALTER LISTENER(LISTENER1)",
+              "E: STOP LISTENER(LISTENER1)"
+            ],
+            "answer": "C"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Configure the DLQ as SYSTEM.DEAD.QUEUE for a queue manager.",
+            "options": [
+              "A: DEFINE QLOCAL(SYSTEM.DEAD.QUEUE)",
+              "B: ALTER QMGR DEADQ(SYSTEM.DEAD.QUEUE)",
+              "C: START QUEUE(SYSTEM.DEAD.QUEUE)",
+              "D: DISPLAY QUEUE(SYSTEM.DEAD.QUEUE)",
+              "E: SET QMGR DLQ(SYSTEM.DEAD.QUEUE)"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a ZPARM parameter to set SMF statistics interval to 15 minutes.",
+            "options": [
+              "A: LOGLOAD=15",
+              "B: STATIME=15",
+              "C: BATCHSZ=15",
+              "D: DISCINT=15",
+              "E: BUFFERS=15"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Write a command to stop a queue manager gracefully.",
+            "options": [
+              "A: S CSQ1MSTR",
+              "B: F CSQ1MSTR,STOP QMGR MODE(QUIESCE)",
+              "C: STOP CSQ1MSTR",
+              "D: ALTER QMGR STOP",
+              "E: END QMGR"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Describe steps to resolve a CSQJ103E log error.",
+            "options": [
+              "A: Check log dataset, allocate space, recover BSDS, restart QMgr",
+              "B: Grant RACF permissions, refresh profiles",
+              "C: Redefine shared queue, restart channel",
+              "D: Increase buffer pool size, tune channels",
+              "E: Format trace records, analyze SMF"
+            ],
+            "answer": "A"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Internal Test",
+        "enabled": true,
+        "duration": "5 minutes",
+        "format": "5 questions (all multiple-choice)",
+        "questions": [
+          {
+            "type": "multiple_choice",
+            "question": "What utility formats log datasets for MQ on z/OS?",
+            "options": [
+              "A: CSQUTIL",
+              "B: CSQJUFMT",
+              "C: CSQWDMP",
+              "D: CSQ5PQSG",
+              "E: CSQ6SYSP"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Which command defines a buffer pool?",
+            "options": [
+              "A: DEFINE BUFFPOOL(0) BUFFERS(1000)",
+              "B: ALTER BUFFPOOL(0)",
+              "C: DISPLAY BUFFPOOL",
+              "D: SET BUFFPOOL",
+              "E: START BUFFPOOL"
+            ],
+            "answer": "A"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What is the purpose of the DISPLAY QSG command?",
+            "options": [
+              "A: Displays queue status",
+              "B: Displays queue sharing group status",
+              "C: Displays channel status",
+              "D: Displays listener status",
+              "E: Displays log status"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "What does the CSQ9022I message indicate?",
+            "options": [
+              "A: Security violation",
+              "B: Successful command completion",
+              "C: Log error",
+              "D: Channel failure",
+              "E: Buffer pool error"
+            ],
+            "answer": "B"
+          },
+          {
+            "type": "multiple_choice",
+            "question": "Which SMF record type provides channel statistics?",
+            "options": [
+              "A: Type 115",
+              "B: Type 116",
+              "C: Type 117",
+              "D: Type 118",
+              "E: Type 119"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "MQ Queue Sharing Groups",
+        "enabled": true,
+        "duration": "30 minutes",
+        "description": "This module covers the creation, configuration, and management of Queue Sharing Groups (QSGs) in IBM MQ for z/OS, focusing on setup for multiple Queue Managers in a Sysplex, leveraging Coupling Facility and DB2 for high availability.",
+        "sections": [
+          {
+            "id": "6.1",
+            "title": "Introduction to Queue Sharing Groups",
+            "overview": "QSGs enable multiple Queue Managers to share queues and messages within a z/OS Sysplex, using Coupling Facility (CF) and DB2 for data sharing and high availability.",
+            "benefit": "Improves scalability and failover by allowing shared queue access across Queue Managers."
+          },
+          {
+            "id": "6.2",
+            "title": "Prerequisites for QSG Setup",
+            "requirements": [
+              "IBM MQ 9.2 or later on z/OS in a Sysplex.",
+              "Access to a Coupling Facility with defined structures.",
+              "DB2 data-sharing group for shared queue storage."
+            ],
+            "automation": "Use tools like Ansible, Python, or REXX to script setup."
+          },
+          {
+            "id": "6.3",
+            "title": "Defining a QSG",
+            "mqsc_command": "ALTER QMGR QSGNAME(QSGA) to assign a QSG name to Queue Managers.",
+            "example": "Run on each Queue Manager (e.g., QMGR1, QMGR2) via z/OS console or ISPF."
+          },
+          {
+            "id": "6.4",
+            "title": "Configuring DB2 for Shared Queues",
+            "description": "Configure a DB2 data-sharing group (e.g., DB2GRP1) for storing shared queue data.",
+            "jcl_example": "//CSQ6SYSP DB2NAME(DB2GRP1) DB2SERV(DB2S1)",
+            "automation": "Automate JCL updates for CSQZPARM using scripts."
+          },
+          {
+            "id": "6.5",
+            "title": "Defining Coupling Facility Structures",
+            "description": "Define CF structures (e.g., QSGA_ADMIN, QSGA_APPL) in the Sysplex CFRM policy for queue and admin data.",
+            "example": "STRUCTURE NAME(QSGA_ADMIN) SIZE(20480) INITSIZE(10240)",
+            "utility": "Use CSQ5PQSG to define QSG structures."
+          },
+          {
+            "id": "6.6",
+            "title": "Enabling QSG on Queue Managers",
+            "description": "Update CHINIT parameters and restart Queue Managers to join the QSG.",
+            "commands": [
+              "STOP QMGR",
+              "START QMGR"
+            ],
+            "automation": "Script restarts using Ansible-driven JCL."
+          },
+          {
+            "id": "6.7",
+            "title": "Defining Shared Queues",
+            "mqsc_command": "DEFINE QLOCAL(SHARED.Q1) QSGDISP(SHARED) CFSTRUCT(QSGA_APPL)",
+            "purpose": "Allows multiple Queue Managers to access the same queue."
+          },
+          {
+            "id": "6.8",
+            "title": "Testing and Monitoring QSGs",
+            "testing": "Put and get messages on shared queues from multiple Queue Managers.",
+            "monitoring": "Use SMF 115/116 records or IBM MQ Console to verify performance and access."
+          },
+          {
+            "id": "6.9",
+            "title": "Naming Conventions and Limits",
+            "qsg_name": "1–4 characters, uppercase alphanumeric (e.g., QSGA).",
+            "qmgr_name": "Unique 1–4 characters, uppercase alphanumeric (e.g., QMGR1).",
+            "cf_structure": "Up to 16 characters, starting with QSG name (e.g., QSGA_ADMIN).",
+            "max_qmgrs": "Up to 32 Queue Managers per QSG, constrained by CF and DB2 capacity."
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the primary purpose of a Queue Sharing Group (QSG) in IBM MQ for z/OS?",
+            "options": [
+              "A: Manages log datasets",
+              "B: Enables shared queue access across Queue Managers",
+              "C: Configures SSL channels",
+              "D: Formats trace records",
+              "E: Monitors SMF statistics"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What z/OS feature does a QSG rely on for shared queue functionality?",
+            "options": [
+              "A: VSAM datasets",
+              "B: Coupling Facility",
+              "C: RACF profiles",
+              "D: Buffer pools",
+              "E: SMF records"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the maximum number of Queue Managers in a QSG?",
+            "options": [
+              "A: 8",
+              "B: 16",
+              "C: 32",
+              "D: 64",
+              "E: 128"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "Which utility is used to define a QSG structure?",
+            "options": [
+              "A: CSQUTIL",
+              "B: CSQJUFMT",
+              "C: CSQWDMP",
+              "D: CSQ5PQSG",
+              "E: CSQ6SYSP"
+            ],
+            "answer": "D"
+          },
+          {
+            "question": "What MQSC command assigns a QSG name to a Queue Manager?",
+            "options": [
+              "A: DEFINE QMGR QSGNAME(QSGA)",
+              "B: ALTER QMGR QSGNAME(QSGA)",
+              "C: START QMGR QSGNAME(QSGA)",
+              "D: DISPLAY QMGR QSGNAME",
+              "E: SET QMGR QSGNAME(QSGA)"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a prerequisite for setting up a QSG in a Sysplex?",
+            "options": [
+              "A: MQ Explorer installed",
+              "B: DB2 data-sharing group configured",
+              "C: File-based logs enabled",
+              "D: SSL channels defined",
+              "E: SMF statistics disabled"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "How many characters can a QSG name have?",
+            "options": [
+              "A: 1–4",
+              "B: 1–8",
+              "C: 1–16",
+              "D: 1–32",
+              "E: 1–48"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is the naming requirement for a QSG name?",
+            "options": [
+              "A: Uppercase alphanumeric, no special characters",
+              "B: Lowercase alphanumeric, with dashes",
+              "C: Mixed case, with underscores",
+              "D: Uppercase only, with periods",
+              "E: Any characters, up to 8"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is the purpose of Coupling Facility structures in a QSG?",
+            "options": [
+              "A: Store log datasets",
+              "B: Store shared queue and admin data",
+              "C: Manage channel connections",
+              "D: Format SMF records",
+              "E: Configure RACF profiles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the maximum length of a Coupling Facility structure name?",
+            "options": [
+              "A: 4 characters",
+              "B: 8 characters",
+              "C: 16 characters",
+              "D: 32 characters",
+              "E: 48 characters"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "How is a shared queue defined in MQSC?",
+            "options": [
+              "A: DEFINE QLOCAL(SHARED.Q1) QSGDISP(SHARED) CFSTRUCT(QSGA_APPL)",
+              "B: DEFINE QLOCAL(SHARED.Q1) QSGNAME(QSGA)",
+              "C: ALTER QMGR SHARED.Q1",
+              "D: START QLOCAL(SHARED.Q1)",
+              "E: DISPLAY QLOCAL(SHARED.Q1)"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What z/OS console command restarts a Queue Manager after QSG configuration?",
+            "options": [
+              "A: F CSQ1MSTR,START QMGR",
+              "B: S CSQ1MSTR",
+              "C: STOP QMGR, START QMGR",
+              "D: ALTER QMGR START",
+              "E: DISPLAY QMGR"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "Which component stores shared queue data in a QSG?",
+            "options": [
+              "A: VSAM datasets",
+              "B: DB2 data-sharing group",
+              "C: SMF records",
+              "D: RACF profiles",
+              "E: Buffer pools"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What JCL parameter configures DB2 for a QSG?",
+            "options": [
+              "A: DB2NAME(DB2GRP1) DB2SERV(DB2S1)",
+              "B: QSGNAME(QSGA)",
+              "C: CFSTRUCT(QSGA_APPL)",
+              "D: LOGLOAD=500000",
+              "E: STATIME=30"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "How do you verify QSG functionality?",
+            "options": [
+              "A: Check SMF statistics",
+              "B: Put/get messages on shared queues from multiple QMgrs",
+              "C: Restart channel initiator",
+              "D: Format log datasets",
+              "E: Configure SSL channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the naming convention for Queue Managers in a QSG?",
+            "options": [
+              "A: 1–8 characters, mixed case",
+              "B: 1–4 characters, uppercase alphanumeric",
+              "C: 1–16 characters, with special characters",
+              "D: 1–32 characters, lowercase only",
+              "E: 1–48 characters, any format"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What utility can automate QSG setup tasks?",
+            "options": [
+              "A: CSQJUFMT",
+              "B: Ansible",
+              "C: CSQWDMP",
+              "D: CSQ6SYSP",
+              "E: runmqsc"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a practical limit for Queue Managers in a QSG due to resource constraints?",
+            "options": [
+              "A: 2–4",
+              "B: 4–8",
+              "C: 8–16",
+              "D: 16–32",
+              "E: 32–64"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What MQSC command displays QSG status?",
+            "options": [
+              "A: DISPLAY QMGR",
+              "B: DISPLAY QSG",
+              "C: DISPLAY QUEUE",
+              "D: DISPLAY CHSTATUS",
+              "E: DISPLAY LSSTATUS"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Why are QSGs unique to IBM MQ for z/OS?",
+            "options": [
+              "A: Use file-based logs",
+              "B: Leverage Parallel Sysplex and Coupling Facility",
+              "C: Support MQ Explorer",
+              "D: Use RPM packages",
+              "E: Require CSQUTIL"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Create a queue manager using provided JCL.",
+        "Issue MQSC commands via ISPF to define a queue and listener.",
+        "Configure RACF for queue access and enable SMF for statistics.",
+        "Set up a Queue Sharing Group with two Queue Managers and a shared queue."
+      ],
+      "resources": [
+        "IBM MQ for z/OS Documentation: IBM MQ Knowledge Center.",
+        "Sample JCL and CSQUTIL scripts provided in course materials."
+      ],
+      "environment": "Access to a z/OS system with IBM MQ, ISPF, and RACF for labs."
+    }
+  }
+}
