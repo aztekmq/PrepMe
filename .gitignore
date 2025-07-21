@@ -1,0 +1,8 @@
+__pycache__/
+.flask_session/
+venv/
+*.log
+scores.db
+secret.key
+tailwind.config.js
+utils/__pycache__/
