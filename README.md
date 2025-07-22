@@ -27,15 +27,16 @@ Welcome to **PrepMe**, a full-stack Flask web application designed for dynamic f
 * ✅ Real-time quiz with score tracking
 * ❌ Missed question review
 * 🔄 Admin interface to edit questions and enable/disable modules
-* 🌓 Full dark mode support
 * 🔍 Searchable help page with toggleable themes
 
 ---
 
 ## 📸 Demo
 
-![Flashcard Quiz Screenshot](docs/screenshot-quiz.png)
-![Scoreboard Screenshot](docs/screenshot-scoreboard.png)
+![PrepMe Screenshot](static/home.png)
+![Select Module Screenshot](static/module-select.png)
+![Select Course Screenshot](static/select-course.png)
+![Manage Modules Screenshot](static/manage-modules.png)
 
 ---
 
