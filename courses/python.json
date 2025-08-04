@@ -1123,10 +1123,10 @@
         ],
         "knowledge_check": [
           {
-            "question": "What library integrates Python with IBM MQ?",
+            "question": "What library integrates Python with RabbitMQ?",
             "options": [
               "A: requests",
-              "B: pymqi",
+              "B: pika",
               "C: numpy",
               "D: asyncio",
               "E: cProfile"
@@ -1134,10 +1134,10 @@
             "answer": "B"
           },
           {
-            "question": "What does pymqi interact with?",
+            "question": "What does pika interact with?",
             "options": [
               "A: File systems",
-              "B: MQ queues",
+              "B: Message queues",
               "C: Network routers",
               "D: Databases",
               "E: Memory blocks"
@@ -1145,10 +1145,10 @@
             "answer": "B"
           },
           {
-            "question": "What triggers ACE message flows?",
+            "question": "What triggers asynchronous message processing?",
             "options": [
               "A: File compression",
-              "B: REST API",
+              "B: asyncio tasks",
               "C: Network routing",
               "D: Data encryption",
               "E: Memory allocation"
@@ -1156,7 +1156,7 @@
             "answer": "B"
           },
           {
-            "question": "What is a use case for pymqi?",
+            "question": "What is a use case for pika?",
             "options": [
               "A: File compression",
               "B: Sending messages to queues",
@@ -1167,10 +1167,10 @@
             "answer": "B"
           },
           {
-            "question": "What does an MQ Node connect to in ACE?",
+            "question": "What manages message queue connections in pika?",
             "options": [
               "A: File systems",
-              "B: Queue manager",
+              "B: Connection channel",
               "C: Network routers",
               "D: Databases",
               "E: Memory blocks"
@@ -1178,7 +1178,7 @@
             "answer": "B"
           },
           {
-            "question": "What handles MQ connection errors?",
+            "question": "What handles connection errors in messaging?",
             "options": [
               "A: try-except",
               "B: collections",
@@ -1189,10 +1189,10 @@
             "answer": "A"
           },
           {
-            "question": "What monitors queue depth in IBM MQ?",
+            "question": "What monitors message queue depth in RabbitMQ?",
             "options": [
               "A: requests",
-              "B: pymqi",
+              "B: pika",
               "C: numpy",
               "D: asyncio",
               "E: cProfile"
@@ -1211,10 +1211,10 @@
             "answer": "B"
           },
           {
-            "question": "What does REST API monitor in ACE?",
+            "question": "What does REST API monitor in a messaging system?",
             "options": [
               "A: File sizes",
-              "B: Server status",
+              "B: Service status",
               "C: Network traffic",
               "D: Memory usage",
               "E: CPU cycles"
@@ -1222,7 +1222,7 @@
             "answer": "B"
           },
           {
-            "question": "What is a common MQ integration task?",
+            "question": "What is a common message queue integration task?",
             "options": [
               "A: File compression",
               "B: Queue messaging",
@@ -1233,10 +1233,10 @@
             "answer": "B"
           },
           {
-            "question": "What does pymqi connect to?",
+            "question": "What does pika connect to in RabbitMQ?",
             "options": [
               "A: File systems",
-              "B: Queue manager",
+              "B: Message broker",
               "C: Network routers",
               "D: Databases",
               "E: Memory blocks"
@@ -1244,10 +1244,10 @@
             "answer": "B"
           },
           {
-            "question": "What is a use case for ACE integration?",
+            "question": "What is a use case for async integration?",
             "options": [
               "A: File compression",
-              "B: Message flow automation",
+              "B: Asynchronous workflows",
               "C: Network routing",
               "D: Data encryption",
               "E: Memory allocation"
@@ -1255,7 +1255,7 @@
             "answer": "B"
           },
           {
-            "question": "What does logging track in MQ integrations?",
+            "question": "What does logging track in integrations?",
             "options": [
               "A: File sizes",
               "B: Integration failures",
@@ -1266,7 +1266,7 @@
             "answer": "B"
           },
           {
-            "question": "What does pymqi retrieve?",
+            "question": "What does pika retrieve in RabbitMQ?",
             "options": [
               "A: File sizes",
               "B: Queue depth",
@@ -1277,7 +1277,7 @@
             "answer": "B"
           },
           {
-            "question": "What is a benefit of try-except in MQ?",
+            "question": "What is a benefit of try-except in messaging?",
             "options": [
               "A: Increases complexity",
               "B: Handles errors robustly",
@@ -1288,10 +1288,10 @@
             "answer": "B"
           },
           {
-            "question": "What does REST API trigger in ACE?",
+            "question": "What does asyncio enable in integrations?",
             "options": [
               "A: File compression",
-              "B: Message flows",
+              "B: Asynchronous messaging",
               "C: Network routing",
               "D: Data encryption",
               "E: Memory allocation"
@@ -1299,7 +1299,7 @@
             "answer": "B"
           },
           {
-            "question": "What is a common ACE integration task?",
+            "question": "What is a common integration task?",
             "options": [
               "A: File compression",
               "B: Automating workflows",
@@ -1310,7 +1310,7 @@
             "answer": "B"
           },
           {
-            "question": "What does pymqi enable?",
+            "question": "What does pika enable in RabbitMQ?",
             "options": [
               "A: File compression",
               "B: Queue interactions",
@@ -1321,10 +1321,10 @@
             "answer": "B"
           },
           {
-            "question": "What monitors ACE server performance?",
+            "question": "What monitors messaging system performance?",
             "options": [
               "A: requests",
-              "B: REST API",
+              "B: Prometheus client",
               "C: numpy",
               "D: asyncio",
               "E: cProfile"
@@ -1332,7 +1332,7 @@
             "answer": "B"
           },
           {
-            "question": "What is a benefit of MQ integration?",
+            "question": "What is a benefit of message queue integration?",
             "options": [
               "A: Reduces connectivity",
               "B: Enables reliable messaging",
