@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "Advanced IBM MQ Troubleshooting",
+    "duration": "10 hours",
+    "audience": [
+      "Experienced IT professionals",
+      "Integration specialists",
+      "Hackers and PhD-level computer scientists",
+      "IBM MQ administrators preparing for advanced certifications"
+    ],
+    "prerequisites": "Intermediate knowledge of IBM MQ administration, familiarity with Linux/Windows command-line tools, and experience with networking protocols. Basic understanding of message queuing concepts and IBM MQ v9 or later is required.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Diagnostic Tools and Log Analysis",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module explores advanced diagnostic tools and log analysis techniques for identifying and resolving IBM MQ issues, including trace logs, FFDC, and error code interpretation.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "MQ Error Logs and FFDC",
+            "overview": "Analyze error logs and First Failure Data Capture (FFDC) for root cause analysis.",
+            "examples": [
+              "FFDC: Captures queue manager state on failure.",
+              "Error Log: AMQERR01.LOG for queue manager issues."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Tracing and Debugging",
+            "overview": "Enable and interpret MQ trace logs for detailed debugging.",
+            "examples": [
+              "mqsitrace: Enables detailed tracing.",
+              "Trace Files: Analyze API call failures."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Command-Line Diagnostics",
+            "overview": "Use commands like dspmqver, runmqsc, and amqmdain for diagnostics.",
+            "examples": [
+              "dspmqver: Checks MQ version and fix packs.",
+              "runmqsc: Queries queue manager status."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Advanced Log Analysis",
+            "overview": "Parse logs for patterns like deadlocks or connection errors.",
+            "examples": [
+              "Deadlock: Queue contention in logs.",
+              "Connection Error: AMQ9504 in error log."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does FFDC capture in IBM MQ?",
+            "options": [
+              "A: User authentication data",
+              "B: Queue manager state on failure",
+              "C: Message payloads",
+              "D: Network traffic",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Where are IBM MQ error logs typically stored?",
+            "options": [
+              "A: AMQERR01.LOG",
+              "B: MQCONFIG.LOG",
+              "C: TRACE.LOG",
+              "D: FFDC.LOG",
+              "E: SYSTEM.LOG"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What command enables detailed tracing in IBM MQ?",
+            "options": [
+              "A: dspmqver",
+              "B: mqsitrace",
+              "C: runmqsc",
+              "D: amqmdain",
+              "E: mqsilist"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the dspmqver command display?",
+            "options": [
+              "A: Queue manager status",
+              "B: MQ version and fix packs",
+              "C: Message payloads",
+              "D: User permissions",
+              "E: Network configuration"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error code indicates a connection failure?",
+            "options": [
+              "A: AMQ9504",
+              "B: AMQ6109",
+              "C: AMQ8101",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common issue found in MQ logs?",
+            "options": [
+              "A: Queue contention",
+              "B: User authentication",
+              "C: Message encryption",
+              "D: Network routing",
+              "E: File backups"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What tool queries queue manager status?",
+            "options": [
+              "A: mqsitrace",
+              "B: runmqsc",
+              "C: dspmqver",
+              "D: amqmdain",
+              "E: mqsilist"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a trace log capture?",
+            "options": [
+              "A: User accounts",
+              "B: API call failures",
+              "C: Message payloads",
+              "D: Network traffic",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of FFDC in troubleshooting?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Captures failure context",
+              "C: Monitors traffic",
+              "D: Configures queues",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command displays installed MQ components?",
+            "options": [
+              "A: dspmqver",
+              "B: mqsitrace",
+              "C: runmqsc",
+              "D: amqmdain",
+              "E: mqsilist"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What indicates a deadlock in MQ logs?",
+            "options": [
+              "A: AMQ9504",
+              "B: Queue contention",
+              "C: AMQ8101",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does amqmdain manage?",
+            "options": [
+              "A: Message payloads",
+              "B: Queue manager configuration",
+              "C: User authentication",
+              "D: Network routing",
+              "E: File backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common log analysis technique?",
+            "options": [
+              "A: Encrypting logs",
+              "B: Parsing for error patterns",
+              "C: Deleting logs",
+              "D: Ignoring errors",
+              "E: Backing up logs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does mqsitrace enable?",
+            "options": [
+              "A: User authentication",
+              "B: Detailed debugging",
+              "C: Message encryption",
+              "D: Network monitoring",
+              "E: File backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is stored in AMQERR01.LOG?",
+            "options": [
+              "A: Message payloads",
+              "B: Queue manager errors",
+              "C: User permissions",
+              "D: Network traffic",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does runmqsc allow?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Querying queue manager",
+              "C: Monitoring traffic",
+              "D: Configuring firewalls",
+              "E: Managing users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of FFDC files?",
+            "options": [
+              "A: Store message data",
+              "B: Capture failure details",
+              "C: Encrypt queues",
+              "D: Monitor network",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What indicates a channel error in logs?",
+            "options": [
+              "A: AMQ9504",
+              "B: AMQ6109",
+              "C: AMQ8101",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What tool analyzes trace logs?",
+            "options": [
+              "A: Web browser",
+              "B: mqsitrace",
+              "C: Text editor",
+              "D: Firewall rule",
+              "E: Backup tool"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is a benefit of command-line diagnostics?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Provides detailed insights",
+              "C: Disables queues",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Performance Tuning and Optimization",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers advanced techniques for optimizing IBM MQ performance, including queue tuning, channel optimization, and resource monitoring.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Queue Performance Tuning",
+            "overview": "Optimize queue settings like MAXDEPTH and buffer sizes.",
+            "examples": [
+              "MAXDEPTH: Adjusts queue capacity.",
+              "Buffer Size: Reduces message latency."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Channel Optimization",
+            "overview": "Tune channel parameters like BATCHSZ and heartbeat intervals.",
+            "examples": [
+              "BATCHSZ: Controls message batching.",
+              "Heartbeat: Detects channel failures."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Resource Monitoring",
+            "overview": "Monitor CPU, memory, and disk usage impacting MQ performance.",
+            "examples": [
+              "mqsilist: Lists resource usage.",
+              "Monitoring Tools: IBM MQ Explorer for metrics."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Message Persistence and Logging",
+            "overview": "Balance persistence and logging for performance and reliability.",
+            "examples": [
+              "Non-Persistent Messages: Faster delivery.",
+              "Log Tuning: Reduces I/O bottlenecks."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What queue parameter controls capacity?",
+            "options": [
+              "A: BATCHSZ",
+              "B: MAXDEPTH",
+              "C: HEARTBEAT",
+              "D: LOGSIZE",
+              "E: BUFFERSIZE"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does BATCHSZ configure in a channel?",
+            "options": [
+              "A: Message encryption",
+              "B: Message batching",
+              "C: User authentication",
+              "D: Queue depth",
+              "E: Log size"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool monitors MQ resource usage?",
+            "options": [
+              "A: mqsitrace",
+              "B: mqsilist",
+              "C: runmqsc",
+              "D: amqmdain",
+              "E: dspmqver"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What improves message delivery speed?",
+            "options": [
+              "A: Persistent messages",
+              "B: Non-persistent messages",
+              "C: Increased log size",
+              "D: Reduced queue depth",
+              "E: Disabled channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does heartbeat interval detect?",
+            "options": [
+              "A: Queue depth",
+              "B: Channel failures",
+              "C: User permissions",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common performance bottleneck?",
+            "options": [
+              "A: Message encryption",
+              "B: Disk I/O",
+              "C: User authentication",
+              "D: Network routing",
+              "E: File backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM MQ Explorer monitor?",
+            "options": [
+              "A: Message payloads",
+              "B: Performance metrics",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does log tuning reduce?",
+            "options": [
+              "A: Message size",
+              "B: I/O bottlenecks",
+              "C: Queue depth",
+              "D: Channel failures",
+              "E: User permissions"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of channel optimization?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Improves message throughput",
+              "C: Disables queues",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What parameter reduces message latency?",
+            "options": [
+              "A: MAXDEPTH",
+              "B: BUFFERSIZE",
+              "C: BATCHSZ",
+              "D: HEARTBEAT",
+              "E: LOGSIZE"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does mqsilist display?",
+            "options": [
+              "A: Message payloads",
+              "B: Resource usage",
+              "C: User permissions",
+              "D: Network traffic",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a characteristic of non-persistent messages?",
+            "options": [
+              "A: High reliability",
+              "B: Faster delivery",
+              "C: Increased disk I/O",
+              "D: Complex logging",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does BATCHSZ optimize?",
+            "options": [
+              "A: Queue depth",
+              "B: Message batching",
+              "C: Log size",
+              "D: User permissions",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource impacts MQ performance?",
+            "options": [
+              "A: Message payloads",
+              "B: CPU and memory",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does log tuning optimize?",
+            "options": [
+              "A: Message encryption",
+              "B: Disk I/O performance",
+              "C: User authentication",
+              "D: Network routing",
+              "E: File backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of channel tuning?",
+            "options": [
+              "A: Encrypt messages",
+              "B: Improve throughput",
+              "C: Monitor traffic",
+              "D: Configure firewalls",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does MAXDEPTH control?",
+            "options": [
+              "A: Message size",
+              "B: Queue capacity",
+              "C: Channel batching",
+              "D: Log size",
+              "E: User permissions"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool provides performance metrics?",
+            "options": [
+              "A: mqsitrace",
+              "B: IBM MQ Explorer",
+              "C: runmqsc",
+              "D: amqmdain",
+              "E: dspmqver"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of non-persistent messages?",
+            "options": [
+              "A: Increases disk I/O",
+              "B: Reduces latency",
+              "C: Enhances logging",
+              "D: Limits throughput",
+              "E: Requires authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does heartbeat interval improve?",
+            "options": [
+              "A: Queue depth",
+              "B: Channel reliability",
+              "C: Message encryption",
+              "D: Log size",
+              "E: User permissions"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Security Issues and Mitigation",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module addresses advanced security troubleshooting, including SSL/TLS issues, OAM configuration, and vulnerability mitigation in IBM MQ.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "SSL/TLS Configuration Issues",
+            "overview": "Diagnose and resolve SSL/TLS certificate and cipher issues.",
+            "examples": [
+              "Certificate Error: AMQ9633 for expired certificates.",
+              "CipherSpec: TLS_RSA_WITH_AES_256_CBC_SHA256."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "Object Authority Manager (OAM)",
+            "overview": "Troubleshoot access control issues using OAM.",
+            "examples": [
+              "OAM: Configures queue permissions.",
+              "Error: AMQ5534 for unauthorized access."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Channel Authentication",
+            "overview": "Resolve CHLAUTH rules and client authentication failures.",
+            "examples": [
+              "CHLAUTH: Blocks unauthorized clients.",
+              "Error: AMQ9557 for authentication failure."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Vulnerability Mitigation",
+            "overview": "Address vulnerabilities like weak ciphers or outdated MQ versions.",
+            "examples": [
+              "Weak Cipher: Disable TLS 1.0.",
+              "Patch: Apply fix packs for security."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What error indicates an expired SSL certificate?",
+            "options": [
+              "A: AMQ9633",
+              "B: AMQ5534",
+              "C: AMQ9557",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does OAM configure in IBM MQ?",
+            "options": [
+              "A: Message encryption",
+              "B: Queue permissions",
+              "C: Network routing",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CHLAUTH block?",
+            "options": [
+              "A: Message payloads",
+              "B: Unauthorized clients",
+              "C: Queue depth",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error indicates unauthorized access?",
+            "options": [
+              "A: AMQ9633",
+              "B: AMQ5534",
+              "C: AMQ9557",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates weak cipher vulnerabilities?",
+            "options": [
+              "A: Enable TLS 1.0",
+              "B: Disable weak ciphers",
+              "C: Increase queue depth",
+              "D: Reduce log size",
+              "E: Ignore patches"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ9557 indicate?",
+            "options": [
+              "A: Queue contention",
+              "B: Authentication failure",
+              "C: Expired certificate",
+              "D: Channel failure",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures MQ channel communication?",
+            "options": [
+              "A: HTTP",
+              "B: SSL/TLS",
+              "C: FTP",
+              "D: SNMP",
+              "E: Telnet"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common OAM issue?",
+            "options": [
+              "A: Message encryption",
+              "B: Unauthorized access",
+              "C: Queue depth",
+              "D: Log size",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does TLS_RSA_WITH_AES_256_CBC_SHA256 specify?",
+            "options": [
+              "A: Queue depth",
+              "B: CipherSpec",
+              "C: Log size",
+              "D: User permissions",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates security vulnerabilities?",
+            "options": [
+              "A: Ignore fix packs",
+              "B: Apply fix packs",
+              "C: Increase queue depth",
+              "D: Reduce log size",
+              "E: Disable channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CHLAUTH configure?",
+            "options": [
+              "A: Message payloads",
+              "B: Client authentication",
+              "C: Queue depth",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common SSL/TLS issue?",
+            "options": [
+              "A: Queue contention",
+              "B: Expired certificates",
+              "C: Message encryption",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ5534 indicate?",
+            "options": [
+              "A: Channel failure",
+              "B: Unauthorized access",
+              "C: Expired certificate",
+              "D: Queue contention",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures MQ client connections?",
+            "options": [
+              "A: CHLAUTH rules",
+              "B: Message payloads",
+              "C: Queue depth",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of disabling weak ciphers?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enhances security",
+              "C: Increases latency",
+              "D: Limits protocols",
+              "E: Disables queues"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does OAM manage?",
+            "options": [
+              "A: Message encryption",
+              "B: Access control",
+              "C: Queue depth",
+              "D: Log size",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error is related to client authentication?",
+            "options": [
+              "A: AMQ9633",
+              "B: AMQ9557",
+              "C: AMQ5534",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates expired certificate issues?",
+            "options": [
+              "A: Ignore certificates",
+              "B: Renew certificates",
+              "C: Increase queue depth",
+              "D: Reduce log size",
+              "E: Disable channels"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSL/TLS ensure?",
+            "options": [
+              "A: Queue depth",
+              "B: Secure communication",
+              "C: Log errors",
+              "D: User permissions",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common security troubleshooting task?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Resolving OAM issues",
+              "C: Monitoring traffic",
+              "D: Configuring queues",
+              "E: Managing users"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Clustering and High Availability",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers troubleshooting IBM MQ clustering and high-availability configurations, including queue manager clusters and multi-instance setups.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "Queue Manager Clusters",
+            "overview": "Troubleshoot cluster issues like repository conflicts and workload balancing.",
+            "examples": [
+              "Full Repository: Manages cluster metadata.",
+              "Error: AMQ9448 for cluster conflicts."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Multi-Instance Queue Managers",
+            "overview": "Resolve issues in active-passive high-availability setups.",
+            "examples": [
+              "Multi-Instance: Failover for queue managers.",
+              "Error: AMQ7467 for instance failure."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Cluster Channel Issues",
+            "overview": "Diagnose channel synchronization and binding issues.",
+            "examples": [
+              "CLUSTER: Channel binding errors.",
+              "Error: AMQ9526 for channel issues."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Workload Balancing",
+            "overview": "Optimize and troubleshoot workload distribution in clusters.",
+            "examples": [
+              "CLWLPRTY: Prioritizes queue usage.",
+              "Error: Uneven message distribution."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What manages cluster metadata in IBM MQ?",
+            "options": [
+              "A: Message payloads",
+              "B: Full Repository",
+              "C: Queue depth",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error indicates a cluster conflict?",
+            "options": [
+              "A: AMQ9448",
+              "B: AMQ7467",
+              "C: AMQ9526",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does a multi-instance queue manager provide?",
+            "options": [
+              "A: Message encryption",
+              "B: High availability",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error indicates a multi-instance failure?",
+            "options": [
+              "A: AMQ9448",
+              "B: AMQ7467",
+              "C: AMQ9526",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CLWLPRTY control?",
+            "options": [
+              "A: Message encryption",
+              "B: Queue usage priority",
+              "C: Log size",
+              "D: User permissions",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common cluster channel issue?",
+            "options": [
+              "A: Message encryption",
+              "B: Channel binding errors",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error indicates a cluster channel issue?",
+            "options": [
+              "A: AMQ9448",
+              "B: AMQ7467",
+              "C: AMQ9526",
+              "D: AMQ9999",
+              "E: AMQ4000"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What does workload balancing optimize?",
+            "options": [
+              "A: Message encryption",
+              "B: Message distribution",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of queue manager clusters?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enhances scalability",
+              "C: Disables queues",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Full Repository store?",
+            "options": [
+              "A: Message payloads",
+              "B: Cluster metadata",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of multi-instance setups?",
+            "options": [
+              "A: Message encryption",
+              "B: Active-passive failover",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ9526 indicate?",
+            "options": [
+              "A: Cluster conflict",
+              "B: Channel issue",
+              "C: Instance failure",
+              "D: Queue contention",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What optimizes message distribution in clusters?",
+            "options": [
+              "A: CLWLPRTY",
+              "B: MAXDEPTH",
+              "C: BATCHSZ",
+              "D: HEARTBEAT",
+              "E: LOGSIZE"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common cluster troubleshooting task?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Resolving repository conflicts",
+              "C: Monitoring traffic",
+              "D: Configuring queues",
+              "E: Managing users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ9448 indicate?",
+            "options": [
+              "A: Channel issue",
+              "B: Cluster conflict",
+              "C: Instance failure",
+              "D: Queue contention",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a multi-instance queue manager ensure?",
+            "options": [
+              "A: Message encryption",
+              "B: High availability",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of workload balancing?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Optimizes resource usage",
+              "C: Disables queues",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ7467 indicate?",
+            "options": [
+              "A: Cluster conflict",
+              "B: Instance failure",
+              "C: Channel issue",
+              "D: Queue contention",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a cluster channel synchronize?",
+            "options": [
+              "A: Message payloads",
+              "B: Cluster metadata",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of queue manager clusters?",
+            "options": [
+              "A: Encrypt messages",
+              "B: Enhance scalability",
+              "C: Monitor traffic",
+              "D: Configure firewalls",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Advanced Scenarios and Exam Prep",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers complex troubleshooting scenarios, integration with IBM ACE, and preparation for advanced IBM MQ certifications.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "Complex Scenario Troubleshooting",
+            "overview": "Resolve issues like message looping and cross-platform integration.",
+            "examples": [
+              "Message Looping: Infinite queue routing.",
+              "Cross-Platform: Windows-Linux connectivity."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Integration with IBM ACE",
+            "overview": "Troubleshoot MQ-ACE integration issues like MQ node failures.",
+            "examples": [
+              "MQ Node: Fails to connect to queue manager.",
+              "Error: AMQ8077 for MQ connection issues."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Disaster Recovery",
+            "overview": "Diagnose and recover from queue manager failures.",
+            "examples": [
+              "Backup: Restore queue manager data.",
+              "Recovery: Rebuild damaged queues."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Certification Preparation",
+            "overview": "Practice complex scenarios and exam questions for IBM MQ certifications.",
+            "examples": [
+              "Practice Exam: Simulates certification questions.",
+              "Lab: Troubleshoot cluster failures."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a common complex MQ issue?",
+            "options": [
+              "A: Message encryption",
+              "B: Message looping",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What error indicates an MQ-ACE connection issue?",
+            "options": [
+              "A: AMQ8077",
+              "B: AMQ9448",
+              "C: AMQ7467",
+              "D: AMQ9526",
+              "E: AMQ9999"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does disaster recovery restore?",
+            "options": [
+              "A: Message payloads",
+              "B: Queue manager data",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common certification preparation method?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Practice exams",
+              "C: Monitoring traffic",
+              "D: Configuring queues",
+              "E: Managing users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a cross-platform MQ issue?",
+            "options": [
+              "A: Message encryption",
+              "B: Windows-Linux connectivity",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ8077 indicate?",
+            "options": [
+              "A: Cluster conflict",
+              "B: MQ connection issue",
+              "C: Channel issue",
+              "D: Queue contention",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of disaster recovery?",
+            "options": [
+              "A: Encrypt messages",
+              "B: Recover queue managers",
+              "C: Monitor traffic",
+              "D: Configure firewalls",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a practice exam simulate?",
+            "options": [
+              "A: Message payloads",
+              "B: Certification questions",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common MQ-ACE integration issue?",
+            "options": [
+              "A: Message encryption",
+              "B: MQ node failure",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does message looping cause?",
+            "options": [
+              "A: Queue contention",
+              "B: Infinite queue routing",
+              "C: Message encryption",
+              "D: Log size increase",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of disaster recovery?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Restores system availability",
+              "C: Disables queues",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an MQ node connect to in ACE?",
+            "options": [
+              "A: Message payloads",
+              "B: Queue manager",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common complex scenario?",
+            "options": [
+              "A: Message encryption",
+              "B: Cross-platform integration",
+              "C: Queue depth",
+              "D: Log size",
+              "E: User authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a lab simulate for certification?",
+            "options": [
+              "A: Message payloads",
+              "B: Troubleshooting scenarios",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQ8077 affect?",
+            "options": [
+              "A: Cluster conflict",
+              "B: MQ-ACE integration",
+              "C: Channel issue",
+              "D: Queue contention",
+              "E: Log error"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of troubleshooting labs?",
+            "options": [
+              "A: Encrypt messages",
+              "B: Simulate real-world issues",
+              "C: Monitor traffic",
+              "D: Configure firewalls",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does disaster recovery rebuild?",
+            "options": [
+              "A: Message payloads",
+              "B: Damaged queues",
+              "C: User accounts",
+              "D: Log errors",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of practice exams?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enhances job readiness",
+              "C: Disables queues",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does message looping impact?",
+            "options": [
+              "A: Message encryption",
+              "B: Queue performance",
+              "C: Log size",
+              "D: User permissions",
+              "E: Network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common MQ certification topic?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Troubleshooting clusters",
+              "C: Monitoring traffic",
+              "D: Configuring firewalls",
+              "E: Managing users"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Analyze an AMQERR01.LOG file to identify and resolve a connection error (AMQ9504).",
+        "Configure and troubleshoot a multi-instance queue manager for high availability.",
+        "Debug a cluster channel issue using mqsitrace and resolve AMQ9526 errors.",
+        "Optimize queue performance by adjusting MAXDEPTH and BATCHSZ parameters.",
+        "Simulate and resolve an MQ-ACE integration issue with an MQ node failure (AMQ8077)."
+      ],
+      "resources": [
+        "IBM MQ v9.3 Knowledge Center and documentation.",
+        "IBM MQ Troubleshooting Guide and fix pack notes.",
+        "IBM MQ Explorer and command-line tools for diagnostics.",
+        "Sample certification questions from IBM Skills Network."
+      ],
+      "environment": "Access to IBM MQ v9 or later, a Linux/Windows lab environment, and IBM MQ Explorer for testing and debugging."
+    }
+  }
+}

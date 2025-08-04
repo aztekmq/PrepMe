@@ -1,0 +1,1632 @@
+{
+  "course": {
+    "title": "IBM App Connect Enterprise",
+    "duration": "6 hours",
+    "audience": [
+      "IT professionals",
+      "Integration developers",
+      "Individuals preparing for IBM ACE certification"
+    ],
+    "prerequisites": "Basic knowledge of integration concepts, REST APIs, and familiarity with JSON or XML. Experience with Java or ESQL is beneficial but not required.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Introduction to IBM App Connect Enterprise",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module introduces IBM App Connect Enterprise, its architecture, and core components for building integration solutions.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Overview of IBM ACE",
+            "overview": "IBM ACE combines IBM Integration Bus with cloud-native capabilities for hybrid integration.",
+            "examples": [
+              "Integration Node: Manages integration servers.",
+              "Message Flows: Process data between applications."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Integration Architecture",
+            "overview": "Supports Enterprise Service Bus (ESB) and Agile Integration Architecture (AIA).",
+            "examples": [
+              "ESB: Centralized integration hub.",
+              "AIA: Flexible, cloud-native integration."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Key Components",
+            "overview": "Components include integration nodes, servers, and message flows.",
+            "examples": [
+              "Integration Server: Executes message flows.",
+              "Toolkit: GUI for developing flows."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Installation and Setup",
+            "overview": "Steps to install and configure ACE on Windows or Linux.",
+            "examples": [
+              "ACE Toolkit: Install on development machine.",
+              "Integration Node: Configure for runtime."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is IBM App Connect Enterprise primarily used for?",
+            "options": [
+              "A: Database management",
+              "B: Data integration across systems",
+              "C: Network security",
+              "D: Web development",
+              "E: Cloud storage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a key feature of IBM ACE?",
+            "options": [
+              "A: File encryption",
+              "B: Hybrid integration support",
+              "C: Virtual machine management",
+              "D: User authentication",
+              "E: Data compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What component manages integration servers in ACE?",
+            "options": [
+              "A: Message Flow",
+              "B: Integration Node",
+              "C: WebUI",
+              "D: Vault",
+              "E: Toolkit"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ESB stand for in IBM ACE?",
+            "options": [
+              "A: Enterprise Security Bus",
+              "B: Enterprise Service Bus",
+              "C: Extended System Backup",
+              "D: External Service Bridge",
+              "E: Enterprise Storage Base"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of the ACE Toolkit?",
+            "options": [
+              "A: Monitor network traffic",
+              "B: Develop and test message flows",
+              "C: Encrypt data",
+              "D: Manage cloud storage",
+              "E: Configure firewalls"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What type of integration does AIA support?",
+            "options": [
+              "A: Cloud-native and flexible",
+              "B: Hardware-based",
+              "C: Database-only",
+              "D: Security-focused",
+              "E: Static and local"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a message flow in IBM ACE?",
+            "options": [
+              "A: A security protocol",
+              "B: A sequence of processing steps for data",
+              "C: A database query",
+              "D: A network configuration",
+              "E: A user authentication method"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What platform can IBM ACE be installed on?",
+            "options": [
+              "A: Windows or Linux",
+              "B: iOS only",
+              "C: Android only",
+              "D: macOS only",
+              "E: Web browsers"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does an integration server execute?",
+            "options": [
+              "A: Database backups",
+              "B: Message flows",
+              "C: Security scans",
+              "D: Web pages",
+              "E: Cloud migrations"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IBM ACE in hybrid environments?",
+            "options": [
+              "A: Reduces data integration",
+              "B: Connects cloud and on-premises systems",
+              "C: Limits application access",
+              "D: Disables APIs",
+              "E: Increases latency"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of an integration node?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Manages integration servers",
+              "C: Hosts web applications",
+              "D: Monitors network traffic",
+              "E: Stores data"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a characteristic of AIA?",
+            "options": [
+              "A: Static configuration",
+              "B: Cloud-native flexibility",
+              "C: Hardware dependency",
+              "D: Local-only integration",
+              "E: No API support"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool is used to develop ACE message flows?",
+            "options": [
+              "A: WebUI",
+              "B: ACE Toolkit",
+              "C: Vault",
+              "D: Integration Node",
+              "E: MQ Console"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM ACE integrate?",
+            "options": [
+              "A: Only cloud applications",
+              "B: Data and applications across environments",
+              "C: Only on-premises systems",
+              "D: Security protocols",
+              "E: Network hardware"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a key component of IBM ACE?",
+            "options": [
+              "A: Firewall",
+              "B: Message Flow",
+              "C: VPN",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the ACE installation process configure?",
+            "options": [
+              "A: Network firewalls",
+              "B: Integration nodes and servers",
+              "C: Web browsers",
+              "D: Cloud storage",
+              "E: User accounts"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of using IBM ACE?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies data integration",
+              "C: Reduces connectivity",
+              "D: Limits API usage",
+              "E: Disables cloud support"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of the integration server?",
+            "options": [
+              "A: Encrypts data",
+              "B: Executes message flows",
+              "C: Manages user accounts",
+              "D: Configures firewalls",
+              "E: Monitors backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM ACE support for message processing?",
+            "options": [
+              "A: Only XML",
+              "B: Multiple message formats",
+              "C: Only JSON",
+              "D: Only CSV",
+              "E: Only fixed-length"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of IBM ACE v12?",
+            "options": [
+              "A: No cloud support",
+              "B: Cloud-native technologies",
+              "C: Limited protocol support",
+              "D: No API integration",
+              "E: Static architecture"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Message Flows and Transformation",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers creating and managing message flows, including transformation techniques using compute nodes, ESQL, and mapping nodes.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Message Flow Basics",
+            "overview": "Message flows define data processing logic between input and output nodes.",
+            "examples": [
+              "Input Node: Receives REST API requests.",
+              "Output Node: Sends transformed data."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Transformation Nodes",
+            "overview": "Nodes like Compute, Java Compute, and Mapping transform data formats.",
+            "examples": [
+              "Compute Node: Uses ESQL for transformation.",
+              "Mapping Node: Converts JSON to XML."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Message Formats",
+            "overview": "Supports JSON, XML, CSV, and fixed-length messages.",
+            "examples": [
+              "JSON: Web API payloads.",
+              "XML: Enterprise application data."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Subflows and Libraries",
+            "overview": "Reusable subflows and libraries enhance modularity.",
+            "examples": [
+              "Subflow: Reusable error handling logic.",
+              "Library: Shared transformation functions."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the purpose of a message flow in IBM ACE?",
+            "options": [
+              "A: Encrypts data",
+              "B: Defines data processing logic",
+              "C: Manages user accounts",
+              "D: Configures firewalls",
+              "E: Monitors backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What node uses ESQL for transformation?",
+            "options": [
+              "A: Input Node",
+              "B: Compute Node",
+              "C: Output Node",
+              "D: MQ Node",
+              "E: HTTP Node"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What message format is supported by IBM ACE?",
+            "options": [
+              "A: Only JSON",
+              "B: JSON, XML, CSV",
+              "C: Only XML",
+              "D: Only CSV",
+              "E: Only fixed-length"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of using subflows?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances modularity",
+              "C: Reduces connectivity",
+              "D: Disables APIs",
+              "E: Limits formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Mapping Node do?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Converts data formats",
+              "C: Monitors traffic",
+              "D: Manages users",
+              "E: Configures servers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of a message flow input?",
+            "options": [
+              "A: REST API request",
+              "B: Firewall rule",
+              "C: User authentication",
+              "D: Backup file",
+              "E: Network port"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What language does the Compute Node use?",
+            "options": [
+              "A: Java",
+              "B: ESQL",
+              "C: Python",
+              "D: XML",
+              "E: JSON"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Java Compute Node use for transformation?",
+            "options": [
+              "A: ESQL",
+              "B: Java code",
+              "C: XSLT",
+              "D: JSON",
+              "E: CSV"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of shared libraries?",
+            "options": [
+              "A: Encrypt data",
+              "B: Reuse transformation functions",
+              "C: Monitor traffic",
+              "D: Configure servers",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What node converts JSON to XML?",
+            "options": [
+              "A: Input Node",
+              "B: Mapping Node",
+              "C: Output Node",
+              "D: MQ Node",
+              "E: HTTP Node"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common message flow output?",
+            "options": [
+              "A: Transformed data",
+              "B: Firewall rule",
+              "C: User account",
+              "D: Backup file",
+              "E: Network port"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does an XSLT Node use?",
+            "options": [
+              "A: ESQL",
+              "B: XSL",
+              "C: Java",
+              "D: JSON",
+              "E: CSV"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What enhances reusability in message flows?",
+            "options": [
+              "A: Subflows",
+              "B: Firewalls",
+              "C: VPNs",
+              "D: Proxies",
+              "E: Routers"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a supported protocol for message flows?",
+            "options": [
+              "A: Telnet",
+              "B: HTTP",
+              "C: SNMP",
+              "D: FTP",
+              "E: RDP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of transformation nodes?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Converts data formats",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits modularity"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of the Compute Node?",
+            "options": [
+              "A: User authentication",
+              "B: Data transformation",
+              "C: Network monitoring",
+              "D: Server configuration",
+              "E: Backup management"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a message flow process?",
+            "options": [
+              "A: Network traffic",
+              "B: Data between applications",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a characteristic of message flows?",
+            "options": [
+              "A: Static configuration",
+              "B: Dynamic data processing",
+              "C: Hardware dependency",
+              "D: No API support",
+              "E: Limited formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What node supports Java-based transformation?",
+            "options": [
+              "A: Compute Node",
+              "B: Java Compute Node",
+              "C: Mapping Node",
+              "D: MQ Node",
+              "E: HTTP Node"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of message flows?",
+            "options": [
+              "A: Encrypt data",
+              "B: Route and transform data",
+              "C: Monitor traffic",
+              "D: Configure servers",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Connectors and Protocols",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module explores IBM ACE connectors and supported protocols like REST, SOAP, MQ, and file-based communication.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "REST and SOAP APIs",
+            "overview": "ACE supports REST and SOAP for web-based integration.",
+            "examples": [
+              "REST: JSON-based API calls.",
+              "SOAP: XML-based web services."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "MQ Integration",
+            "overview": "IBM MQ enables queue-based messaging for reliable delivery.",
+            "examples": [
+              "MQ Node: Sends messages to queues.",
+              "Queue Manager: Handles message delivery."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "File-Based Integration",
+            "overview": "File nodes handle CSV, fixed-length, and other file formats.",
+            "examples": [
+              "File Input Node: Reads CSV files.",
+              "File Output Node: Writes transformed data."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Discovery Connectors",
+            "overview": "Connectors integrate with SaaS and enterprise applications.",
+            "examples": [
+              "Salesforce Connector: Integrates CRM data.",
+              "SAP Connector: Connects to ERP systems."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What protocol does IBM ACE support for web APIs?",
+            "options": [
+              "A: Telnet",
+              "B: REST",
+              "C: SNMP",
+              "D: RDP",
+              "E: FTP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of IBM MQ in ACE?",
+            "options": [
+              "A: File encryption",
+              "B: Queue-based messaging",
+              "C: User authentication",
+              "D: Network monitoring",
+              "E: Cloud storage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a File Input Node process?",
+            "options": [
+              "A: Network traffic",
+              "B: CSV files",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of a discovery connector?",
+            "options": [
+              "A: Firewall",
+              "B: Salesforce Connector",
+              "C: VPN",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SOAP use for communication?",
+            "options": [
+              "A: JSON",
+              "B: XML",
+              "C: CSV",
+              "D: Fixed-length",
+              "E: Text"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of an MQ Node?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Sends messages to queues",
+              "C: Monitors traffic",
+              "D: Configures servers",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a File Output Node do?",
+            "options": [
+              "A: Reads data",
+              "B: Writes transformed data",
+              "C: Encrypts files",
+              "D: Monitors traffic",
+              "E: Configures servers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of REST APIs in ACE?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Supports JSON payloads",
+              "C: Disables integration",
+              "D: Increases latency",
+              "E: Limits formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Salesforce Connector integrate?",
+            "options": [
+              "A: Network traffic",
+              "B: CRM data",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol supports queue-based messaging?",
+            "options": [
+              "A: HTTP",
+              "B: MQ",
+              "C: FTP",
+              "D: SNMP",
+              "E: Telnet"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a supported file format in ACE?",
+            "options": [
+              "A: JSON only",
+              "B: CSV",
+              "C: XML only",
+              "D: Text only",
+              "E: Binary only"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a REST API typically use?",
+            "options": [
+              "A: XML",
+              "B: JSON",
+              "C: CSV",
+              "D: Fixed-length",
+              "E: Text"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a role of the Queue Manager in MQ?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Handles message delivery",
+              "C: Monitors traffic",
+              "D: Configures servers",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a SAP Connector integrate?",
+            "options": [
+              "A: CRM data",
+              "B: ERP systems",
+              "C: Network traffic",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of file-based integration?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Processes CSV and fixed-length files",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a REST Node process?",
+            "options": [
+              "A: Database queries",
+              "B: JSON-based API calls",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a characteristic of SOAP in ACE?",
+            "options": [
+              "A: JSON-based",
+              "B: XML-based",
+              "C: CSV-based",
+              "D: Text-based",
+              "E: Binary-based"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What node supports file-based integration?",
+            "options": [
+              "A: Compute Node",
+              "B: File Input Node",
+              "C: Mapping Node",
+              "D: MQ Node",
+              "E: HTTP Node"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of discovery connectors?",
+            "options": [
+              "A: Reduces integration",
+              "B: Connects to SaaS applications",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol is used for reliable messaging?",
+            "options": [
+              "A: HTTP",
+              "B: MQ",
+              "C: FTP",
+              "D: SNMP",
+              "E: Telnet"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Administration and Configuration",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers administration tasks, including integration node setup, server management, and WebUI configuration.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "Integration Node Setup",
+            "overview": "Configure integration nodes for managing servers.",
+            "examples": [
+              "Node Creation: Set up via command line.",
+              "Configuration File: Define node properties."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Integration Server Management",
+            "overview": "Manage standalone and node-managed servers.",
+            "examples": [
+              "Standalone Server: Docker-compatible.",
+              "Node-Managed Server: Controlled by integration node."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "WebUI Configuration",
+            "overview": "WebUI enables server management and monitoring.",
+            "examples": [
+              "REST Admin Port: Configures WebUI access.",
+              "SSL: Secures WebUI communication."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Vault and Credentials",
+            "overview": "Vault secures credentials for database and server access.",
+            "examples": [
+              "Vault: Stores ODBC credentials.",
+              "Credentials: Export/import for servers."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the role of an integration node?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Manages integration servers",
+              "C: Monitors traffic",
+              "D: Configures firewalls",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of a standalone integration server?",
+            "options": [
+              "A: Hardware dependency",
+              "B: Docker compatibility",
+              "C: No WebUI support",
+              "D: Limited protocols",
+              "E: Static configuration"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the WebUI configure in ACE?",
+            "options": [
+              "A: Database backups",
+              "B: Server management",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures WebUI communication?",
+            "options": [
+              "A: HTTP",
+              "B: SSL",
+              "C: FTP",
+              "D: SNMP",
+              "E: Telnet"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the Vault store in ACE?",
+            "options": [
+              "A: Message flows",
+              "B: Credentials",
+              "C: Log files",
+              "D: Firewalls",
+              "E: APIs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of node-managed servers?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Centralized management",
+              "C: Disables WebUI",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is used to configure an integration node?",
+            "options": [
+              "A: Web browser",
+              "B: Configuration file",
+              "C: Database query",
+              "D: Firewall rule",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the REST Admin Port configure?",
+            "options": [
+              "A: Message flows",
+              "B: WebUI access",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common credential type in the Vault?",
+            "options": [
+              "A: ODBC credentials",
+              "B: Message flows",
+              "C: Log files",
+              "D: Firewalls",
+              "E: APIs"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a feature of ACE v12 administration?",
+            "options": [
+              "A: No WebUI support",
+              "B: Readable trace logs",
+              "C: Limited protocols",
+              "D: Static configuration",
+              "E: No cloud support"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What manages standalone servers?",
+            "options": [
+              "A: Integration Node",
+              "B: WebUI",
+              "C: Vault",
+              "D: MQ Console",
+              "E: Toolkit"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of the Vault in ACE?",
+            "options": [
+              "A: Reduces security",
+              "B: Secures credentials",
+              "C: Disables WebUI",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is used to start an integration server?",
+            "options": [
+              "A: Web browser",
+              "B: Command line",
+              "C: Database query",
+              "D: Firewall rule",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSL configure in WebUI?",
+            "options": [
+              "A: Message flows",
+              "B: Secure communication",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a characteristic of node-managed servers?",
+            "options": [
+              "A: Docker compatibility",
+              "B: Controlled by integration node",
+              "C: No WebUI support",
+              "D: Limited protocols",
+              "E: Static configuration"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the configuration file define?",
+            "options": [
+              "A: Message flows",
+              "B: Node and server properties",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of WebUI in ACE?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Simplifies server management",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What can override node properties?",
+            "options": [
+              "A: Web browser",
+              "B: Configuration file",
+              "C: Database query",
+              "D: Firewall rule",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common administration task in ACE?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Configuring integration nodes",
+              "C: Monitoring traffic",
+              "D: Managing users",
+              "E: Creating backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the Vault manage?",
+            "options": [
+              "A: Message flows",
+              "B: Secure credentials",
+              "C: Log files",
+              "D: Firewalls",
+              "E: APIs"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Monitoring and Debugging",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers tools and techniques for monitoring, debugging, and logging in IBM ACE, including record and replay features.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "Business Transaction Monitoring",
+            "overview": "Monitors transaction performance and issues.",
+            "examples": [
+              "BTM: Tracks message flow performance.",
+              "Alerts: Notify on transaction failures."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Record and Replay",
+            "overview": "Captures and replays messages for debugging.",
+            "examples": [
+              "Record: Stores message data.",
+              "Replay: Tests message flow behavior."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Logging and Tracing",
+            "overview": "Logs and traces provide debugging insights.",
+            "examples": [
+              "User Trace: Logs message flow execution.",
+              "Service Trace: Captures system-level issues."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Troubleshooting Tools",
+            "overview": "Tools like WebUI and command-line interfaces aid debugging.",
+            "examples": [
+              "WebUI: Monitors server status.",
+              "mqsireportflow: Displays flow statistics."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the purpose of Business Transaction Monitoring?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Tracks transaction performance",
+              "C: Manages users",
+              "D: Configures servers",
+              "E: Creates backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the Record and Replay feature do?",
+            "options": [
+              "A: Encrypts data",
+              "B: Captures and replays messages",
+              "C: Monitors traffic",
+              "D: Configures firewalls",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What provides debugging insights in ACE?",
+            "options": [
+              "A: Message flows",
+              "B: User Trace logs",
+              "C: Firewalls",
+              "D: APIs",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool monitors server status in ACE?",
+            "options": [
+              "A: Firewall",
+              "B: WebUI",
+              "C: VPN",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Service Trace logs?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Captures system-level issues",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the mqsireportflow command do?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Displays flow statistics",
+              "C: Manages users",
+              "D: Configures servers",
+              "E: Creates backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of Record and Replay?",
+            "options": [
+              "A: Encrypts data",
+              "B: Tests message flow behavior",
+              "C: Monitors traffic",
+              "D: Configures firewalls",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does User Trace log in ACE?",
+            "options": [
+              "A: Network traffic",
+              "B: Message flow execution",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of BTM in ACE?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Tracks transaction issues",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool aids troubleshooting in ACE?",
+            "options": [
+              "A: Web browser",
+              "B: mqsireportflow",
+              "C: Database query",
+              "D: Firewall rule",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Record and Replay capture?",
+            "options": [
+              "A: Network traffic",
+              "B: Message data",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of ACE v12 logs?",
+            "options": [
+              "A: Unreadable format",
+              "B: Readable text format",
+              "C: No logging support",
+              "D: Limited protocols",
+              "E: Static configuration"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does BTM monitor in ACE?",
+            "options": [
+              "A: User accounts",
+              "B: Transaction performance",
+              "C: Firewall rules",
+              "D: Backup files",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of Service Trace?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Captures system-level issues",
+              "C: Manages users",
+              "D: Configures servers",
+              "E: Creates backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does WebUI provide for debugging?",
+            "options": [
+              "A: Message encryption",
+              "B: Server status monitoring",
+              "C: User authentication",
+              "D: Firewall configuration",
+              "E: Backup management"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Record and Replay?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Simplifies debugging",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does User Trace provide?",
+            "options": [
+              "A: Network traffic",
+              "B: Debugging insights",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool displays flow statistics?",
+            "options": [
+              "A: Web browser",
+              "B: mqsireportflow",
+              "C: Database query",
+              "D: Firewall rule",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common debugging method in ACE?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Using trace logs",
+              "C: Configuring firewalls",
+              "D: Managing users",
+              "E: Creating backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does BTM alert on?",
+            "options": [
+              "A: Message flows",
+              "B: Transaction failures",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Advanced Features and Exam Prep",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers advanced IBM ACE features like group nodes, policies, and exam preparation strategies for certifications.",
+        "sections": [
+          {
+            "id": "6.1",
+            "title": "Group and Aggregate Nodes",
+            "overview": "Group, Collector, and Aggregate nodes handle complex data processing.",
+            "examples": [
+              "Group Node: Aggregates related messages.",
+              "Collector Node: Collects messages for processing."
+            ]
+          },
+          {
+            "id": "6.2",
+            "title": "Policy Projects",
+            "overview": "Policies define reusable configurations for services.",
+            "examples": [
+              "Policy: Defines database connectivity.",
+              "Configurable Service: Sets server properties."
+            ]
+          },
+          {
+            "id": "6.3",
+            "title": "User-Defined Extensions",
+            "overview": "Custom nodes extend ACE functionality.",
+            "examples": [
+              "Custom Node: Processes proprietary formats.",
+              "Extension: Adds new protocol support."
+            ]
+          },
+          {
+            "id": "6.4",
+            "title": "Exam Preparation",
+            "overview": "Practice exams and hands-on labs prepare for certification.",
+            "examples": [
+              "Practice Exam: Simulates certification questions.",
+              "Lab: Builds message flow for testing."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does a Group Node do in IBM ACE?",
+            "options": [
+              "A: Encrypts messages",
+              "B: Aggregates related messages",
+              "C: Manages users",
+              "D: Configures servers",
+              "E: Creates backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of a Policy Project?",
+            "options": [
+              "A: Encrypts data",
+              "B: Defines reusable configurations",
+              "C: Monitors traffic",
+              "D: Configures firewalls",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Collector Node process?",
+            "options": [
+              "A: Network traffic",
+              "B: Messages for processing",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of user-defined extensions?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Extends ACE functionality",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common exam preparation method?",
+            "options": [
+              "A: Encrypting messages",
+              "B: Practice exams",
+              "C: Configuring firewalls",
+              "D: Managing users",
+              "E: Creating backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an Aggregate Node do?",
+            "options": [
+              "A: Encrypts data",
+              "B: Combines message data",
+              "C: Monitors traffic",
+              "D: Configures servers",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of Policy Projects?",
+            "options": [
+              "A: Static configurations",
+              "B: Reusable service configurations",
+              "C: No API support",
+              "D: Limited protocols",
+              "E: Hardware dependency"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a user-defined node process?",
+            "options": [
+              "A: Network traffic",
+              "B: Proprietary formats",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of practice exams?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Prepares for certification",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Configurable Service define?",
+            "options": [
+              "A: Message flows",
+              "B: Server properties",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of Group Nodes?",
+            "options": [
+              "A: Encrypt messages",
+              "B: Aggregate related messages",
+              "C: Monitor traffic",
+              "D: Configure servers",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Policy Project configure?",
+            "options": [
+              "A: Network traffic",
+              "B: Database connectivity",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of user-defined extensions?",
+            "options": [
+              "A: Reduces functionality",
+              "B: Adds new protocol support",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common certification preparation tool?",
+            "options": [
+              "A: Web browser",
+              "B: Hands-on labs",
+              "C: Database query",
+              "D: Firewall rule",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an Aggregate Node combine?",
+            "options": [
+              "A: Network traffic",
+              "B: Message data",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Policy Projects?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Simplifies configuration",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a user-defined node extend?",
+            "options": [
+              "A: Message flows",
+              "B: ACE functionality",
+              "C: User accounts",
+              "D: Firewall rules",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of hands-on labs?",
+            "options": [
+              "A: Encrypt messages",
+              "B: Simulate real-world scenarios",
+              "C: Monitor traffic",
+              "D: Configure firewalls",
+              "E: Manage users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Collector Node do?",
+            "options": [
+              "A: Encrypts data",
+              "B: Collects messages for processing",
+              "C: Monitors traffic",
+              "D: Configures servers",
+              "E: Manages users"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of certification preparation?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enhances job readiness",
+              "C: Disables APIs",
+              "D: Increases latency",
+              "E: Limits protocols"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Create a message flow to transform JSON to XML using a Mapping Node.",
+        "Configure an integration node and server using command-line tools.",
+        "Set up a REST API integration with a Salesforce Connector.",
+        "Implement a record and replay feature to debug a message flow.",
+        "Develop a custom node to process a proprietary message format."
+      ],
+      "resources": [
+        "IBM App Connect Enterprise V12 Documentation.",
+        "IBM ACE Toolkit and sample message flows.",
+        "IBM Certified Solution Developer - App Connect Enterprise V11 Study Guide.",
+        "Online practice exams and tutorials from IBM Skills Network."
+      ],
+      "environment": "Access to IBM ACE Toolkit, IBM MQ, and a virtual lab environment for integration testing."
+    }
+  }
+}

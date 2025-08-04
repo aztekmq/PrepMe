@@ -1,0 +1,1632 @@
+{
+  "course": {
+    "title": "CompTIA Security+",
+    "duration": "6 hours",
+    "audience": [
+      "IT professionals",
+      "Security enthusiasts",
+      "Individuals preparing for CompTIA Security+ certification"
+    ],
+    "prerequisites": "Basic understanding of networking and IT fundamentals or completion of CompTIA Network+ certification.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Threats & Vulnerabilities",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers common cybersecurity threats, vulnerabilities, and mitigation strategies, including malware, phishing, social engineering, and insider threats.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Malware and Phishing",
+            "overview": "Malware includes viruses, ransomware, and spyware; phishing targets user credentials.",
+            "examples": [
+              "Ransomware: WannaCry encrypts files for ransom.",
+              "Phishing: Fake login pages steal credentials."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Social Engineering Techniques",
+            "overview": "Techniques like pretexting, baiting, and tailgating exploit human trust.",
+            "examples": [
+              "Pretexting: Impersonating IT staff to gain access.",
+              "Tailgating: Following authorized personnel into secure areas."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Risk Types and Threat Actors",
+            "overview": "Risks include internal and external threats; actors range from script kiddies to nation-states.",
+            "examples": [
+              "Insider Threat: Disgruntled employee leaking data.",
+              "Nation-State: APT groups targeting infrastructure."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Common Vulnerabilities and Mitigation",
+            "overview": "Vulnerabilities like unpatched systems or weak passwords are mitigated through updates and policies.",
+            "examples": [
+              "Mitigation: Regular patch management.",
+              "Vulnerability: SQL injection in web applications."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a common goal of ransomware?",
+            "options": [
+              "A: Steal user credentials",
+              "B: Encrypt files for ransom",
+              "C: Monitor network traffic",
+              "D: Install updates",
+              "E: Map vulnerabilities"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of social engineering?",
+            "options": [
+              "A: Installing a firewall",
+              "B: Tailgating into a secure area",
+              "C: Encrypting data",
+              "D: Patching software",
+              "E: Scanning ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "Who is considered a threat actor?",
+            "options": [
+              "A: A secure firewall",
+              "B: A nation-state hacker",
+              "C: A VPN server",
+              "D: A compliance policy",
+              "E: A backup system"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates unpatched system vulnerabilities?",
+            "options": [
+              "A: Weak passwords",
+              "B: Regular patch management",
+              "C: Open ports",
+              "D: Unencrypted data",
+              "E: Public Wi-Fi"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of phishing attacks?",
+            "options": [
+              "A: Encrypt network traffic",
+              "B: Steal user credentials",
+              "C: Update software",
+              "D: Monitor backups",
+              "E: Secure protocols"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What type of malware spies on user activity?",
+            "options": [
+              "A: Virus",
+              "B: Spyware",
+              "C: Worm",
+              "D: Trojan",
+              "E: Ransomware"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of an insider threat?",
+            "options": [
+              "A: Firewall misconfiguration",
+              "B: Employee leaking sensitive data",
+              "C: Encrypted email",
+              "D: Secure VPN access",
+              "E: Patched software"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What vulnerability does SQL injection exploit?",
+            "options": [
+              "A: Weak encryption",
+              "B: Unvalidated input",
+              "C: Strong passwords",
+              "D: Firewalls",
+              "E: Backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common social engineering technique?",
+            "options": [
+              "A: Installing antivirus",
+              "B: Pretexting",
+              "C: Encrypting data",
+              "D: Configuring firewalls",
+              "E: Updating firmware"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a characteristic of a nation-state threat actor?",
+            "options": [
+              "A: Limited resources",
+              "B: Advanced persistent threats",
+              "C: Basic scripting",
+              "D: Public Wi-Fi usage",
+              "E: Weak encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates phishing attacks?",
+            "options": [
+              "A: Open email attachments",
+              "B: User awareness training",
+              "C: Unsecured Wi-Fi",
+              "D: Weak passwords",
+              "E: Unpatched systems"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a worm malware do?",
+            "options": [
+              "A: Encrypts files",
+              "B: Self-replicates across networks",
+              "C: Steals credentials",
+              "D: Monitors traffic",
+              "E: Installs updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common risk type?",
+            "options": [
+              "A: Encrypted data",
+              "B: Insider threats",
+              "C: Secure protocols",
+              "D: Strong passwords",
+              "E: Firewalls"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of a Trojan?",
+            "options": [
+              "A: A legitimate software update",
+              "B: Malware disguised as software",
+              "C: A secure VPN",
+              "D: A firewall rule",
+              "E: A backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates social engineering risks?",
+            "options": [
+              "A: User training",
+              "B: Open ports",
+              "C: Weak encryption",
+              "D: Unpatched systems",
+              "E: Public Wi-Fi"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common vulnerability in web applications?",
+            "options": [
+              "A: Strong encryption",
+              "B: Cross-site scripting",
+              "C: Firewalls",
+              "D: Backups",
+              "E: VPNs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of a script kiddie?",
+            "options": [
+              "A: Develops secure software",
+              "B: Uses pre-built hacking tools",
+              "C: Configures firewalls",
+              "D: Manages backups",
+              "E: Encrypts data"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does baiting involve in social engineering?",
+            "options": [
+              "A: Encrypting files",
+              "B: Offering free USB drives with malware",
+              "C: Patching systems",
+              "D: Securing networks",
+              "E: Monitoring traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a mitigation for weak passwords?",
+            "options": [
+              "A: Use single-factor authentication",
+              "B: Implement strong password policies",
+              "C: Open public Wi-Fi",
+              "D: Disable firewalls",
+              "E: Ignore updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a phishing email typically contain?",
+            "options": [
+              "A: Firewall rules",
+              "B: Fake login links",
+              "C: Secure protocols",
+              "D: Backup scripts",
+              "E: Encryption keys"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Network & Infrastructure Security",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module explores securing network infrastructure using protocols, segmentation, firewalls, and wireless security techniques.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Secure Protocols",
+            "overview": "Protocols like HTTPS and SSH ensure secure communication.",
+            "examples": [
+              "HTTPS: Secures web traffic.",
+              "SSH: Enables secure remote access."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Network Segmentation and VPNs",
+            "overview": "Segmentation isolates networks; VPNs secure remote connections.",
+            "examples": [
+              "VLANs: Separate internal networks.",
+              "VPN: Secure teleworker access."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Firewalls and Proxies",
+            "overview": "Firewalls filter traffic; proxies control access.",
+            "examples": [
+              "Firewall: Blocks unauthorized traffic.",
+              "Proxy: Filters web requests."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Wireless Security",
+            "overview": "WPA3 and EAP secure wireless networks.",
+            "examples": [
+              "WPA3: Encrypts Wi-Fi traffic.",
+              "EAP: Authenticates wireless users."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What protocol secures web traffic?",
+            "options": [
+              "A: HTTP",
+              "B: HTTPS",
+              "C: FTP",
+              "D: Telnet",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of network segmentation?",
+            "options": [
+              "A: Increase network speed",
+              "B: Isolate network traffic",
+              "C: Disable firewalls",
+              "D: Open ports",
+              "E: Reduce encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a firewall do?",
+            "options": [
+              "A: Encrypts data",
+              "B: Filters network traffic",
+              "C: Authenticates users",
+              "D: Backs up data",
+              "E: Monitors logs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of using WPA3?",
+            "options": [
+              "A: Reduces encryption",
+              "B: Secures wireless networks",
+              "C: Opens public Wi-Fi",
+              "D: Disables authentication",
+              "E: Increases latency"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol enables secure remote access?",
+            "options": [
+              "A: FTP",
+              "B: SSH",
+              "C: HTTP",
+              "D: Telnet",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the role of a proxy server?",
+            "options": [
+              "A: Encrypts files",
+              "B: Filters web requests",
+              "C: Backs up data",
+              "D: Authenticates users",
+              "E: Opens ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a VPN provide?",
+            "options": [
+              "A: Public Wi-Fi access",
+              "B: Secure remote connections",
+              "C: Unencrypted traffic",
+              "D: Open network ports",
+              "E: Reduced security"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of network hardening?",
+            "options": [
+              "A: Disabling firewalls",
+              "B: Closing unused ports",
+              "C: Using weak passwords",
+              "D: Open Wi-Fi",
+              "E: Ignoring updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does EAP stand for in wireless security?",
+            "options": [
+              "A: Extended Access Protocol",
+              "B: Extensible Authentication Protocol",
+              "C: Encrypted Application Protocol",
+              "D: External Access Point",
+              "E: Enhanced Attack Prevention"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures data in transit over HTTPS?",
+            "options": [
+              "A: SSL/TLS",
+              "B: FTP",
+              "C: SNMP",
+              "D: Telnet",
+              "E: HTTP"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of VLANs?",
+            "options": [
+              "A: Increases network exposure",
+              "B: Isolates network traffic",
+              "C: Reduces encryption",
+              "D: Opens ports",
+              "E: Disables firewalls"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol is insecure for remote access?",
+            "options": [
+              "A: SSH",
+              "B: Telnet",
+              "C: HTTPS",
+              "D: SFTP",
+              "E: VPN"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a stateful firewall track?",
+            "options": [
+              "A: User passwords",
+              "B: Connection states",
+              "C: File backups",
+              "D: Encryption keys",
+              "E: Log files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common wireless security protocol?",
+            "options": [
+              "A: WEP",
+              "B: WPA3",
+              "C: FTP",
+              "D: HTTP",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates man-in-the-middle attacks?",
+            "options": [
+              "A: Open Wi-Fi",
+              "B: HTTPS",
+              "C: Weak passwords",
+              "D: Unpatched systems",
+              "E: Telnet"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of a reverse proxy?",
+            "options": [
+              "A: Backs up data",
+              "B: Load balances traffic",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Reduces security"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures wireless authentication?",
+            "options": [
+              "A: WEP",
+              "B: EAP",
+              "C: HTTP",
+              "D: FTP",
+              "E: Telnet"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a network hardening technique?",
+            "options": [
+              "A: Using default passwords",
+              "B: Disabling unused services",
+              "C: Open Wi-Fi",
+              "D: Unencrypted protocols",
+              "E: Ignoring updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol secures file transfers?",
+            "options": [
+              "A: FTP",
+              "B: SFTP",
+              "C: HTTP",
+              "D: Telnet",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a DMZ provide in network security?",
+            "options": [
+              "A: Unsecured access",
+              "B: Isolated public-facing services",
+              "C: Open ports",
+              "D: Weak encryption",
+              "E: Public Wi-Fi"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Identity & Access Management (IAM)",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers authentication, access control models, identity federation, and directory services for secure access management.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "Authentication Methods",
+            "overview": "Methods like MFA, biometrics, and SSO verify user identity.",
+            "examples": [
+              "MFA: Password + SMS code.",
+              "Biometrics: Fingerprint scanning."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "Identity Federation and Lifecycle",
+            "overview": "Federation enables cross-organization access; lifecycle manages user accounts.",
+            "examples": [
+              "Federation: SAML for single sign-on.",
+              "Lifecycle: Account provisioning and deprovisioning."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Access Control Models",
+            "overview": "RBAC and ABAC define access based on roles or attributes.",
+            "examples": [
+              "RBAC: Role-based access for employees.",
+              "ABAC: Attribute-based access for contractors."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Directory Services and Identity Providers",
+            "overview": "Services like LDAP and IdPs manage user identities.",
+            "examples": [
+              "LDAP: Active Directory for user management.",
+              "IdP: Okta for authentication."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does MFA stand for?",
+            "options": [
+              "A: Multi-Factor Authentication",
+              "B: Managed Firewall Access",
+              "C: Mandatory File Analysis",
+              "D: Mobile Framework Application",
+              "E: Multi-Firewall Architecture"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is an example of biometrics?",
+            "options": [
+              "A: Password",
+              "B: Fingerprint scanning",
+              "C: Security question",
+              "D: Token card",
+              "E: PIN"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSO provide?",
+            "options": [
+              "A: Single access to multiple systems",
+              "B: Single encryption key",
+              "C: Single firewall rule",
+              "D: Single user account",
+              "E: Single network port"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common access control model?",
+            "options": [
+              "A: RBAC",
+              "B: VPN",
+              "C: HTTPS",
+              "D: Firewall",
+              "E: Proxy"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What protocol is used for identity federation?",
+            "options": [
+              "A: HTTP",
+              "B: SAML",
+              "C: FTP",
+              "D: Telnet",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What manages user identities in organizations?",
+            "options": [
+              "A: Firewalls",
+              "B: Active Directory",
+              "C: VPNs",
+              "D: Proxies",
+              "E: Routers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of RBAC?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies access management",
+              "C: Reduces encryption",
+              "D: Opens ports",
+              "E: Disables authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of an identity provider?",
+            "options": [
+              "A: Firewall",
+              "B: Okta",
+              "C: VPN",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does account deprovisioning involve?",
+            "options": [
+              "A: Creating new accounts",
+              "B: Removing user access",
+              "C: Encrypting data",
+              "D: Opening ports",
+              "E: Monitoring traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ABAC use for access control?",
+            "options": [
+              "A: Roles",
+              "B: Attributes",
+              "C: Firewalls",
+              "D: Encryption keys",
+              "E: Network ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a component of MFA?",
+            "options": [
+              "A: Single password",
+              "B: SMS code",
+              "C: Open Wi-Fi",
+              "D: Unencrypted data",
+              "E: Weak passwords"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What manages user accounts in LDAP?",
+            "options": [
+              "A: Firewalls",
+              "B: Directory services",
+              "C: VPNs",
+              "D: Proxies",
+              "E: Routers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of identity federation?",
+            "options": [
+              "A: Reduces user access",
+              "B: Enables cross-organization authentication",
+              "C: Disables MFA",
+              "D: Opens network ports",
+              "E: Weakens encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an example of an authentication factor?",
+            "options": [
+              "A: Firewall rule",
+              "B: Security token",
+              "C: Network port",
+              "D: Proxy server",
+              "E: Backup file"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does RBAC stand for?",
+            "options": [
+              "A: Role-Based Access Control",
+              "B: Remote Backup Authentication Control",
+              "C: Rule-Based Application Control",
+              "D: Restricted Bandwidth Access Control",
+              "E: Role-Based Analysis Control"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a common directory service?",
+            "options": [
+              "A: VPN",
+              "B: Active Directory",
+              "C: Firewall",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of account provisioning?",
+            "options": [
+              "A: Remove user access",
+              "B: Create user accounts",
+              "C: Disable MFA",
+              "D: Open ports",
+              "E: Reduce encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an IdP manage?",
+            "options": [
+              "A: Firewalls",
+              "B: User authentication",
+              "C: Network ports",
+              "D: Backup files",
+              "E: Proxies"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of biometrics?",
+            "options": [
+              "A: Reduces security",
+              "B: Enhances authentication",
+              "C: Opens ports",
+              "D: Disables MFA",
+              "E: Weakens encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common IAM challenge?",
+            "options": [
+              "A: Strong encryption",
+              "B: Managing user lifecycle",
+              "C: Open Wi-Fi",
+              "D: Firewalls",
+              "E: Proxies"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Architecture, Cloud & Application Security",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers secure system design, virtualization, cloud security, and application security best practices.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "Secure System Design",
+            "overview": "Principles like Zero Trust and least privilege ensure secure architecture.",
+            "examples": [
+              "Zero Trust: Verify all access.",
+              "Least Privilege: Restrict user permissions."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Virtualization and Container Security",
+            "overview": "Securing VMs and containers prevents unauthorized access.",
+            "examples": [
+              "VMs: Hypervisor security.",
+              "Containers: Docker image scanning."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Application Security Best Practices",
+            "overview": "Input validation and secure coding prevent vulnerabilities.",
+            "examples": [
+              "Input Validation: Prevent SQL injection.",
+              "Secure Coding: Avoid hard-coded credentials."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "DevSecOps and Secure Coding",
+            "overview": "Integrating security into DevOps ensures secure software development.",
+            "examples": [
+              "DevSecOps: Automated security testing.",
+              "Secure Coding: OWASP guidelines."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a principle of Zero Trust?",
+            "options": [
+              "A: Allow all access",
+              "B: Verify all access",
+              "C: Disable encryption",
+              "D: Open ports",
+              "E: Ignore updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does least privilege ensure?",
+            "options": [
+              "A: Maximum user access",
+              "B: Restricted user permissions",
+              "C: Open network ports",
+              "D: Unencrypted data",
+              "E: Weak passwords"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures virtual machines?",
+            "options": [
+              "A: Open ports",
+              "B: Hypervisor security",
+              "C: Weak encryption",
+              "D: Unpatched systems",
+              "E: Public Wi-Fi"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What prevents SQL injection?",
+            "options": [
+              "A: Input validation",
+              "B: Open ports",
+              "C: Weak passwords",
+              "D: Unencrypted data",
+              "E: Disabling firewalls"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a DevSecOps practice?",
+            "options": [
+              "A: Ignoring security testing",
+              "B: Automated security testing",
+              "C: Open Wi-Fi",
+              "D: Weak encryption",
+              "E: Unpatched systems"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common container security practice?",
+            "options": [
+              "A: Open access",
+              "B: Docker image scanning",
+              "C: Disabling firewalls",
+              "D: Weak passwords",
+              "E: Unencrypted data"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does secure coding avoid?",
+            "options": [
+              "A: Input validation",
+              "B: Hard-coded credentials",
+              "C: Encryption",
+              "D: Firewalls",
+              "E: Backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Zero Trust?",
+            "options": [
+              "A: Reduces security",
+              "B: Enhances access control",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures cloud environments?",
+            "options": [
+              "A: Open Wi-Fi",
+              "B: Least privilege policies",
+              "C: Weak passwords",
+              "D: Unpatched systems",
+              "E: Disabling firewalls"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is an application security best practice?",
+            "options": [
+              "A: Hard-coded passwords",
+              "B: Input sanitization",
+              "C: Open ports",
+              "D: Unencrypted data",
+              "E: Weak authentication"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does OWASP provide?",
+            "options": [
+              "A: Firewall rules",
+              "B: Secure coding guidelines",
+              "C: Network ports",
+              "D: Backup scripts",
+              "E: Encryption keys"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common virtualization security measure?",
+            "options": [
+              "A: Open access",
+              "B: Securing hypervisors",
+              "C: Weak encryption",
+              "D: Unpatched systems",
+              "E: Public Wi-Fi"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DevSecOps integrate?",
+            "options": [
+              "A: Unsecured coding",
+              "B: Security into DevOps",
+              "C: Open ports",
+              "D: Weak passwords",
+              "E: Unencrypted data"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common cloud security challenge?",
+            "options": [
+              "A: Strong encryption",
+              "B: Shared responsibility model",
+              "C: Firewalls",
+              "D: Backups",
+              "E: VPNs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What prevents cross-site scripting?",
+            "options": [
+              "A: Input validation",
+              "B: Open ports",
+              "C: Weak passwords",
+              "D: Unencrypted data",
+              "E: Disabling firewalls"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of secure system design?",
+            "options": [
+              "A: Increases vulnerabilities",
+              "B: Reduces attack surface",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures containerized applications?",
+            "options": [
+              "A: Open access",
+              "B: Image scanning",
+              "C: Weak encryption",
+              "D: Unpatched systems",
+              "E: Public Wi-Fi"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a principle of secure coding?",
+            "options": [
+              "A: Hard-coded credentials",
+              "B: Sanitizing inputs",
+              "C: Open ports",
+              "D: Weak authentication",
+              "E: Unencrypted data"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Zero Trust assume?",
+            "options": [
+              "A: All users are trusted",
+              "B: No users are trusted",
+              "C: Firewalls are disabled",
+              "D: Ports are open",
+              "E: Encryption is weak"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of least privilege?",
+            "options": [
+              "A: Increases access",
+              "B: Limits unauthorized access",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Cryptography & PKI",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers encryption, hashing, digital signatures, and public key infrastructure for securing data and communications.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "Encryption Types",
+            "overview": "Symmetric and asymmetric encryption secure data.",
+            "examples": [
+              "Symmetric: AES for file encryption.",
+              "Asymmetric: RSA for key exchange."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Hashing and Salting",
+            "overview": "Hashing ensures data integrity; salting strengthens passwords.",
+            "examples": [
+              "Hashing: SHA-256 for data verification.",
+              "Salting: Random data for password hashing."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Certificates and Key Management",
+            "overview": "Certificates and PKI manage secure communications.",
+            "examples": [
+              "Certificates: SSL/TLS for websites.",
+              "Key Management: Secure key storage."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Crypto Attacks and Secure Protocols",
+            "overview": "Attacks like brute force target weak encryption; secure protocols mitigate risks.",
+            "examples": [
+              "Attack: Brute force on weak keys.",
+              "Protocol: TLS for secure communication."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is an example of symmetric encryption?",
+            "options": [
+              "A: RSA",
+              "B: AES",
+              "C: SHA-256",
+              "D: MD5",
+              "E: ECC"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does hashing ensure?",
+            "options": [
+              "A: Data confidentiality",
+              "B: Data integrity",
+              "C: Data availability",
+              "D: Data encryption",
+              "E: Data compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common asymmetric encryption algorithm?",
+            "options": [
+              "A: AES",
+              "B: RSA",
+              "C: SHA-256",
+              "D: MD5",
+              "E: DES"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a digital signature provide?",
+            "options": [
+              "A: Data encryption",
+              "B: Authentication and integrity",
+              "C: Data compression",
+              "D: Network filtering",
+              "E: Port scanning"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol uses SSL/TLS?",
+            "options": [
+              "A: HTTP",
+              "B: HTTPS",
+              "C: FTP",
+              "D: Telnet",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of salting?",
+            "options": [
+              "A: Encrypts data",
+              "B: Strengthens password hashing",
+              "C: Compresses files",
+              "D: Filters traffic",
+              "E: Opens ports"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What manages secure communications in PKI?",
+            "options": [
+              "A: Firewalls",
+              "B: Certificates",
+              "C: Proxies",
+              "D: VPNs",
+              "E: Routers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common hashing algorithm?",
+            "options": [
+              "A: AES",
+              "B: SHA-256",
+              "C: RSA",
+              "D: DES",
+              "E: ECC"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a crypto attack example?",
+            "options": [
+              "A: Firewall configuration",
+              "B: Brute force on keys",
+              "C: Secure coding",
+              "D: Input validation",
+              "E: Network segmentation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures key exchange in asymmetric encryption?",
+            "options": [
+              "A: AES",
+              "B: RSA",
+              "C: SHA-256",
+              "D: MD5",
+              "E: DES"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does TLS provide?",
+            "options": [
+              "A: Unsecured communication",
+              "B: Secure communication",
+              "C: Open ports",
+              "D: Weak passwords",
+              "E: Unpatched systems"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of key management?",
+            "options": [
+              "A: Increases vulnerabilities",
+              "B: Secures cryptographic keys",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a certificate authority issue?",
+            "options": [
+              "A: Firewalls",
+              "B: SSL/TLS certificates",
+              "C: Network ports",
+              "D: Proxies",
+              "E: VPNs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common symmetric encryption issue?",
+            "options": [
+              "A: Strong security",
+              "B: Key distribution",
+              "C: Data integrity",
+              "D: Authentication",
+              "E: Compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SHA-256 ensure?",
+            "options": [
+              "A: Data encryption",
+              "B: Data integrity",
+              "C: Data compression",
+              "D: Network filtering",
+              "E: Port scanning"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of digital signatures?",
+            "options": [
+              "A: Encrypt files",
+              "B: Verify authenticity",
+              "C: Open ports",
+              "D: Disable firewalls",
+              "E: Reduce encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What mitigates brute force attacks?",
+            "options": [
+              "A: Weak passwords",
+              "B: Strong encryption keys",
+              "C: Open Wi-Fi",
+              "D: Unpatched systems",
+              "E: Disabling MFA"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common PKI component?",
+            "options": [
+              "A: Firewall",
+              "B: Certificate authority",
+              "C: Proxy",
+              "D: VPN",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What protocol secures email communication?",
+            "options": [
+              "A: HTTP",
+              "B: TLS",
+              "C: FTP",
+              "D: Telnet",
+              "E: SNMP"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of salting passwords?",
+            "options": [
+              "A: Reduces security",
+              "B: Prevents rainbow table attacks",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Governance, Risk, Ops & Exam Prep",
+        "enabled": true,
+        "duration": "1 hour",
+        "description": "This module covers security policies, compliance frameworks, incident response, and exam preparation strategies.",
+        "sections": [
+          {
+            "id": "6.1",
+            "title": "Security Policies and Procedures",
+            "overview": "Policies define security practices and compliance requirements.",
+            "examples": [
+              "Acceptable Use Policy: Governs device usage.",
+              "Incident Response Plan: Guides breach response."
+            ]
+          },
+          {
+            "id": "6.2",
+            "title": "Frameworks, Laws, and Compliance",
+            "overview": "Frameworks like NIST and laws like GDPR ensure compliance.",
+            "examples": [
+              "NIST: Cybersecurity framework.",
+              "GDPR: Data protection regulation."
+            ]
+          },
+          {
+            "id": "6.3",
+            "title": "Incident Response and Forensics",
+            "overview": "Structured response and forensic analysis mitigate breaches.",
+            "examples": [
+              "Incident Response: Containment and recovery.",
+              "Forensics: Analyzing breach evidence."
+            ]
+          },
+          {
+            "id": "6.4",
+            "title": "Exam Preparation",
+            "overview": "Practice exams and command-line tools prepare for certification.",
+            "examples": [
+              "Tools: Nmap for scanning.",
+              "Practice: Simulated exam questions."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the purpose of an Acceptable Use Policy?",
+            "options": [
+              "A: Encrypts data",
+              "B: Governs device usage",
+              "C: Opens ports",
+              "D: Disables firewalls",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common compliance framework?",
+            "options": [
+              "A: VPN",
+              "B: NIST",
+              "C: Firewall",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What regulation protects user data in the EU?",
+            "options": [
+              "A: HIPAA",
+              "B: GDPR",
+              "C: PCI DSS",
+              "D: SOX",
+              "E: FISMA"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a key step in incident response?",
+            "options": [
+              "A: Open ports",
+              "B: Containment",
+              "C: Weak passwords",
+              "D: Unencrypted data",
+              "E: Disabling MFA"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool is used for network scanning?",
+            "options": [
+              "A: Nmap",
+              "B: SSH",
+              "C: HTTPS",
+              "D: FTP",
+              "E: Telnet"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does GDPR require for data breaches?",
+            "options": [
+              "A: Ignore notifications",
+              "B: Notify authorities",
+              "C: Open ports",
+              "D: Disable encryption",
+              "E: Reduce backups"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of forensic analysis?",
+            "options": [
+              "A: Encrypt files",
+              "B: Analyze breach evidence",
+              "C: Open ports",
+              "D: Disable firewalls",
+              "E: Ignore updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common incident response phase?",
+            "options": [
+              "A: Encryption",
+              "B: Recovery",
+              "C: Open ports",
+              "D: Weak passwords",
+              "E: Unpatched systems"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does HIPAA protect?",
+            "options": [
+              "A: Financial data",
+              "B: Health information",
+              "C: Network traffic",
+              "D: Encryption keys",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of security policies?",
+            "options": [
+              "A: Increases vulnerabilities",
+              "B: Standardizes security practices",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What framework guides cybersecurity practices?",
+            "options": [
+              "A: VPN",
+              "B: NIST",
+              "C: Firewall",
+              "D: Proxy",
+              "E: Router"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common exam preparation tool?",
+            "options": [
+              "A: Weak passwords",
+              "B: Practice exams",
+              "C: Open ports",
+              "D: Unencrypted data",
+              "E: Disabling MFA"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an incident response plan guide?",
+            "options": [
+              "A: Encryption keys",
+              "B: Breach response",
+              "C: Network ports",
+              "D: Backup files",
+              "E: Proxies"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common compliance challenge?",
+            "options": [
+              "A: Strong encryption",
+              "B: Meeting regulatory requirements",
+              "C: Firewalls",
+              "D: Backups",
+              "E: VPNs"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool analyzes network vulnerabilities?",
+            "options": [
+              "A: Nmap",
+              "B: SSH",
+              "C: HTTPS",
+              "D: FTP",
+              "E: Telnet"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does PCI DSS regulate?",
+            "options": [
+              "A: Health data",
+              "B: Payment card data",
+              "C: Network traffic",
+              "D: Encryption keys",
+              "E: Backup files"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a purpose of security awareness training?",
+            "options": [
+              "A: Open ports",
+              "B: Reduce social engineering risks",
+              "C: Disable encryption",
+              "D: Ignore updates",
+              "E: Weak passwords"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common forensic technique?",
+            "options": [
+              "A: Encrypting files",
+              "B: Analyzing log files",
+              "C: Opening ports",
+              "D: Disabling firewalls",
+              "E: Ignoring updates"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a risk assessment identify?",
+            "options": [
+              "A: Encryption keys",
+              "B: Potential vulnerabilities",
+              "C: Network ports",
+              "D: Backup files",
+              "E: Proxies"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of compliance frameworks?",
+            "options": [
+              "A: Increases vulnerabilities",
+              "B: Ensures regulatory adherence",
+              "C: Opens ports",
+              "D: Disables encryption",
+              "E: Ignores updates"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Configure a firewall rule to block unauthorized traffic.",
+        "Set up a VPN for secure remote access.",
+        "Implement MFA on a test account using an IdP.",
+        "Scan a network using Nmap to identify open ports.",
+        "Analyze a sample incident response plan and suggest improvements."
+      ],
+      "resources": [
+        "CompTIA Security+ Study Guide (SY0-601 or later).",
+        "OWASP Top Ten for application security.",
+        "NIST Cybersecurity Framework documentation.",
+        "Sample practice exams and command-line tools provided in course materials."
+      ],
+      "environment": "Access to a virtual lab environment or sandbox for network and security tool practice."
+    }
+  }
+}

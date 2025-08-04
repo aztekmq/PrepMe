@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "Advanced Python for Computer Science",
+    "duration": "10 hours",
+    "audience": [
+      "Senior Computer Science majors",
+      "Graduate students in computing disciplines",
+      "Professional developers seeking advanced Python mastery"
+    ],
+    "prerequisites": "Proficiency in Python (equivalent to MIT’s 6.0001/6.0002 or similar), understanding of data structures, algorithms, and object-oriented programming. Familiarity with Linux command-line, APIs, and basic networking concepts is recommended.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Advanced Data Structures and Algorithms",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module explores advanced Python data structures and algorithmic optimizations, focusing on custom implementations and performance-critical use cases.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Custom Data Structures",
+            "overview": "Implement custom data structures like tries and graphs using Python’s collections module.",
+            "examples": [
+              "Trie: Autocomplete system with prefix matching.",
+              "Graph: Adjacency list for shortest path algorithms."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Algorithm Optimization",
+            "overview": "Optimize algorithms using memoization and dynamic programming.",
+            "examples": [
+              "Memoization: Caching Fibonacci results.",
+              "Dynamic Programming: Knapsack problem solver."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Collections and Itertools",
+            "overview": "Leverage collections.deque, Counter, and itertools for efficient data manipulation.",
+            "examples": [
+              "deque: Double-ended queue for BFS.",
+              "Counter: Frequency analysis of data."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Performance Analysis",
+            "overview": "Use timeit and cProfile to measure and optimize code performance.",
+            "examples": [
+              "timeit: Compare list comprehension vs. loops.",
+              "cProfile: Profile recursive algorithms."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a use case for a trie data structure?",
+            "options": [
+              "A: Sorting integers",
+              "B: Autocomplete systems",
+              "C: Matrix operations",
+              "D: File compression",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does collections.deque provide?",
+            "options": [
+              "A: Key-value storage",
+              "B: Double-ended queue",
+              "C: Priority queue",
+              "D: Hash table",
+              "E: Sorted list"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What optimization technique caches results?",
+            "options": [
+              "A: Dynamic programming",
+              "B: Memoization",
+              "C: Greedy algorithm",
+              "D: Divide and conquer",
+              "E: Backtracking"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What module measures code execution time?",
+            "options": [
+              "A: cProfile",
+              "B: timeit",
+              "C: sys",
+              "D: os",
+              "E: logging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does collections.Counter analyze?",
+            "options": [
+              "A: Memory usage",
+              "B: Data frequency",
+              "C: Network traffic",
+              "D: File size",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What algorithm benefits from dynamic programming?",
+            "options": [
+              "A: Binary search",
+              "B: Knapsack problem",
+              "C: Bubble sort",
+              "D: Depth-first search",
+              "E: Merge sort"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for itertools.permutations?",
+            "options": [
+              "A: File compression",
+              "B: Generating combinations",
+              "C: Matrix multiplication",
+              "D: Network routing",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does cProfile measure?",
+            "options": [
+              "A: Disk I/O",
+              "B: Function call performance",
+              "C: Network latency",
+              "D: Memory allocation",
+              "E: File size"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What data structure is ideal for BFS?",
+            "options": [
+              "A: Stack",
+              "B: deque",
+              "C: Hash table",
+              "D: Binary tree",
+              "E: Array"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of memoization?",
+            "options": [
+              "A: Increases memory usage",
+              "B: Reduces computation time",
+              "C: Simplifies code",
+              "D: Enhances security",
+              "E: Limits scalability"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What module provides efficient data structures?",
+            "options": [
+              "A: sys",
+              "B: collections",
+              "C: os",
+              "D: logging",
+              "E: json"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does timeit compare?",
+            "options": [
+              "A: File sizes",
+              "B: Code execution times",
+              "C: Network speeds",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for a graph data structure?",
+            "options": [
+              "A: File compression",
+              "B: Shortest path algorithms",
+              "C: String sorting",
+              "D: Matrix operations",
+              "E: Data encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does itertools.chain do?",
+            "options": [
+              "A: Encrypts data",
+              "B: Concatenates iterables",
+              "C: Sorts lists",
+              "D: Compresses files",
+              "E: Monitors memory"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of dynamic programming?",
+            "options": [
+              "A: Increases complexity",
+              "B: Reduces redundant computations",
+              "C: Limits scalability",
+              "D: Enhances security",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does collections.namedtuple provide?",
+            "options": [
+              "A: Dynamic arrays",
+              "B: Immutable records",
+              "C: Priority queues",
+              "D: Hash tables",
+              "E: Sorted lists"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of cProfile?",
+            "options": [
+              "A: File compression",
+              "B: Performance profiling",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What data structure supports prefix matching?",
+            "options": [
+              "A: Stack",
+              "B: Trie",
+              "C: Queue",
+              "D: Hash table",
+              "E: Array"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does itertools.groupby do?",
+            "options": [
+              "A: Sorts lists",
+              "B: Groups consecutive elements",
+              "C: Encrypts data",
+              "D: Compresses files",
+              "E: Monitors memory"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of using collections.deque?",
+            "options": [
+              "A: Reduces memory usage",
+              "B: Efficient appends/pops",
+              "C: Enhances security",
+              "D: Limits scalability",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Concurrency and Parallelism",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers advanced concurrency models in Python, including threading, multiprocessing, asyncio, and concurrent.futures for high-performance applications.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Threading and GIL",
+            "overview": "Understand threading limitations due to the Global Interpreter Lock (GIL).",
+            "examples": [
+              "Threading: Parallel I/O tasks.",
+              "GIL: Limits CPU-bound parallelism."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Multiprocessing",
+            "overview": "Bypass GIL using multiprocessing for CPU-bound tasks.",
+            "examples": [
+              "Pool: Parallel matrix computations.",
+              "Process: Independent task execution."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Asyncio for I/O-Bound Tasks",
+            "overview": "Use asyncio for asynchronous I/O operations.",
+            "examples": [
+              "async/await: Non-blocking HTTP requests.",
+              "Event Loop: Manages async tasks."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Concurrent Futures",
+            "overview": "Simplify concurrency with ThreadPoolExecutor and ProcessPoolExecutor.",
+            "examples": [
+              "ThreadPoolExecutor: Parallel web scraping.",
+              "ProcessPoolExecutor: CPU-intensive tasks."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What limits threading in Python?",
+            "options": [
+              "A: asyncio",
+              "B: GIL",
+              "C: Multiprocessing",
+              "D: ThreadPoolExecutor",
+              "E: Event Loop"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for multiprocessing?",
+            "options": [
+              "A: I/O-bound tasks",
+              "B: CPU-bound tasks",
+              "C: File compression",
+              "D: Network routing",
+              "E: Data encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does asyncio handle efficiently?",
+            "options": [
+              "A: CPU-bound tasks",
+              "B: I/O-bound tasks",
+              "C: Memory allocation",
+              "D: File compression",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ThreadPoolExecutor simplify?",
+            "options": [
+              "A: File compression",
+              "B: Thread management",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What manages async tasks in asyncio?",
+            "options": [
+              "A: GIL",
+              "B: Event Loop",
+              "C: Pool",
+              "D: Process",
+              "E: Thread"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of ProcessPoolExecutor?",
+            "options": [
+              "A: Enhances I/O performance",
+              "B: Bypasses GIL for CPU tasks",
+              "C: Simplifies debugging",
+              "D: Reduces memory usage",
+              "E: Limits scalability"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of threading?",
+            "options": [
+              "A: CPU-bound tasks",
+              "B: I/O-bound tasks",
+              "C: File compression",
+              "D: Data encryption",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does async/await enable?",
+            "options": [
+              "A: Blocking I/O",
+              "B: Non-blocking I/O",
+              "C: CPU-bound tasks",
+              "D: Memory allocation",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a limitation of the GIL?",
+            "options": [
+              "A: Prevents I/O-bound tasks",
+              "B: Limits CPU-bound parallelism",
+              "C: Disables asyncio",
+              "D: Reduces memory usage",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ProcessPoolExecutor handle?",
+            "options": [
+              "A: I/O-bound tasks",
+              "B: CPU-intensive tasks",
+              "C: File compression",
+              "D: Network routing",
+              "E: Data encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for asyncio?",
+            "options": [
+              "A: Matrix computations",
+              "B: HTTP requests",
+              "C: File compression",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What simplifies concurrent task management?",
+            "options": [
+              "A: collections",
+              "B: concurrent.futures",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ThreadPoolExecutor optimize?",
+            "options": [
+              "A: CPU-bound tasks",
+              "B: I/O-bound tasks",
+              "C: File compression",
+              "D: Data encryption",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a feature of the Event Loop?",
+            "options": [
+              "A: Encrypts data",
+              "B: Manages async tasks",
+              "C: Compresses files",
+              "D: Monitors memory",
+              "E: Routes network traffic"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does multiprocessing bypass?",
+            "options": [
+              "A: Event Loop",
+              "B: GIL",
+              "C: ThreadPoolExecutor",
+              "D: asyncio",
+              "E: cProfile"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of concurrent.futures?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies concurrency",
+              "C: Limits scalability",
+              "D: Enhances security",
+              "E: Reduces performance"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does asyncio avoid?",
+            "options": [
+              "A: Blocking I/O",
+              "B: Non-blocking I/O",
+              "C: CPU-bound tasks",
+              "D: Memory allocation",
+              "E: File compression"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a use case for ThreadPoolExecutor?",
+            "options": [
+              "A: Matrix computations",
+              "B: Web scraping",
+              "C: File compression",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the GIL affect?",
+            "options": [
+              "A: I/O-bound tasks",
+              "B: CPU-bound threading",
+              "C: File compression",
+              "D: Network routing",
+              "E: Data encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common concurrency model in Python?",
+            "options": [
+              "A: collections",
+              "B: asyncio",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Metaprogramming and Decorators",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module delves into Python’s metaprogramming capabilities, including decorators, metaclasses, and dynamic code generation for advanced applications.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "Decorators",
+            "overview": "Use decorators for function wrapping and code reuse.",
+            "examples": [
+              "Decorator: Logs function execution time.",
+              "@retry: Handles API call retries."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "Metaclasses",
+            "overview": "Customize class creation with metaclasses.",
+            "examples": [
+              "Metaclass: Enforces singleton pattern.",
+              "Dynamic Class: Generates classes at runtime."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Dynamic Code Generation",
+            "overview": "Use exec() and types module for runtime code creation.",
+            "examples": [
+              "exec(): Generates functions dynamically.",
+              "types.MethodType: Adds methods to objects."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Introspection",
+            "overview": "Inspect and modify code at runtime using inspect module.",
+            "examples": [
+              "inspect: Retrieves function signatures.",
+              "dir(): Lists object attributes."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a use case for a Python decorator?",
+            "options": [
+              "A: File compression",
+              "B: Logging execution time",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a metaclass customize?",
+            "options": [
+              "A: Function execution",
+              "B: Class creation",
+              "C: File compression",
+              "D: Network routing",
+              "E: Data encryption"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What module supports dynamic code generation?",
+            "options": [
+              "A: collections",
+              "B: types",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the inspect module provide?",
+            "options": [
+              "A: File compression",
+              "B: Code introspection",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of @retry decorator?",
+            "options": [
+              "A: File compression",
+              "B: Handling API retries",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What enforces the singleton pattern?",
+            "options": [
+              "A: Decorator",
+              "B: Metaclass",
+              "C: Event Loop",
+              "D: ThreadPoolExecutor",
+              "E: asyncio"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does exec() enable?",
+            "options": [
+              "A: File compression",
+              "B: Dynamic code execution",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does dir() list?",
+            "options": [
+              "A: File sizes",
+              "B: Object attributes",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of decorators?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances code reuse",
+              "C: Limits scalability",
+              "D: Reduces performance",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does types.MethodType add?",
+            "options": [
+              "A: File compression",
+              "B: Methods to objects",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for metaclasses?",
+            "options": [
+              "A: File compression",
+              "B: Dynamic class creation",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does inspect.getsource do?",
+            "options": [
+              "A: Compresses files",
+              "B: Retrieves function code",
+              "C: Routes network traffic",
+              "D: Encrypts data",
+              "E: Allocates memory"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common decorator use case?",
+            "options": [
+              "A: File compression",
+              "B: Access control",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a metaclass enforce?",
+            "options": [
+              "A: File compression",
+              "B: Class behavior",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of dynamic code generation?",
+            "options": [
+              "A: Reduces flexibility",
+              "B: Enhances runtime adaptability",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does inspect.signature retrieve?",
+            "options": [
+              "A: File sizes",
+              "B: Function parameters",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for dynamic code?",
+            "options": [
+              "A: File compression",
+              "B: Generating functions",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a decorator wrap?",
+            "options": [
+              "A: File objects",
+              "B: Functions or methods",
+              "C: Network packets",
+              "D: Memory blocks",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of introspection?",
+            "options": [
+              "A: Reduces code flexibility",
+              "B: Enables runtime inspection",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What module supports metaprogramming?",
+            "options": [
+              "A: collections",
+              "B: types",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Performance Optimization and C Extensions",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module focuses on optimizing Python code for performance, including C extensions, NumPy, and just-in-time compilation with Numba.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "C Extensions with Cython",
+            "overview": "Write C extensions using Cython to improve performance.",
+            "examples": [
+              "Cython: Optimize matrix operations.",
+              ".pyx File: Compile Python to C."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "NumPy for Numerical Computing",
+            "overview": "Use NumPy for efficient array operations and linear algebra.",
+            "examples": [
+              "NumPy: Vectorized matrix multiplication.",
+              "ndarray: Fast array computations."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Numba JIT Compilation",
+            "overview": "Use Numba for just-in-time compilation of Python code.",
+            "examples": [
+              "@jit: Accelerates loops.",
+              "nopython: Ensures native performance."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Memory Management",
+            "overview": "Optimize memory usage with weakref and gc modules.",
+            "examples": [
+              "weakref: Manages object references.",
+              "gc: Controls garbage collection."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does Cython optimize?",
+            "options": [
+              "A: File compression",
+              "B: Python performance",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for NumPy?",
+            "options": [
+              "A: File compression",
+              "B: Matrix multiplication",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Numba’s @jit decorator do?",
+            "options": [
+              "A: Compresses files",
+              "B: Compiles code to machine code",
+              "C: Routes network traffic",
+              "D: Encrypts data",
+              "E: Allocates memory"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What module manages garbage collection?",
+            "options": [
+              "A: collections",
+              "B: gc",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does weakref manage?",
+            "options": [
+              "A: File sizes",
+              "B: Object references",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of NumPy’s ndarray?",
+            "options": [
+              "A: Reduces performance",
+              "B: Fast array computations",
+              "C: Limits scalability",
+              "D: Enhances security",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Cython compile to?",
+            "options": [
+              "A: JavaScript",
+              "B: C code",
+              "C: Python bytecode",
+              "D: Assembly",
+              "E: Java"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Numba optimize?",
+            "options": [
+              "A: File compression",
+              "B: Loop performance",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for gc module?",
+            "options": [
+              "A: File compression",
+              "B: Garbage collection",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does NumPy’s vectorization avoid?",
+            "options": [
+              "A: Fast computations",
+              "B: Python loops",
+              "C: Memory usage",
+              "D: Network traffic",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Cython?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances performance",
+              "C: Limits scalability",
+              "D: Reduces memory usage",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Numba’s nopython mode ensure?",
+            "options": [
+              "A: File compression",
+              "B: Native performance",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for weakref?",
+            "options": [
+              "A: File compression",
+              "B: Managing object references",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does NumPy optimize?",
+            "options": [
+              "A: File compression",
+              "B: Numerical computations",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Numba?",
+            "options": [
+              "A: Reduces performance",
+              "B: Accelerates Python code",
+              "C: Limits scalability",
+              "D: Enhances security",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Cython’s .pyx file do?",
+            "options": [
+              "A: Compresses files",
+              "B: Compiles to C",
+              "C: Routes network traffic",
+              "D: Encrypts data",
+              "E: Allocates memory"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of NumPy?",
+            "options": [
+              "A: File compression",
+              "B: Linear algebra",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does gc.collect() do?",
+            "options": [
+              "A: Compresses files",
+              "B: Frees unused memory",
+              "C: Routes network traffic",
+              "D: Encrypts data",
+              "E: Allocates memory"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of vectorized operations?",
+            "options": [
+              "A: Increases complexity",
+              "B: Improves performance",
+              "C: Limits scalability",
+              "D: Enhances security",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Numba compile to?",
+            "options": [
+              "A: JavaScript",
+              "B: Machine code",
+              "C: Python bytecode",
+              "D: Assembly",
+              "E: Java"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Integration with IBM MQ and ACE",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers advanced integration of Python with IBM MQ and App Connect Enterprise, focusing on message queuing and enterprise-grade workflows.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "IBM MQ Integration",
+            "overview": "Use pymqi to interact with IBM MQ queues for messaging.",
+            "examples": [
+              "pymqi: Sends messages to queues.",
+              "Queue Manager: Connects to MQ server."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "IBM ACE Integration",
+            "overview": "Integrate Python with ACE for message flow automation.",
+            "examples": [
+              "REST API: Triggers ACE message flows.",
+              "MQ Node: Connects ACE to MQ queues."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Error Handling and Logging",
+            "overview": "Implement robust error handling for MQ and ACE integrations.",
+            "examples": [
+              "try-except: Handles MQ connection errors.",
+              "logging: Logs integration failures."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Performance Monitoring",
+            "overview": "Monitor MQ and ACE performance using Python scripts.",
+            "examples": [
+              "pymqi: Retrieves queue depth.",
+              "REST API: Monitors ACE server status."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What library integrates Python with IBM MQ?",
+            "options": [
+              "A: requests",
+              "B: pymqi",
+              "C: numpy",
+              "D: asyncio",
+              "E: cProfile"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pymqi interact with?",
+            "options": [
+              "A: File systems",
+              "B: MQ queues",
+              "C: Network routers",
+              "D: Databases",
+              "E: Memory blocks"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What triggers ACE message flows?",
+            "options": [
+              "A: File compression",
+              "B: REST API",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for pymqi?",
+            "options": [
+              "A: File compression",
+              "B: Sending messages to queues",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an MQ Node connect to in ACE?",
+            "options": [
+              "A: File systems",
+              "B: Queue manager",
+              "C: Network routers",
+              "D: Databases",
+              "E: Memory blocks"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What handles MQ connection errors?",
+            "options": [
+              "A: try-except",
+              "B: collections",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What monitors queue depth in IBM MQ?",
+            "options": [
+              "A: requests",
+              "B: pymqi",
+              "C: numpy",
+              "D: asyncio",
+              "E: cProfile"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of logging in integrations?",
+            "options": [
+              "A: Increases complexity",
+              "B: Tracks failures",
+              "C: Limits scalability",
+              "D: Reduces performance",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does REST API monitor in ACE?",
+            "options": [
+              "A: File sizes",
+              "B: Server status",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common MQ integration task?",
+            "options": [
+              "A: File compression",
+              "B: Queue messaging",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pymqi connect to?",
+            "options": [
+              "A: File systems",
+              "B: Queue manager",
+              "C: Network routers",
+              "D: Databases",
+              "E: Memory blocks"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for ACE integration?",
+            "options": [
+              "A: File compression",
+              "B: Message flow automation",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does logging track in MQ integrations?",
+            "options": [
+              "A: File sizes",
+              "B: Integration failures",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pymqi retrieve?",
+            "options": [
+              "A: File sizes",
+              "B: Queue depth",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of try-except in MQ?",
+            "options": [
+              "A: Increases complexity",
+              "B: Handles errors robustly",
+              "C: Limits scalability",
+              "D: Reduces performance",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does REST API trigger in ACE?",
+            "options": [
+              "A: File compression",
+              "B: Message flows",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common ACE integration task?",
+            "options": [
+              "A: File compression",
+              "B: Automating workflows",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pymqi enable?",
+            "options": [
+              "A: File compression",
+              "B: Queue interactions",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What monitors ACE server performance?",
+            "options": [
+              "A: requests",
+              "B: REST API",
+              "C: numpy",
+              "D: asyncio",
+              "E: cProfile"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of MQ integration?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enables reliable messaging",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Implement a trie-based autocomplete system using collections.deque.",
+        "Optimize a matrix multiplication algorithm using NumPy and Numba.",
+        "Develop an async web scraper using asyncio and aiohttp.",
+        "Create a decorator to log IBM MQ queue interactions with pymqi.",
+        "Write a Cython extension to optimize a recursive algorithm."
+      ],
+      "resources": [
+        "Python 3.10+ official documentation.",
+        "Fluent Python by Luciano Ramalho (2nd Edition).",
+        "IBM MQ v9.3 Knowledge Center for pymqi integration.",
+        "NumPy and Numba documentation for performance optimization.",
+        "MIT OpenCourseWare for advanced algorithms and data structures."
+      ],
+      "environment": "Python 3.10+ environment with pymqi, NumPy, Numba, Cython, and aiohttp installed. Access to IBM MQ and ACE for integration labs."
+    }
+  }
+}
