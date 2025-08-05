@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "Advanced Terraform for AWS Infrastructure in Enterprise Environments",
+    "duration": "10 hours",
+    "audience": [
+      "Senior Computer Science majors",
+      "DevOps engineers and cloud architects",
+      "Professional developers seeking expertise in AWS infrastructure automation"
+    ],
+    "prerequisites": "Proficiency in AWS core services (EC2, S3, IAM, VPC) equivalent to AWS Solutions Architect Associate, basic Terraform usage (e.g., writing HCL, running terraform init/apply), and familiarity with Linux command-line interfaces. Knowledge of Python or Bash scripting and CI/CD concepts is recommended.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Terraform Fundamentals and AWS Provider",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers advanced Terraform configuration techniques and AWS provider setup for enterprise-grade infrastructure deployment.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Terraform Configuration and HCL",
+            "overview": "Write and structure Terraform configurations using HashiCorp Configuration Language (HCL) for AWS resources.",
+            "examples": [
+              "HCL: Define an EC2 instance with tags.",
+              "Variables: Use input variables for reusability."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "AWS Provider Authentication",
+            "overview": "Configure AWS provider authentication using IAM roles and environment variables.",
+            "examples": [
+              "IAM Role: Assume role for Terraform access.",
+              "Environment Variables: Set AWS_ACCESS_KEY_ID."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "State Management",
+            "overview": "Implement remote state storage with S3 and DynamoDB for team collaboration.",
+            "examples": [
+              "S3 Backend: Store state in S3 bucket.",
+              "DynamoDB: Enable state locking."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Modules and Reusability",
+            "overview": "Create reusable Terraform modules for AWS resources.",
+            "examples": [
+              "Module: VPC module with subnets.",
+              "Registry: Use Terraform Registry modules."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What language is used for Terraform configurations?",
+            "options": [
+              "A: YAML",
+              "B: JSON",
+              "C: HCL",
+              "D: Python",
+              "E: XML"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What does the AWS provider require for authentication?",
+            "options": [
+              "A: Local file storage",
+              "B: IAM credentials",
+              "C: Database connection",
+              "D: SSH keys",
+              "E: API gateway"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command initializes a Terraform project?",
+            "options": [
+              "A: terraform apply",
+              "B: terraform init",
+              "C: terraform plan",
+              "D: terraform destroy",
+              "E: terraform validate"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What stores Terraform state remotely?",
+            "options": [
+              "A: EC2 instance",
+              "B: S3 bucket",
+              "C: RDS database",
+              "D: Lambda function",
+              "E: CloudWatch"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What ensures state locking in Terraform?",
+            "options": [
+              "A: S3 bucket",
+              "B: DynamoDB table",
+              "C: IAM policy",
+              "D: VPC endpoint",
+              "E: Route 53"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Terraform modules?",
+            "options": [
+              "A: Increases runtime",
+              "B: Enhances reusability",
+              "C: Reduces security",
+              "D: Limits scalability",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform plan do?",
+            "options": [
+              "A: Applies changes",
+              "B: Validates syntax",
+              "C: Previews changes",
+              "D: Deletes resources",
+              "E: Initializes project"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is a use case for input variables?",
+            "options": [
+              "A: Hardcoding values",
+              "B: Dynamic configurations",
+              "C: State locking",
+              "D: Resource deletion",
+              "E: Error logging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does the Terraform Registry provide?",
+            "options": [
+              "A: Cloud monitoring",
+              "B: Pre-built modules",
+              "C: Database backups",
+              "D: Network routing",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of remote state storage?",
+            "options": [
+              "A: Reduces collaboration",
+              "B: Enables team sharing",
+              "C: Increases latency",
+              "D: Limits scalability",
+              "E: Disables versioning"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What authenticates Terraform to AWS?",
+            "options": [
+              "A: SSH keys",
+              "B: IAM credentials",
+              "C: API tokens",
+              "D: SSL certificates",
+              "E: OAuth tokens"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform fmt do?",
+            "options": [
+              "A: Applies changes",
+              "B: Formats code",
+              "C: Validates syntax",
+              "D: Deletes resources",
+              "E: Initializes project"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for HCL?",
+            "options": [
+              "A: Data visualization",
+              "B: Infrastructure definition",
+              "C: File compression",
+              "D: Network monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DynamoDB provide in Terraform?",
+            "options": [
+              "A: State storage",
+              "B: State locking",
+              "C: Resource tagging",
+              "D: Data encryption",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of the AWS provider?",
+            "options": [
+              "A: Reduces resource types",
+              "B: Supports multiple services",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform validate check?",
+            "options": [
+              "A: Resource status",
+              "B: Configuration syntax",
+              "C: Network connectivity",
+              "D: State file",
+              "E: IAM permissions"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common Terraform backend?",
+            "options": [
+              "A: EC2 instance",
+              "B: S3 bucket",
+              "C: RDS database",
+              "D: Lambda function",
+              "E: CloudWatch"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Terraform module encapsulate?",
+            "options": [
+              "A: State files",
+              "B: Reusable resources",
+              "C: Cloud credentials",
+              "D: Log files",
+              "E: Network routes"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for environment variables?",
+            "options": [
+              "A: Resource tagging",
+              "B: AWS authentication",
+              "C: State locking",
+              "D: Data encryption",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform apply do?",
+            "options": [
+              "A: Formats code",
+              "B: Previews changes",
+              "C: Executes changes",
+              "D: Validates syntax",
+              "E: Initializes project"
+            ],
+            "answer": "C"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Networking and Security in AWS with Terraform",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module focuses on configuring enterprise-grade networking and security components in AWS using Terraform, including VPCs, subnets, and security groups.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "VPC and Subnets",
+            "overview": "Deploy VPCs, public/private subnets, and route tables using Terraform.",
+            "examples": [
+              "VPC: Create isolated network with CIDR.",
+              "Subnets: Public and private subnet setup."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Security Groups",
+            "overview": "Configure security groups for fine-grained access control.",
+            "examples": [
+              "Security Group: Allow HTTP/SSH traffic.",
+              "Dynamic Rules: Use dynamic blocks for rules."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "NAT and Internet Gateways",
+            "overview": "Set up NAT gateways and internet gateways for connectivity.",
+            "examples": [
+              "NAT Gateway: Enable private subnet egress.",
+              "Internet Gateway: Public subnet access."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "IAM Policies",
+            "overview": "Define IAM roles and policies for secure resource access.",
+            "examples": [
+              "IAM Role: EC2 access to S3.",
+              "Policy: Restrict resource permissions."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What resource defines an AWS VPC in Terraform?",
+            "options": [
+              "A: aws_vpc",
+              "B: aws_subnet",
+              "C: aws_route_table",
+              "D: aws_security_group",
+              "E: aws_iam_role"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does a security group control?",
+            "options": [
+              "A: Disk storage",
+              "B: Network traffic",
+              "C: CPU usage",
+              "D: Memory allocation",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What enables private subnet egress?",
+            "options": [
+              "A: Internet Gateway",
+              "B: NAT Gateway",
+              "C: Route 53",
+              "D: CloudWatch",
+              "E: S3 bucket"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for IAM roles?",
+            "options": [
+              "A: Network routing",
+              "B: Resource access control",
+              "C: Data encryption",
+              "D: Load balancing",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a public subnet require?",
+            "options": [
+              "A: NAT Gateway",
+              "B: Internet Gateway",
+              "C: VPC endpoint",
+              "D: IAM policy",
+              "E: S3 bucket"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of dynamic blocks?",
+            "options": [
+              "A: Reduces scalability",
+              "B: Simplifies rule definitions",
+              "C: Increases latency",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource defines a subnet in Terraform?",
+            "options": [
+              "A: aws_vpc",
+              "B: aws_subnet",
+              "C: aws_route_table",
+              "D: aws_security_group",
+              "E: aws_iam_role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an IAM policy restrict?",
+            "options": [
+              "A: Network traffic",
+              "B: Resource permissions",
+              "C: Disk storage",
+              "D: CPU usage",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What connects VPCs to the internet?",
+            "options": [
+              "A: NAT Gateway",
+              "B: Internet Gateway",
+              "C: Route 53",
+              "D: CloudWatch",
+              "E: S3 bucket"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for route tables?",
+            "options": [
+              "A: Data encryption",
+              "B: Network routing",
+              "C: File compression",
+              "D: Load balancing",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a security group rule define?",
+            "options": [
+              "A: Disk storage",
+              "B: Traffic permissions",
+              "C: CPU usage",
+              "D: Memory allocation",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of NAT Gateways?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enables private subnet egress",
+              "C: Increases latency",
+              "D: Limits scalability",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource defines IAM policies in Terraform?",
+            "options": [
+              "A: aws_vpc",
+              "B: aws_subnet",
+              "C: aws_iam_policy",
+              "D: aws_security_group",
+              "E: aws_route_table"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What does a VPC isolate?",
+            "options": [
+              "A: Disk storage",
+              "B: Network environment",
+              "C: CPU usage",
+              "D: Memory allocation",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for private subnets?",
+            "options": [
+              "A: Public web servers",
+              "B: Secure databases",
+              "C: File compression",
+              "D: Network monitoring",
+              "E: Data visualization"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an Internet Gateway enable?",
+            "options": [
+              "A: Private subnet egress",
+              "B: Public subnet access",
+              "C: State locking",
+              "D: Data encryption",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IAM roles?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a route table manage?",
+            "options": [
+              "A: Resource permissions",
+              "B: Network traffic",
+              "C: Disk storage",
+              "D: CPU usage",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for security groups?",
+            "options": [
+              "A: File compression",
+              "B: Traffic control",
+              "C: Data encryption",
+              "D: Load balancing",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a private subnet protect?",
+            "options": [
+              "A: Public web servers",
+              "B: Internal resources",
+              "C: File compression",
+              "D: Network monitoring",
+              "E: Data visualization"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Compute and Storage with Terraform",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module explores deploying and managing AWS compute and storage resources like EC2, EBS, and S3 using Terraform for enterprise scalability.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "EC2 Instances",
+            "overview": "Deploy EC2 instances with Terraform for scalable compute.",
+            "examples": [
+              "EC2: Launch t3.micro instance.",
+              "AMI: Use data source for latest AMI."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "EBS Volumes",
+            "overview": "Configure EBS volumes for persistent storage.",
+            "examples": [
+              "EBS: Attach volume to EC2.",
+              "Snapshot: Backup EBS volume."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "S3 Buckets",
+            "overview": "Create and manage S3 buckets for storage and backups.",
+            "examples": [
+              "S3: Create bucket with versioning.",
+              "Policy: Restrict bucket access."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Auto Scaling Groups",
+            "overview": "Implement auto scaling for dynamic compute capacity.",
+            "examples": [
+              "ASG: Scale EC2 based on CPU.",
+              "Launch Template: Define instance config."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What resource defines an EC2 instance in Terraform?",
+            "options": [
+              "A: aws_ec2",
+              "B: aws_instance",
+              "C: aws_s3_bucket",
+              "D: aws_ebs_volume",
+              "E: aws_auto_scaling_group"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an EBS volume provide?",
+            "options": [
+              "A: Network routing",
+              "B: Persistent storage",
+              "C: CPU scaling",
+              "D: Data encryption",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for S3 buckets?",
+            "options": [
+              "A: Compute scaling",
+              "B: Data storage",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does auto scaling adjust?",
+            "options": [
+              "A: Disk storage",
+              "B: Compute capacity",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource defines an S3 bucket in Terraform?",
+            "options": [
+              "A: aws_ec2",
+              "B: aws_instance",
+              "C: aws_s3_bucket",
+              "D: aws_ebs_volume",
+              "E: aws_auto_scaling_group"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is a benefit of EBS snapshots?",
+            "options": [
+              "A: Increases latency",
+              "B: Enables backups",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a launch template define?",
+            "options": [
+              "A: Network routes",
+              "B: Instance configuration",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for auto scaling groups?",
+            "options": [
+              "A: File compression",
+              "B: Dynamic scaling",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an AMI provide in Terraform?",
+            "options": [
+              "A: Network routing",
+              "B: Instance image",
+              "C: Data storage",
+              "D: CPU monitoring",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of S3 versioning?",
+            "options": [
+              "A: Increases latency",
+              "B: Enables data recovery",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource defines an EBS volume in Terraform?",
+            "options": [
+              "A: aws_ec2",
+              "B: aws_instance",
+              "C: aws_s3_bucket",
+              "D: aws_ebs_volume",
+              "E: aws_auto_scaling_group"
+            ],
+            "answer": "D"
+          },
+          {
+            "question": "What does an auto scaling group monitor?",
+            "options": [
+              "A: Disk storage",
+              "B: Resource metrics",
+              "C: Network routes",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for EC2 instances?",
+            "options": [
+              "A: Data storage",
+              "B: Compute workloads",
+              "C: Network routing",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an S3 policy restrict?",
+            "options": [
+              "A: Compute scaling",
+              "B: Bucket access",
+              "C: Network traffic",
+              "D: CPU usage",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of launch templates?",
+            "options": [
+              "A: Increases latency",
+              "B: Simplifies scaling",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an EBS volume attach to?",
+            "options": [
+              "A: S3 bucket",
+              "B: EC2 instance",
+              "C: Route table",
+              "D: Security group",
+              "E: IAM role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for S3 buckets?",
+            "options": [
+              "A: Compute scaling",
+              "B: Backup storage",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an auto scaling group use?",
+            "options": [
+              "A: Network routes",
+              "B: Launch templates",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of EC2 instances?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Flexible compute",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an S3 bucket store?",
+            "options": [
+              "A: Compute resources",
+              "B: Object data",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Serverless and Containerized Workloads",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers deploying serverless and containerized workloads in AWS using Terraform, including Lambda, ECS, and EKS.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "AWS Lambda",
+            "overview": "Deploy serverless functions with Terraform for event-driven apps.",
+            "examples": [
+              "Lambda: Trigger on S3 events.",
+              "IAM Role: Grant Lambda permissions."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "ECS and Fargate",
+            "overview": "Configure ECS with Fargate for containerized workloads.",
+            "examples": [
+              "ECS: Deploy Docker container.",
+              "Fargate: Serverless container runtime."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "EKS Clusters",
+            "overview": "Set up Kubernetes clusters with EKS for orchestration.",
+            "examples": [
+              "EKS: Create managed Kubernetes cluster.",
+              "Node Group: Add worker nodes."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "API Gateway",
+            "overview": "Expose Lambda functions via API Gateway endpoints.",
+            "examples": [
+              "API Gateway: REST API for Lambda.",
+              "Integration: Connect to Lambda function."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What resource defines a Lambda function in Terraform?",
+            "options": [
+              "A: aws_lambda",
+              "B: aws_lambda_function",
+              "C: aws_ecs_cluster",
+              "D: aws_eks_cluster",
+              "E: aws_api_gateway"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ECS manage?",
+            "options": [
+              "A: Serverless functions",
+              "B: Containerized workloads",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for AWS Lambda?",
+            "options": [
+              "A: Persistent storage",
+              "B: Event-driven tasks",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Fargate provide?",
+            "options": [
+              "A: Network routing",
+              "B: Serverless containers",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource defines an EKS cluster in Terraform?",
+            "options": [
+              "A: aws_lambda",
+              "B: aws_lambda_function",
+              "C: aws_ecs_cluster",
+              "D: aws_eks_cluster",
+              "E: aws_api_gateway"
+            ],
+            "answer": "D"
+          },
+          {
+            "question": "What is a benefit of API Gateway?",
+            "options": [
+              "A: Increases latency",
+              "B: Exposes serverless APIs",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an EKS node group add?",
+            "options": [
+              "A: Network routes",
+              "B: Worker nodes",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for ECS?",
+            "options": [
+              "A: File compression",
+              "B: Container orchestration",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What triggers a Lambda function?",
+            "options": [
+              "A: Disk storage",
+              "B: Event sources",
+              "C: CPU usage",
+              "D: Memory allocation",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Fargate?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies container management",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What resource defines an API Gateway in Terraform?",
+            "options": [
+              "A: aws_lambda",
+              "B: aws_lambda_function",
+              "C: aws_ecs_cluster",
+              "D: aws_eks_cluster",
+              "E: aws_api_gateway_rest_api"
+            ],
+            "answer": "E"
+          },
+          {
+            "question": "What does EKS manage?",
+            "options": [
+              "A: Serverless functions",
+              "B: Kubernetes clusters",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for API Gateway?",
+            "options": [
+              "A: Persistent storage",
+              "B: Exposing APIs",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Lambda IAM role grant?",
+            "options": [
+              "A: Network access",
+              "B: Execution permissions",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of EKS?",
+            "options": [
+              "A: Increases latency",
+              "B: Managed Kubernetes",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an ECS cluster orchestrate?",
+            "options": [
+              "A: Serverless functions",
+              "B: Docker containers",
+              "C: Network routes",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Lambda functions?",
+            "options": [
+              "A: File compression",
+              "B: Serverless processing",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does API Gateway integrate with?",
+            "options": [
+              "A: EBS volumes",
+              "B: Lambda functions",
+              "C: Route tables",
+              "D: Security groups",
+              "E: IAM roles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of serverless workloads?",
+            "options": [
+              "A: Increases complexity",
+              "B: Reduces management overhead",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an EKS cluster require?",
+            "options": [
+              "A: S3 bucket",
+              "B: Node groups",
+              "C: Route table",
+              "D: Security group",
+              "E: IAM policy"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "CI/CD and Advanced Terraform Workflows",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers integrating Terraform with CI/CD pipelines and advanced workflows for enterprise automation, including CodePipeline and state management.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "AWS CodePipeline Integration",
+            "overview": "Automate Terraform deployments with AWS CodePipeline.",
+            "examples": [
+              "CodePipeline: Trigger Terraform apply.",
+              "CodeCommit: Store Terraform configs."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Workspaces",
+            "overview": "Use Terraform workspaces for multi-environment deployments.",
+            "examples": [
+              "Workspace: Separate dev/prod environments.",
+              "Variable: Environment-specific settings."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "State Management Best Practices",
+            "overview": "Implement advanced state management with remote backends.",
+            "examples": [
+              "S3: Versioned state storage.",
+              "DynamoDB: Concurrent state locking."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Troubleshooting and Debugging",
+            "overview": "Diagnose and resolve common Terraform issues in AWS.",
+            "examples": [
+              "Logging: Enable Terraform debug logs.",
+              "Error Handling: Fix state conflicts."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What service automates Terraform deployments?",
+            "options": [
+              "A: CloudWatch",
+              "B: CodePipeline",
+              "C: Route 53",
+              "D: S3 bucket",
+              "E: IAM role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Terraform workspace manage?",
+            "options": [
+              "A: Network routes",
+              "B: Environment configurations",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of remote state storage?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances collaboration",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CodePipeline integrate with?",
+            "options": [
+              "A: EBS volumes",
+              "B: CodeCommit",
+              "C: Route tables",
+              "D: Security groups",
+              "E: IAM roles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Terraform workspaces?",
+            "options": [
+              "A: File compression",
+              "B: Multi-environment deployments",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DynamoDB enable in Terraform?",
+            "options": [
+              "A: Data storage",
+              "B: State locking",
+              "C: Compute scaling",
+              "D: Network routing",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of CodePipeline?",
+            "options": [
+              "A: Increases complexity",
+              "B: Automates deployments",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform debug enable?",
+            "options": [
+              "A: Resource tagging",
+              "B: Detailed logging",
+              "C: State locking",
+              "D: Data encryption",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What stores Terraform configurations?",
+            "options": [
+              "A: CloudWatch",
+              "B: CodeCommit",
+              "C: Route 53",
+              "D: S3 bucket",
+              "E: IAM role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for state locking?",
+            "options": [
+              "A: File compression",
+              "B: Prevent concurrent edits",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform plan validate?",
+            "options": [
+              "A: Resource status",
+              "B: Configuration changes",
+              "C: Network connectivity",
+              "D: State file",
+              "E: IAM permissions"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of workspaces?",
+            "options": [
+              "A: Increases latency",
+              "B: Separates environments",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CodeCommit provide?",
+            "options": [
+              "A: Compute scaling",
+              "B: Source control",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common Terraform issue?",
+            "options": [
+              "A: Network latency",
+              "B: State conflicts",
+              "C: Disk storage",
+              "D: CPU usage",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does terraform destroy do?",
+            "options": [
+              "A: Formats code",
+              "B: Previews changes",
+              "C: Deletes resources",
+              "D: Validates syntax",
+              "E: Initializes project"
+            ],
+            "answer": "C"
+          },
+          {
+            "question": "What is a use case for CodePipeline?",
+            "options": [
+              "A: File compression",
+              "B: CI/CD automation",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does state management ensure?",
+            "options": [
+              "A: Network routing",
+              "B: Resource consistency",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of debug logs?",
+            "options": [
+              "A: Increases latency",
+              "B: Aids troubleshooting",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CodePipeline trigger?",
+            "options": [
+              "A: Resource tagging",
+              "B: Terraform apply",
+              "C: State locking",
+              "D: Data encryption",
+              "E: Load balancing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for remote backends?",
+            "options": [
+              "A: File compression",
+              "B: Team collaboration",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Deploy a VPC with public and private subnets using Terraform.",
+        "Create an EC2 instance with an attached EBS volume and S3 access.",
+        "Set up an ECS cluster with Fargate for a containerized app.",
+        "Configure a Lambda function with API Gateway integration.",
+        "Implement a CI/CD pipeline with CodePipeline and CodeCommit."
+      ],
+      "resources": [
+        "Terraform AWS Provider Documentation (registry.terraform.io).",
+        "Terraform: Up & Running by Yevgeniy Brikman (3rd Edition).",
+        "AWS Solutions Architect Associate Study Guide.",
+        "HashiCorp Learning: Official Terraform Tutorials.",
+        "AWS CLI and SDK Documentation for scripting."
+      ],
+      "environment": "Terraform 1.5+ installed, AWS CLI configured, and an AWS account with permissions for EC2, S3, VPC, IAM, ECS, EKS, Lambda, API Gateway, CodePipeline, and CodeCommit. Rocky Linux or equivalent for local development is recommended."
+    }
+  }
+}

@@ -1,278 +1,276 @@
 {
   "course": {
-    "title": "Introduction to Animal Biology and Conservation",
-    "duration": "4.5 hours",
+    "title": "Advanced English Comprehension for IT Corporate Environments",
+    "duration": "10 hours",
     "audience": [
-      "Wildlife enthusiasts",
-      "Biology students",
-      "Conservation volunteers"
+      "Senior Computer Science majors",
+      "IT professionals in corporate settings",
+      "Non-native English speakers seeking advanced communication skills in IT"
     ],
-    "prerequisites": "Basic understanding of biology or completion of a high school-level science course.",
+    "prerequisites": "Intermediate English proficiency (equivalent to CEFR B2 or TOEFL iBT 80+), familiarity with IT concepts (e.g., software development, cloud computing, DevOps), and basic experience in corporate or technical environments. Knowledge of IT tools like AWS or Git is recommended.",
     "modules": [
       {
         "id": 1,
-        "title": "Animal Classification and Taxonomy",
+        "title": "Technical Writing for IT Documentation",
         "enabled": true,
-        "duration": "1 hour",
-        "description": "This module introduces the principles of animal classification, focusing on taxonomy, phylogenetic relationships, and key characteristics of major animal groups.",
+        "duration": "2 hours",
+        "description": "This module focuses on writing clear, concise, and precise technical documentation for IT systems, including system architecture, APIs, and user guides.",
         "sections": [
           {
             "id": "1.1",
-            "title": "Basics of Taxonomy",
-            "overview": "Taxonomy organizes animals into hierarchical groups based on shared traits.",
-            "key_steps": [
-              "Identify key characteristics (e.g., backbone for vertebrates).",
-              "Classify into kingdoms, phyla, classes, etc.",
-              "Use binomial nomenclature (e.g., Panthera leo for lion)."
-            ],
-            "example": "Classifying a lion: Kingdom Animalia, Phylum Chordata, Class Mammalia, Order Carnivora, Family Felidae, Genus Panthera, Species leo"
+            "title": "Writing System Architecture Documents",
+            "overview": "Craft detailed system architecture descriptions for IT stakeholders.",
+            "examples": [
+              "Architecture Doc: Describe AWS VPC setup.",
+              "Diagram Caption: Explain network flow."
+            ]
           },
           {
             "id": "1.2",
-            "title": "Major Animal Phyla",
-            "overview": "Key phyla include Chordata (vertebrates), Arthropoda (insects, spiders), and Mollusca (snails, octopuses).",
+            "title": "API Documentation",
+            "overview": "Write API specifications for developers and end-users.",
             "examples": [
-              "Chordata: Animals with a notochord (e.g., mammals, birds).",
-              "Arthropoda: Exoskeleton and jointed limbs (e.g., beetles, crabs)."
+              "Swagger Doc: Document REST API endpoints.",
+              "Usage Guide: Explain API request formats."
             ]
           },
           {
             "id": "1.3",
-            "title": "Phylogenetic Trees",
-            "overview": "Diagrams showing evolutionary relationships among species.",
-            "example": "A tree showing birds and crocodiles as closer relatives than lizards."
+            "title": "Clarity and Concision",
+            "overview": "Use concise language to improve readability in technical writing.",
+            "examples": [
+              "Active Voice: Simplify technical instructions.",
+              "Plain Language: Avoid jargon overload."
+            ]
           },
           {
             "id": "1.4",
-            "title": "Binomial Nomenclature",
-            "description": "Standard naming system using genus and species.",
-            "example": "Canis lupus (gray wolf), Homo sapiens (human)"
-          },
-          {
-            "id": "1.5",
-            "title": "Cladistics",
-            "description": "Method of classification based on shared derived characteristics.",
-            "example": "Feathers as a shared trait for classifying birds in a clade."
+            "title": "Formatting and Tools",
+            "overview": "Leverage tools like Markdown and Confluence for professional documentation.",
+            "examples": [
+              "Markdown: Format README files.",
+              "Confluence: Create team wikis."
+            ]
           }
         ],
         "knowledge_check": [
           {
-            "question": "What is the primary purpose of taxonomy?",
+            "question": "What is a key feature of technical writing?",
             "options": [
-              "A: To study animal behavior",
-              "B: To organize animals into hierarchical groups",
-              "C: To track animal populations",
-              "D: To conserve habitats",
-              "E: To breed animals"
+              "A: Creative storytelling",
+              "B: Clarity and precision",
+              "C: Emotional appeal",
+              "D: Lengthy descriptions",
+              "E: Ambiguous terms"
             ],
             "answer": "B"
           },
           {
-            "question": "What command classifies an animal into a species?",
+            "question": "What does an API documentation describe?",
             "options": [
-              "A: Phylogenetic analysis",
-              "B: Binomial nomenclature",
-              "C: Habitat mapping",
-              "D: Genetic sequencing",
-              "E: Behavioral observation"
+              "A: Marketing strategies",
+              "B: Endpoint functionality",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Hardware specs"
             ],
             "answer": "B"
           },
           {
-            "question": "Which phylum includes animals with a notochord?",
+            "question": "What improves readability in technical documents?",
             "options": [
-              "A: Arthropoda",
-              "B: Mollusca",
-              "C: Chordata",
-              "D: Annelida",
-              "E: Cnidaria"
-            ],
-            "answer": "C"
-          },
-          {
-            "question": "What is the genus of Panthera leo?",
-            "options": [
-              "A: Felidae",
-              "B: Panthera",
-              "C: Carnivora",
-              "D: Mammalia",
-              "E: Leo"
+              "A: Complex jargon",
+              "B: Active voice",
+              "C: Passive voice",
+              "D: Long paragraphs",
+              "E: Vague terms"
             ],
             "answer": "B"
           },
           {
-            "question": "What does a phylogenetic tree show?",
+            "question": "What tool is used for formatting READMEs?",
             "options": [
-              "A: Animal population sizes",
-              "B: Evolutionary relationships",
-              "C: Habitat locations",
-              "D: Feeding behaviors",
-              "E: Migration patterns"
+              "A: Excel",
+              "B: Markdown",
+              "C: PowerPoint",
+              "D: Word",
+              "E: Notepad"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the species name for Homo sapiens?",
+            "question": "What is a use case for Confluence?",
             "options": [
-              "A: Homo",
-              "B: Sapiens",
-              "C: Primates",
-              "D: Mammalia",
-              "E: Chordata"
+              "A: Code deployment",
+              "B: Team wikis",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "Which characteristic defines Arthropoda?",
+            "question": "What does a system architecture document describe?",
             "options": [
-              "A: Backbone",
-              "B: Exoskeleton",
-              "C: Gills",
-              "D: Fur",
-              "E: Scales"
+              "A: Marketing plans",
+              "B: IT infrastructure",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the purpose of binomial nomenclature?",
+            "question": "What is a benefit of plain language?",
             "options": [
-              "A: Tracks animal migrations",
-              "B: Standardizes animal naming",
-              "C: Monitors population sizes",
-              "D: Analyzes genetic diversity",
-              "E: Maps habitats"
+              "A: Increases complexity",
+              "B: Enhances understanding",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a shared derived characteristic in cladistics?",
+            "question": "What does Swagger document?",
             "options": [
-              "A: Common habitat",
-              "B: Unique trait shared by a clade",
-              "C: Population size",
-              "D: Feeding behavior",
-              "E: Migration route"
+              "A: Database schemas",
+              "B: API endpoints",
+              "C: Network protocols",
+              "D: Hardware configs",
+              "E: User interfaces"
             ],
             "answer": "B"
           },
           {
-            "question": "Which phylum includes octopuses?",
+            "question": "What is a use case for active voice?",
             "options": [
-              "A: Chordata",
-              "B: Arthropoda",
-              "C: Mollusca",
-              "D: Annelida",
-              "E: Cnidaria"
-            ],
-            "answer": "C"
-          },
-          {
-            "question": "What is the default kingdom for animals?",
-            "options": [
-              "A: Plantae",
-              "B: Fungi",
-              "C: Animalia",
-              "D: Protista",
-              "E: Bacteria"
-            ],
-            "answer": "C"
-          },
-          {
-            "question": "What tool visualizes evolutionary relationships?",
-            "options": [
-              "A: Habitat map",
-              "B: Phylogenetic tree",
-              "C: Population chart",
-              "D: Food web",
-              "E: Migration tracker"
+              "A: Lengthy narratives",
+              "B: Clear instructions",
+              "C: Emotional appeals",
+              "D: Ambiguous terms",
+              "E: Complex jargon"
             ],
             "answer": "B"
           },
           {
-            "question": "How is a lion classified in the order level?",
+            "question": "What does Markdown support?",
             "options": [
-              "A: Mammalia",
-              "B: Felidae",
-              "C: Carnivora",
-              "D: Panthera",
-              "E: Chordata"
-            ],
-            "answer": "C"
-          },
-          {
-            "question": "What does the -u option in binomial nomenclature represent?",
-            "options": [
-              "A: Unique identifier",
-              "B: Species name",
-              "C: Genus name",
-              "D: Family name",
-              "E: Common name"
+              "A: Code execution",
+              "B: Text formatting",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a cladistic approach based on?",
+            "question": "What is a goal of API documentation?",
             "options": [
-              "A: Habitat similarity",
-              "B: Shared derived characteristics",
-              "C: Population size",
-              "D: Migration patterns",
-              "E: Feeding habits"
+              "A: Marketing products",
+              "B: Developer usability",
+              "C: Financial analysis",
+              "D: Employee training",
+              "E: Hardware setup"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the role of the class level in taxonomy?",
+            "question": "What does a diagram caption explain?",
             "options": [
-              "A: Defines species",
-              "B: Groups related orders",
-              "C: Specifies phyla",
-              "D: Names genera",
-              "E: Tracks populations"
+              "A: Code logic",
+              "B: Visual components",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "Which phylum includes insects?",
+            "question": "What is a benefit of concise writing?",
             "options": [
-              "A: Chordata",
-              "B: Arthropoda",
-              "C: Mollusca",
-              "D: Annelida",
-              "E: Cnidaria"
+              "A: Increases confusion",
+              "B: Improves readability",
+              "C: Reduces accuracy",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the purpose of the dead-letter queue equivalent in taxonomy?",
+            "question": "What is a use case for Confluence?",
             "options": [
-              "A: Tracks extinct species",
-              "B: Holds unclassified species",
-              "C: Manages migration data",
-              "D: Monitors population growth",
-              "E: Maps habitats"
+              "A: Code deployment",
+              "B: Knowledge sharing",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What tool checks taxonomic classification accuracy?",
+            "question": "What does technical writing avoid?",
             "options": [
-              "A: Phylogenetic analysis",
-              "B: Habitat mapping",
-              "C: Population survey",
-              "D: Feeding study",
-              "E: Migration tracking"
+              "A: Clear terms",
+              "B: Excessive jargon",
+              "C: Active voice",
+              "D: Concise sentences",
+              "E: Structured format"
             ],
-            "answer": "A"
+            "answer": "B"
           },
           {
-            "question": "What is a key difference between Chordata and Arthropoda?",
+            "question": "What does an architecture document include?",
             "options": [
-              "A: Chordata have exoskeletons, Arthropoda have backbones",
-              "B: Chordata have notochords, Arthropoda have exoskeletons",
-              "C: Chordata use gills, Arthropoda use lungs",
-              "D: Chordata are plants, Arthropoda are animals",
-              "E: Chordata migrate, Arthropoda do not"
+              "A: Marketing strategies",
+              "B: System components",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Customer feedback"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Markdown?",
+            "options": [
+              "A: Data visualization",
+              "B: Documentation formatting",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does API documentation ensure?",
+            "options": [
+              "A: Code execution",
+              "B: User understanding",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of structured documentation?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances accessibility",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does plain language improve?",
+            "options": [
+              "A: Code performance",
+              "B: Document clarity",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
             ],
             "answer": "B"
           }
@@ -280,276 +278,266 @@
       },
       {
         "id": 2,
-        "title": "Animal Behavior and Communication",
+        "title": "Effective Presentations in IT Meetings",
         "enabled": true,
-        "duration": "1 hour",
-        "description": "This module explores how animals behave and communicate, including social structures, mating behaviors, and signaling methods across species.",
+        "duration": "2 hours",
+        "description": "This module focuses on delivering clear and persuasive presentations in IT corporate settings, including technical briefings and stakeholder updates.",
         "sections": [
           {
             "id": "2.1",
-            "title": "Behavioral Ecology Overview",
-            "overview": "Behavioral ecology studies how behaviors enhance survival and reproduction.",
-            "components": [
-              "Foraging: Finding and obtaining food.",
-              "Social Behavior: Group interactions like packs or herds.",
-              "Mating: Strategies for reproduction."
+            "title": "Structuring Technical Presentations",
+            "overview": "Organize presentations for technical and non-technical audiences.",
+            "examples": [
+              "Slide Deck: Explain AWS architecture.",
+              "Agenda: Outline project milestones."
             ]
           },
           {
             "id": "2.2",
-            "title": "Animal Communication",
-            "description": "Animals use visual, auditory, chemical, and tactile signals.",
+            "title": "Technical Vocabulary",
+            "overview": "Use precise IT terminology for credibility and clarity.",
             "examples": [
-              "Bird songs for territory defense.",
-              "Pheromones in ants for trail marking."
+              "Glossary: Define cloud computing terms.",
+              "Context: Explain DevOps concepts."
             ]
           },
           {
             "id": "2.3",
-            "title": "Social Structures",
-            "overview": "Group living, such as wolf packs or bee colonies, enhances survival.",
+            "title": "Visual Aids",
+            "overview": "Create effective diagrams and charts for IT concepts.",
             "examples": [
-              "Alpha dominance in wolf packs.",
-              "Queen-led hierarchies in bee hives."
+              "Diagram: AWS VPC network flow.",
+              "Chart: Show system performance metrics."
             ]
           },
           {
             "id": "2.4",
-            "title": "Mating Behaviors",
-            "description": "Behaviors like courtship displays or mate guarding.",
+            "title": "Handling Questions",
+            "overview": "Respond to technical and business-related questions confidently.",
             "examples": [
-              "Peacock tail displays.",
-              "Penguin pebble gifting."
-            ]
-          },
-          {
-            "id": "2.5",
-            "title": "Learning and Cognition",
-            "description": "Animals learn through instinct, conditioning, or observation.",
-            "examples": [
-              "Tool use in chimpanzees.",
-              "Navigation in migratory birds."
+              "Q&A: Address scalability concerns.",
+              "Clarification: Explain technical trade-offs."
             ]
           }
         ],
         "knowledge_check": [
           {
-            "question": "What is a key focus of behavioral ecology?",
+            "question": "What is a key component of a technical presentation?",
             "options": [
-              "A: Habitat mapping",
-              "B: Survival and reproduction",
-              "C: Genetic sequencing",
-              "D: Population counting",
-              "E: Fossil analysis"
+              "A: Emotional stories",
+              "B: Clear structure",
+              "C: Lengthy details",
+              "D: Ambiguous terms",
+              "E: Unrelated anecdotes"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the role of pheromones in animal communication?",
+            "question": "What does technical vocabulary enhance?",
             "options": [
-              "A: Visual signaling",
-              "B: Chemical signaling",
-              "C: Auditory signaling",
-              "D: Tactile signaling",
-              "E: Thermal signaling"
+              "A: Marketing appeal",
+              "B: Presentation credibility",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Hardware specs"
             ],
             "answer": "B"
           },
           {
-            "question": "What is an example of animal communication?",
+            "question": "What is a use case for visual aids?",
             "options": [
-              "A: Building nests",
-              "B: Bird songs for territory defense",
-              "C: Hibernation",
-              "D: Camouflage",
-              "E: Migration"
+              "A: Code execution",
+              "B: Explaining concepts",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common social structure in wolves?",
+            "question": "What does a Q&A session address?",
             "options": [
-              "A: Solitary living",
-              "B: Alpha dominance in packs",
-              "C: Queen-led colonies",
-              "D: Pair bonding",
-              "E: Herding"
+              "A: Marketing plans",
+              "B: Audience concerns",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What behavior is associated with peacock tail displays?",
+            "question": "What is a benefit of a clear slide deck?",
             "options": [
-              "A: Foraging",
-              "B: Courtship",
-              "C: Territory defense",
-              "D: Migration",
-              "E: Hibernation"
+              "A: Increases confusion",
+              "B: Enhances understanding",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common communication method in ants?",
+            "question": "What does a glossary define?",
             "options": [
-              "A: Songs",
-              "B: Pheromones",
-              "C: Visual displays",
-              "D: Tactile signals",
-              "E: Echoes"
+              "A: Code logic",
+              "B: Technical terms",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is an example of a tactile communication?",
+            "question": "What is a use case for diagrams?",
             "options": [
-              "A: Bird songs",
-              "B: Grooming in primates",
-              "C: Pheromone trails",
-              "D: Color changes",
-              "E: Echo location"
-            ],
-            "answer": "B"
-          },
-          {
-            "question": "What is the role of social structures in animals?",
-            "options": [
-              "A: Reduces survival rates",
-              "B: Enhances survival and cooperation",
-              "C: Limits reproduction",
-              "D: Prevents communication",
-              "E: Isolates individuals"
-            ],
-            "answer": "B"
-          },
-          {
-            "question": "What is an example of a courtship behavior?",
-            "options": [
-              "A: Penguin pebble gifting",
-              "B: Ant pheromone trails",
-              "C: Wolf pack hunting",
-              "D: Bird migration",
-              "E: Bee foraging"
+              "A: Data visualization",
+              "B: File compression",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database queries"
             ],
             "answer": "A"
           },
           {
-            "question": "What is a benefit of group living in animals?",
+            "question": "What does a technical presentation explain?",
             "options": [
-              "A: Increased competition",
-              "B: Enhanced survival through cooperation",
-              "C: Reduced communication",
-              "D: Limited reproduction",
-              "E: Isolated behaviors"
+              "A: Marketing strategies",
+              "B: IT systems",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What behavior do chimpanzees exhibit with tool use?",
+            "question": "What is a benefit of handling questions well?",
             "options": [
-              "A: Migration",
-              "B: Learning and cognition",
-              "C: Hibernation",
-              "D: Camouflage",
-              "E: Foraging only"
+              "A: Increases complexity",
+              "B: Builds confidence",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "How do bees organize their social structure?",
+            "question": "What does a chart illustrate?",
             "options": [
-              "A: Solitary living",
-              "B: Queen-led hierarchies",
-              "C: Alpha dominance",
-              "D: Pair bonding",
-              "E: Random grouping"
+              "A: Code execution",
+              "B: Performance metrics",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a key consideration for animal communication?",
+            "question": "What is a use case for a slide deck?",
             "options": [
-              "A: Use of only visual signals",
-              "B: Multiple signaling methods",
-              "C: Avoiding group interactions",
-              "D: Limiting behaviors",
-              "E: Ignoring instincts"
+              "A: Code deployment",
+              "B: Project updates",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the purpose of mate guarding in animals?",
+            "question": "What does technical context provide?",
             "options": [
-              "A: Foraging efficiency",
-              "B: Ensuring reproductive success",
-              "C: Territory expansion",
-              "D: Food storage",
-              "E: Migration planning"
+              "A: Marketing appeal",
+              "B: Clear explanations",
+              "C: Financial analysis",
+              "D: Employee training",
+              "E: Hardware setup"
             ],
             "answer": "B"
           },
           {
-            "question": "What behavior indicates learning in migratory birds?",
+            "question": "What is a benefit of visual aids?",
             "options": [
-              "A: Tool use",
-              "B: Navigation skills",
-              "C: Pheromone trails",
-              "D: Color changes",
-              "E: Hibernation"
+              "A: Increases confusion",
+              "B: Simplifies concepts",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a benefit of auditory communication?",
+            "question": "What does a Q&A session improve?",
             "options": [
-              "A: Requires physical contact",
-              "B: Works over long distances",
-              "C: Limits group size",
-              "D: Reduces survival",
-              "E: Prevents mating"
+              "A: Code performance",
+              "B: Audience engagement",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
             ],
             "answer": "B"
           },
           {
-            "question": "What is an example of a visual communication signal?",
+            "question": "What is a use case for technical vocabulary?",
             "options": [
-              "A: Pheromone trails",
-              "B: Peacock tail displays",
-              "C: Bird songs",
-              "D: Grooming",
-              "E: Echo location"
+              "A: Creative writing",
+              "B: Precise communication",
+              "C: Emotional appeal",
+              "D: Lengthy narratives",
+              "E: Ambiguous terms"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a key difference between wolf and bee social structures?",
+            "question": "What does a structured presentation ensure?",
             "options": [
-              "A: Wolves use pheromones, bees use alpha dominance",
-              "B: Wolves have alpha dominance, bees have queen-led hierarchies",
-              "C: Wolves are solitary, bees live in groups",
-              "D: Wolves migrate, bees do not",
-              "E: Wolves use tools, bees do not"
+              "A: Code execution",
+              "B: Clear delivery",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common method for territory defense?",
+            "question": "What is a benefit of diagrams in presentations?",
             "options": [
-              "A: Hibernation",
-              "B: Bird songs",
-              "C: Tool use",
-              "D: Migration",
-              "E: Camouflage"
+              "A: Increases complexity",
+              "B: Visualizes systems",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a benefit of learning in animals?",
+            "question": "What does an agenda outline?",
             "options": [
-              "A: Reduces survival",
-              "B: Improves adaptation to environments",
-              "C: Limits communication",
-              "D: Prevents reproduction",
-              "E: Isolates individuals"
+              "A: Code logic",
+              "B: Presentation topics",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for charts?",
+            "options": [
+              "A: File compression",
+              "B: Data visualization",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a technical presentation target?",
+            "options": [
+              "A: Marketing teams",
+              "B: IT stakeholders",
+              "C: Financial analysts",
+              "D: HR staff",
+              "E: Customers"
             ],
             "answer": "B"
           }
@@ -557,275 +545,266 @@
       },
       {
         "id": 3,
-        "title": "Animal Habitats and Ecosystems",
+        "title": "Cross-Functional Collaboration in IT",
         "enabled": true,
-        "duration": "1 hour",
-        "description": "This module covers the diverse habitats where animals live, their roles in ecosystems, and how environmental factors shape their adaptations.",
+        "duration": "2 hours",
+        "description": "This module covers effective communication with cross-functional teams, including developers, managers, and clients, in IT corporate environments.",
         "sections": [
           {
             "id": "3.1",
-            "title": "Terrestrial Habitats",
-            "description": "Land-based habitats like forests, deserts, and grasslands.",
+            "title": "Communicating with Developers",
+            "overview": "Use technical language to collaborate with development teams.",
             "examples": [
-              "Forests: Home to bears and owls.",
-              "Deserts: Lizards and camels."
+              "Code Review: Provide clear feedback.",
+              "Bug Report: Detail issues concisely."
             ]
           },
           {
             "id": "3.2",
-            "title": "Aquatic Habitats",
-            "description": "Marine and freshwater environments, including oceans and rivers.",
+            "title": "Engaging with Managers",
+            "overview": "Translate technical details into business outcomes for managers.",
             "examples": [
-              "Oceans: Dolphins and sharks.",
-              "Rivers: Salmon and otters."
+              "Status Report: Summarize project progress.",
+              "ROI Explanation: Justify IT investments."
             ]
           },
           {
             "id": "3.3",
-            "title": "Ecosystem Roles",
-            "description": "Animals act as predators, prey, or decomposers in food webs.",
+            "title": "Client Communication",
+            "overview": "Explain IT solutions to non-technical clients clearly.",
             "examples": [
-              "Predators: Lions control herbivore populations.",
-              "Decomposers: Dung beetles recycle nutrients."
+              "Proposal: Outline cloud migration benefits.",
+              "Demo: Showcase system functionality."
             ]
           },
           {
             "id": "3.4",
-            "title": "Adaptations to Habitats",
-            "description": "Physical and behavioral adaptations for survival.",
+            "title": "Conflict Resolution",
+            "overview": "Resolve misunderstandings in cross-functional IT teams.",
             "examples": [
-              "Camouflage in chameleons.",
-              "Migration in wildebeests."
-            ]
-          },
-          {
-            "id": "3.5",
-            "title": "Human Impacts on Habitats",
-            "description": "Deforestation, pollution, and climate change affect animal habitats.",
-            "examples": [
-              "Deforestation: Loss of orangutan habitats.",
-              "Pollution: Coral reef damage affecting fish."
+              "Mediation: Address priority conflicts.",
+              "Clarification: Resolve technical disputes."
             ]
           }
         ],
         "knowledge_check": [
           {
-            "question": "What is an example of a terrestrial habitat?",
+            "question": "What is a use case for developer communication?",
             "options": [
-              "A: Coral reef",
-              "B: Grassland",
-              "C: Deep ocean",
-              "D: River",
-              "E: Lake"
+              "A: Marketing campaigns",
+              "B: Code review feedback",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Customer surveys"
             ],
             "answer": "B"
           },
           {
-            "question": "What animals are commonly found in marine habitats?",
+            "question": "What does a status report summarize?",
             "options": [
-              "A: Bears",
-              "B: Dolphins",
-              "C: Camels",
-              "D: Owls",
-              "E: Lizards"
+              "A: Code logic",
+              "B: Project progress",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the role of predators in ecosystems?",
+            "question": "What is a benefit of clear client communication?",
             "options": [
-              "A: Recycle nutrients",
-              "B: Control prey populations",
-              "C: Pollinate plants",
-              "D: Decompose waste",
-              "E: Build habitats"
+              "A: Increases confusion",
+              "B: Builds trust",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is an example of an animal adaptation?",
+            "question": "What does a bug report detail?",
             "options": [
-              "A: Camouflage in chameleons",
-              "B: Deforestation",
-              "C: Pollution",
-              "D: Habitat mapping",
-              "E: Population counting"
-            ],
-            "answer": "A"
-          },
-          {
-            "question": "What human activity affects orangutan habitats?",
-            "options": [
-              "A: Migration",
-              "B: Deforestation",
-              "C: Predation",
-              "D: Communication",
-              "E: Foraging"
+              "A: Marketing plans",
+              "B: Technical issues",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common aquatic habitat?",
+            "question": "What is a use case for manager communication?",
             "options": [
-              "A: Desert",
-              "B: Ocean",
-              "C: Forest",
-              "D: Grassland",
-              "E: Tundra"
+              "A: Code deployment",
+              "B: Business outcomes",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the role of decomposers in ecosystems?",
+            "question": "What does a proposal outline?",
             "options": [
-              "A: Control predators",
-              "B: Recycle nutrients",
-              "C: Pollinate plants",
-              "D: Build nests",
-              "E: Migrate seasonally"
+              "A: Code logic",
+              "B: Solution benefits",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What adaptation helps wildebeests survive?",
+            "question": "What is a use case for conflict resolution?",
             "options": [
-              "A: Camouflage",
-              "B: Migration",
-              "C: Pheromones",
-              "D: Tool use",
-              "E: Hibernation"
+              "A: Data visualization",
+              "B: Team disputes",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What animals are found in freshwater habitats?",
+            "question": "What does a demo showcase?",
             "options": [
-              "A: Camels",
-              "B: Otters",
-              "C: Lions",
-              "D: Bears",
-              "E: Lizards"
+              "A: Marketing strategies",
+              "B: System functionality",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a key adaptation for desert animals?",
+            "question": "What is a benefit of clear feedback?",
             "options": [
-              "A: Thick fur",
-              "B: Water conservation",
-              "C: Large wings",
-              "D: Deep roots",
-              "E: Gills"
+              "A: Increases complexity",
+              "B: Improves collaboration",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What human impact affects coral reefs?",
+            "question": "What does an ROI explanation justify?",
             "options": [
-              "A: Migration",
-              "B: Pollution",
-              "C: Predation",
-              "D: Communication",
-              "E: Foraging"
+              "A: Code execution",
+              "B: IT investments",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the purpose of camouflage in animals?",
+            "question": "What is a use case for client proposals?",
             "options": [
-              "A: Attract mates",
-              "B: Avoid predators",
-              "C: Build nests",
-              "D: Migrate long distances",
-              "E: Communicate signals"
+              "A: Code deployment",
+              "B: Solution benefits",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What role do dung beetles play in ecosystems?",
+            "question": "What does conflict resolution address?",
             "options": [
-              "A: Predators",
-              "B: Decomposers",
-              "C: Pollinators",
-              "D: Herbivores",
-              "E: Parasites"
+              "A: Marketing plans",
+              "B: Team misunderstandings",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common feature of forest habitats?",
+            "question": "What is a use case for developer feedback?",
             "options": [
-              "A: Sandy soils",
-              "B: Dense vegetation",
-              "C: Open water",
-              "D: Extreme temperatures",
-              "E: Sparse plants"
+              "A: Data visualization",
+              "B: Code improvement",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What checks ecosystem health?",
+            "question": "What does a status report provide?",
             "options": [
-              "A: Migration tracking",
-              "B: Species diversity analysis",
-              "C: Tool use studies",
-              "D: Pheromone mapping",
-              "E: Camouflage observation"
+              "A: Code logic",
+              "B: Project updates",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the default location for marine animal habitats?",
+            "question": "What is a benefit of client demos?",
             "options": [
-              "A: Forests",
-              "B: Oceans",
-              "C: Deserts",
-              "D: Grasslands",
-              "E: Tundra"
+              "A: Increases confusion",
+              "B: Demonstrates value",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What environmental factor affects fish populations?",
+            "question": "What does technical feedback improve?",
             "options": [
-              "A: Tool use",
-              "B: Water pollution",
-              "C: Migration routes",
-              "D: Social structures",
-              "E: Courtship displays"
+              "A: Code performance",
+              "B: System quality",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
             ],
             "answer": "B"
           },
           {
-            "question": "How do animals adapt to cold habitats?",
+            "question": "What is a use case for cross-functional communication?",
             "options": [
-              "A: Thin skin",
-              "B: Thick fur or blubber",
-              "C: Small body size",
-              "D: No insulation",
-              "E: High water loss"
+              "A: File compression",
+              "B: Team alignment",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database access"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a benefit of studying animal habitats?",
+            "question": "What does a client demo ensure?",
             "options": [
-              "A: Improves conservation efforts",
-              "B: Reduces animal populations",
-              "C: Limits ecosystem diversity",
-              "D: Prevents migration",
-              "E: Isolates species"
+              "A: Code execution",
+              "B: Solution clarity",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
-            "answer": "A"
+            "answer": "B"
           },
           {
-            "question": "What animal is adapted for desert survival?",
+            "question": "What is a benefit of conflict resolution?",
             "options": [
-              "A: Penguin",
-              "B: Camel",
-              "C: Dolphin",
-              "D: Owl",
-              "E: Salmon"
+              "A: Increases disputes",
+              "B: Enhances teamwork",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a business outcome focus on?",
+            "options": [
+              "A: Code details",
+              "B: Project impact",
+              "C: Network protocols",
+              "D: Hardware specs",
+              "E: Employee schedules"
             ],
             "answer": "B"
           }
@@ -833,275 +812,266 @@
       },
       {
         "id": 4,
-        "title": "Animal Physiology and Adaptations",
+        "title": "Reading and Interpreting IT Documentation",
         "enabled": true,
-        "duration": "1 hour",
-        "description": "This module covers the physiological adaptations that enable animals to survive in diverse environments, focusing on respiratory, circulatory, and thermoregulatory systems.",
+        "duration": "2 hours",
+        "description": "This module focuses on understanding and analyzing complex IT documentation, including technical specifications, architecture diagrams, and compliance reports.",
         "sections": [
           {
             "id": "4.1",
-            "title": "Respiratory Systems",
-            "description": "Animals use lungs, gills, or skin for respiration.",
+            "title": "Technical Specifications",
+            "overview": "Interpret detailed technical specs for IT systems.",
             "examples": [
-              "Lungs: Mammals like humans.",
-              "Gills: Fish like salmon."
+              "Spec: AWS EC2 instance types.",
+              "Glossary: Define cloud terms."
             ]
           },
           {
             "id": "4.2",
-            "title": "Circulatory Systems",
-            "description": "Open or closed systems transport nutrients and oxygen.",
+            "title": "Architecture Diagrams",
+            "overview": "Analyze diagrams to understand system workflows.",
             "examples": [
-              "Closed: Vertebrates like birds.",
-              "Open: Insects like beetles."
+              "Diagram: AWS VPC network flow.",
+              "Component Map: Identify system dependencies."
             ]
           },
           {
             "id": "4.3",
-            "title": "Thermoregulation",
-            "description": "Endotherms and ectotherms regulate body temperature.",
+            "title": "Compliance Reports",
+            "overview": "Understand compliance documents like SOC 2 and GDPR.",
             "examples": [
-              "Endotherms: Mammals maintain constant temperature.",
-              "Ectotherms: Reptiles rely on environment."
+              "SOC 2: Review security controls.",
+              "GDPR: Analyze data privacy requirements."
             ]
           },
           {
             "id": "4.4",
-            "title": "Sensory Adaptations",
-            "description": "Enhanced senses like echolocation or infrared detection.",
+            "title": "Troubleshooting Guides",
+            "overview": "Use guides to diagnose and resolve IT issues.",
             "examples": [
-              "Echolocation in bats.",
-              "Infrared detection in snakes."
-            ]
-          },
-          {
-            "id": "4.5",
-            "title": "Metabolic Adaptations",
-            "description": "Adaptations like hibernation or torpor conserve energy.",
-            "examples": [
-              "Hibernation in bears.",
-              "Torpor in hummingbirds."
+              "Guide: Debug Terraform state errors.",
+              "Log Analysis: Identify system failures."
             ]
           }
         ],
         "knowledge_check": [
           {
-            "question": "What is the primary respiratory system in fish?",
+            "question": "What does a technical specification describe?",
             "options": [
-              "A: Lungs",
-              "B: Gills",
-              "C: Skin",
-              "D: Tracheae",
-              "E: Spiracles"
+              "A: Marketing plans",
+              "B: System details",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What animals use a closed circulatory system?",
+            "question": "What does an architecture diagram show?",
             "options": [
-              "A: Insects",
-              "B: Birds",
-              "C: Arachnids",
-              "D: Mollusks",
-              "E: Annelids"
+              "A: Code logic",
+              "B: System workflows",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the purpose of thermoregulation?",
+            "question": "What is a use case for compliance reports?",
             "options": [
-              "A: Controls body temperature",
-              "B: Enhances vision",
-              "C: Improves digestion",
-              "D: Manages reproduction",
-              "E: Tracks migration"
-            ],
-            "answer": "A"
-          },
-          {
-            "question": "What is an example of a sensory adaptation?",
-            "options": [
-              "A: Hibernation",
-              "B: Echolocation in bats",
-              "C: Open circulation",
-              "D: Gills",
-              "E: Fur"
+              "A: Code deployment",
+              "B: Security audits",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What animals use an open circulatory system?",
+            "question": "What does a troubleshooting guide help with?",
             "options": [
-              "A: Mammals",
-              "B: Birds",
-              "C: Insects",
-              "D: Reptiles",
-              "E: Fish"
-            ],
-            "answer": "C"
-          },
-          {
-            "question": "What is used for respiration in amphibians?",
-            "options": [
-              "A: Gills only",
-              "B: Skin and lungs",
-              "C: Tracheae",
-              "D: Spiracles",
-              "E: Lungs only"
+              "A: Marketing strategies",
+              "B: System issue resolution",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What adaptation helps bats navigate?",
+            "question": "What is a benefit of understanding diagrams?",
             "options": [
-              "A: Hibernation",
-              "B: Echolocation",
-              "C: Open circulation",
-              "D: Gills",
-              "E: Fur"
+              "A: Increases confusion",
+              "B: Clarifies workflows",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is an example of an endotherm?",
+            "question": "What does a SOC 2 report evaluate?",
             "options": [
-              "A: Lizard",
-              "B: Crocodile",
-              "C: Mammal",
-              "D: Snake",
-              "E: Turtle"
-            ],
-            "answer": "C"
-          },
-          {
-            "question": "What is a benefit of hibernation?",
-            "options": [
-              "A: Increases energy use",
-              "B: Conserves energy",
-              "C: Enhances reproduction",
-              "D: Improves vision",
-              "E: Speeds migration"
+              "A: Code performance",
+              "B: Security controls",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
             ],
             "answer": "B"
           },
           {
-            "question": "What system do insects use for respiration?",
+            "question": "What is a use case for a glossary?",
             "options": [
-              "A: Lungs",
-              "B: Gills",
-              "C: Tracheae",
-              "D: Skin",
-              "E: Spiracles and tracheae"
-            ],
-            "answer": "E"
-          },
-          {
-            "question": "What does a closed circulatory system provide?",
-            "options": [
-              "A: Less efficient transport",
-              "B: Efficient nutrient transport",
-              "C: No oxygen transport",
-              "D: Reduced blood flow",
-              "E: Open hemolymph flow"
+              "A: Data visualization",
+              "B: Defining terms",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What adaptation conserves energy in hummingbirds?",
+            "question": "What does GDPR address?",
             "options": [
-              "A: Echolocation",
-              "B: Torpor",
-              "C: Open circulation",
-              "D: Gills",
-              "E: Camouflage"
+              "A: Code deployment",
+              "B: Data privacy",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common sensory adaptation in snakes?",
+            "question": "What is a benefit of troubleshooting guides?",
             "options": [
-              "A: Echolocation",
-              "B: Infrared detection",
-              "C: Hibernation",
-              "D: Gills",
-              "E: Fur"
+              "A: Increases complexity",
+              "B: Speeds issue resolution",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What system transports oxygen in mammals?",
+            "question": "What does a component map identify?",
             "options": [
-              "A: Respiratory",
-              "B: Circulatory",
-              "C: Nervous",
-              "D: Digestive",
-              "E: Skeletal"
+              "A: Code logic",
+              "B: System dependencies",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common respiratory issue in polluted habitats?",
+            "question": "What is a use case for technical specs?",
             "options": [
-              "A: Enhanced lung function",
-              "B: Reduced oxygen uptake",
-              "C: Increased body temperature",
-              "D: Improved circulation",
-              "E: Faster metabolism"
+              "A: Marketing campaigns",
+              "B: System configuration",
+              "C: Financial reports",
+              "D: Employee schedules",
+              "E: Customer surveys"
             ],
             "answer": "B"
           },
           {
-            "question": "What adaptation supports high-altitude survival?",
+            "question": "What does log analysis help identify?",
             "options": [
-              "A: Reduced lung capacity",
-              "B: Enhanced oxygen transport",
-              "C: No thermoregulation",
-              "D: Open circulation",
-              "E: Gills"
+              "A: Marketing plans",
+              "B: System failures",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a benefit of endothermy?",
+            "question": "What is a benefit of compliance reports?",
             "options": [
-              "A: Relies on environment",
-              "B: Maintains constant body temperature",
-              "C: Reduces energy use",
-              "D: Limits activity",
-              "E: Prevents adaptation"
+              "A: Increases complexity",
+              "B: Ensures regulatory adherence",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What system do fish use for respiration?",
+            "question": "What does an architecture diagram clarify?",
             "options": [
-              "A: Lungs",
-              "B: Gills",
-              "C: Tracheae",
-              "D: Skin",
-              "E: Spiracles"
+              "A: Code execution",
+              "B: System structure",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is the purpose of the circulatory system?",
+            "question": "What is a use case for troubleshooting guides?",
             "options": [
-              "A: Regulates temperature",
-              "B: Transports nutrients and oxygen",
-              "C: Enhances vision",
-              "D: Controls reproduction",
-              "E: Manages digestion"
+              "A: File compression",
+              "B: Error diagnosis",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a key consideration for thermoregulation?",
+            "question": "What does a technical spec ensure?",
             "options": [
-              "A: Ignore environmental factors",
-              "B: Adapt to temperature changes",
-              "C: Avoid energy conservation",
-              "D: Limit sensory adaptations",
-              "E: Prevent circulation"
+              "A: Marketing appeal",
+              "B: Accurate implementation",
+              "C: Financial analysis",
+              "D: Employee training",
+              "E: Hardware setup"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of a glossary?",
+            "options": [
+              "A: Increases confusion",
+              "B: Clarifies terminology",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a compliance report verify?",
+            "options": [
+              "A: Code performance",
+              "B: Regulatory compliance",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for log analysis?",
+            "options": [
+              "A: Data visualization",
+              "B: Issue identification",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a diagram improve?",
+            "options": [
+              "A: Code execution",
+              "B: System understanding",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           }
@@ -1109,295 +1079,288 @@
       },
       {
         "id": 5,
-        "title": "Wildlife Conservation and Threats",
+        "title": "Email and Professional Communication in IT",
         "enabled": true,
-        "duration": "30 minutes",
-        "description": "This module covers the challenges facing wildlife, including habitat loss, poaching, and climate change, and strategies for conservation.",
+        "duration": "2 hours",
+        "description": "This module covers writing professional emails and other communications in IT corporate environments, including project updates, proposals, and escalations.",
         "sections": [
           {
             "id": "5.1",
-            "title": "Habitat Loss",
-            "description": "Deforestation and urbanization destroy animal habitats.",
+            "title": "Writing Professional Emails",
+            "overview": "Craft clear and professional emails for IT contexts.",
             "examples": [
-              "Amazon deforestation affecting jaguars.",
-              "Urban sprawl impacting bird nesting."
+              "Email: Project status update.",
+              "Request: Resource allocation."
             ]
           },
           {
             "id": "5.2",
-            "title": "Poaching and Illegal Trade",
-            "description": "Illegal hunting threatens species like rhinos and elephants.",
+            "title": "Proposals and Justifications",
+            "overview": "Write persuasive proposals for IT initiatives.",
             "examples": [
-              "Rhino horn trade.",
-              "Ivory poaching."
+              "Proposal: Cloud migration plan.",
+              "Justification: Explain budget needs."
             ]
           },
           {
             "id": "5.3",
-            "title": "Climate Change",
-            "description": "Rising temperatures and changing climates affect habitats.",
+            "title": "Escalation Communication",
+            "overview": "Communicate critical issues to stakeholders effectively.",
             "examples": [
-              "Polar bear habitat loss from melting ice.",
-              "Coral bleaching affecting fish."
+              "Escalation: Report system outage.",
+              "Follow-Up: Update on resolution."
             ]
           },
           {
             "id": "5.4",
-            "title": "Conservation Strategies",
-            "description": "Protected areas, breeding programs, and anti-poaching efforts.",
+            "title": "Tone and Etiquette",
+            "overview": "Use appropriate tone and etiquette in IT communications.",
             "examples": [
-              "National parks like Yellowstone.",
-              "Captive breeding for pandas."
-            ]
-          },
-          {
-            "id": "5.5",
-            "title": "Monitoring and Research",
-            "description": "Use of technology like GPS tracking and drones for conservation.",
-            "examples": [
-              "GPS collars on wolves.",
-              "Drones for monitoring deforestation."
+              "Polite Tone: Request feedback.",
+              "Professional Etiquette: Address stakeholders."
             ]
           }
         ],
         "knowledge_check": [
           {
-            "question": "What is a major cause of habitat loss?",
+            "question": "What is a use case for professional emails?",
             "options": [
-              "A: Migration",
-              "B: Deforestation",
-              "C: Communication",
-              "D: Reproduction",
-              "E: Foraging"
+              "A: Code deployment",
+              "B: Project updates",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What animals are threatened by poaching?",
+            "question": "What does a proposal justify?",
             "options": [
-              "A: Rhinos",
-              "B: Ants",
-              "C: Bees",
-              "D: Fish",
-              "E: Birds"
-            ],
-            "answer": "A"
-          },
-          {
-            "question": "What conservation strategy protects animal habitats?",
-            "options": [
-              "A: Urbanization",
-              "B: National parks",
-              "C: Poaching",
-              "D: Deforestation",
-              "E: Pollution"
+              "A: Code logic",
+              "B: IT initiatives",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What does climate change cause for polar bears?",
+            "question": "What is a benefit of professional tone?",
             "options": [
-              "A: Increased food supply",
-              "B: Habitat loss from melting ice",
-              "C: Enhanced reproduction",
-              "D: Improved navigation",
-              "E: Better thermoregulation"
+              "A: Increases confusion",
+              "B: Builds credibility",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What technology monitors wildlife populations?",
+            "question": "What does an escalation email report?",
             "options": [
-              "A: Pheromone traps",
-              "B: GPS collars",
-              "C: Bird songs",
-              "D: Camouflage nets",
-              "E: Migration maps"
+              "A: Marketing plans",
+              "B: Critical issues",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common cause of coral bleaching?",
+            "question": "What is a use case for a follow-up email?",
             "options": [
-              "A: Deforestation",
-              "B: Rising sea temperatures",
-              "C: Poaching",
-              "D: Urbanization",
-              "E: Migration"
+              "A: Code deployment",
+              "B: Issue resolution",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "How do you check for habitat loss?",
+            "question": "What does professional etiquette ensure?",
             "options": [
-              "A: Monitor deforestation with drones",
-              "B: Track migration routes",
-              "C: Study animal behavior",
-              "D: Analyze pheromones",
-              "E: Observe courtship"
-            ],
-            "answer": "A"
-          },
-          {
-            "question": "What strategy helps endangered pandas?",
-            "options": [
-              "A: Deforestation",
-              "B: Captive breeding",
-              "C: Poaching",
-              "D: Pollution",
-              "E: Urbanization"
+              "A: Code performance",
+              "B: Respectful communication",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a benefit of anti-poaching efforts?",
+            "question": "What is a use case for a resource request?",
             "options": [
-              "A: Increases habitat loss",
-              "B: Protects endangered species",
-              "C: Reduces biodiversity",
-              "D: Limits conservation",
-              "E: Promotes urbanization"
+              "A: Data visualization",
+              "B: Project needs",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What monitors deforestation impacts?",
+            "question": "What does a proposal email propose?",
             "options": [
-              "A: GPS collars",
-              "B: Drones",
-              "C: Bird songs",
-              "D: Pheromone traps",
-              "E: Migration maps"
+              "A: Code logic",
+              "B: IT solutions",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What open-source tool could monitor wildlife populations?",
+            "question": "What is a benefit of clear emails?",
             "options": [
-              "A: Satellite imagery",
-              "B: Citizen science apps",
-              "C: Pheromone traps",
-              "D: Camouflage nets",
-              "E: Bird feeders"
+              "A: Increases complexity",
+              "B: Enhances understanding",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What does captive breeding aim to do?",
+            "question": "What does an escalation email address?",
             "options": [
-              "A: Increase poaching",
-              "B: Boost endangered species populations",
-              "C: Reduce habitat size",
-              "D: Promote pollution",
-              "E: Limit migration"
+              "A: Code execution",
+              "B: Urgent issues",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common threat to elephants?",
+            "question": "What is a use case for professional emails?",
             "options": [
-              "A: Migration",
-              "B: Ivory poaching",
-              "C: Communication",
-              "D: Foraging",
-              "E: Camouflage"
+              "A: File compression",
+              "B: Stakeholder updates",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a key metric for conservation success?",
+            "question": "What does a justification email explain?",
             "options": [
-              "A: Population size",
-              "B: Migration distance",
-              "C: Pheromone strength",
-              "D: Courtship displays",
-              "E: Tool use"
-            ],
-            "answer": "A"
-          },
-          {
-            "question": "What monitors climate change impacts on wildlife?",
-            "options": [
-              "A: Pheromone analysis",
-              "B: Temperature and habitat monitoring",
-              "C: Courtship studies",
-              "D: Foraging patterns",
-              "E: Camouflage observation"
+              "A: Code logic",
+              "B: Resource needs",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a benefit of protected areas?",
+            "question": "What is a benefit of polite tone?",
             "options": [
-              "A: Increases poaching",
-              "B: Preserves habitats",
-              "C: Promotes pollution",
-              "D: Limits biodiversity",
-              "E: Encourages urbanization"
+              "A: Increases confusion",
+              "B: Fosters collaboration",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "What does habitat loss cause for jaguars?",
+            "question": "What does a follow-up email provide?",
             "options": [
-              "A: Increased reproduction",
-              "B: Reduced territory",
-              "C: Enhanced communication",
-              "D: Improved foraging",
-              "E: Better thermoregulation"
+              "A: Marketing plans",
+              "B: Resolution updates",
+              "C: Financial budgets",
+              "D: Employee roles",
+              "E: Customer feedback"
             ],
             "answer": "B"
           },
           {
-            "question": "How do you verify a species is endangered?",
+            "question": "What is a use case for email etiquette?",
             "options": [
-              "A: Observe migration",
-              "B: Check IUCN Red List",
-              "C: Study pheromones",
-              "D: Analyze courtship",
-              "E: Track foraging"
+              "A: Code deployment",
+              "B: Professional communication",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: File compression"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common cause of habitat destruction?",
+            "question": "What does a project update email communicate?",
             "options": [
-              "A: Migration",
-              "B: Urbanization",
-              "C: Communication",
-              "D: Reproduction",
-              "E: Foraging"
+              "A: Code execution",
+              "B: Progress status",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
             ],
             "answer": "B"
           },
           {
-            "question": "What is a common use of GPS collars in conservation?",
+            "question": "What is a benefit of email clarity?",
             "options": [
-              "A: Monitor population movements",
-              "B: Enhance reproduction",
-              "C: Improve camouflage",
-              "D: Promote poaching",
-              "E: Reduce habitats"
+              "A: Increases complexity",
+              "B: Reduces misunderstandings",
+              "C: Reduces clarity",
+              "D: Limits audience",
+              "E: Disables feedback"
             ],
-            "answer": "A"
+            "answer": "B"
+          },
+          {
+            "question": "What does a resource request email seek?",
+            "options": [
+              "A: Code logic",
+              "B: Project support",
+              "C: Budget details",
+              "D: Employee roles",
+              "E: Customer feedback"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for escalation emails?",
+            "options": [
+              "A: Data visualization",
+              "B: Critical issue reporting",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does professional tone enhance?",
+            "options": [
+              "A: Code performance",
+              "B: Communication effectiveness",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
           }
         ]
       }
     ],
     "additional_notes": {
       "hands_on_labs": [
-        "Classify a set of animals using taxonomic keys.",
-        "Observe and document animal behaviors in a local park or zoo.",
-        "Map a local ecosystem and identify key species roles.",
-        "Analyze physiological adaptations in a chosen animal species.",
-        "Research a conservation program and propose improvements."
+        "Write a system architecture document for an AWS-based application.",
+        "Prepare a slide deck for a technical presentation on cloud migration.",
+        "Draft a code review feedback email for a developer team.",
+        "Analyze an AWS architecture diagram and summarize its components.",
+        "Write a professional email proposing a Terraform-based CI/CD pipeline."
       ],
       "resources": [
-        "IUCN Red List of Threatened Species.",
-        "National Geographic Animal Database.",
-        "Sample field guides and taxonomic keys provided in course materials."
+        "Purdue OWL: Professional and Technical Writing.",
+        "Technical Communication by Mike Markel and Stuart A. Selber (12th Edition).",
+        "AWS Documentation for technical reference.",
+        "Confluence and Markdown documentation for formatting.",
+        "Effective Technical Communication (MIT OpenCourseWare)."
       ],
-      "environment": "Access to a local park, zoo, or virtual simulation for labs."
+      "environment": "Access to a text editor (e.g., VS Code), Markdown tools, and Confluence or similar platforms. Familiarity with IT systems (e.g., AWS, Terraform) for context-specific exercises is recommended."
     }
   }
 }

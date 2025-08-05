@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "IBM MQ Operations and Administration for iSeries",
+    "duration": "10 hours",
+    "audience": [
+      "System administrators for IBM iSeries",
+      "Middleware specialists managing IBM MQ",
+      "IT professionals in enterprises using iSeries for messaging"
+    ],
+    "prerequisites": "Basic knowledge of IBM iSeries (AS/400) administration, familiarity with IBM MQ concepts, and experience with IBM i command-line interface (CL) or IBM Navigator for i. Knowledge of Python or Ansible for automation is recommended.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "IBM MQ Setup and Configuration on iSeries",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers the installation, configuration, and initial setup of IBM MQ on IBM iSeries systems, focusing on queue managers and basic operations.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Installing IBM MQ on iSeries",
+            "overview": "Install and verify IBM MQ software on iSeries using IBM i commands.",
+            "examples": [
+              "Install: Use RSTLICPGM for MQ.",
+              "Verify: Check MQ version."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Queue Manager Configuration",
+            "overview": "Create and configure queue managers using IBM i CL commands.",
+            "examples": [
+              "CRTMQM: Create queue manager.",
+              "STRMQM: Start queue manager."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Defining Queues and Channels",
+            "overview": "Set up local queues, remote queues, and channels for messaging.",
+            "examples": [
+              "Queue: Define local queue.",
+              "Channel: Configure sender-receiver."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Basic Security Setup",
+            "overview": "Configure basic security for IBM MQ on iSeries using object authority.",
+            "examples": [
+              "Authority: Grant queue access.",
+              "SSL: Enable basic SSL."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What command installs IBM MQ on iSeries?",
+            "options": [
+              "A: CRTMQM",
+              "B: RSTLICPGM",
+              "C: STRMQM",
+              "D: ENDMQM",
+              "E: DSPMQM"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CRTMQM create?",
+            "options": [
+              "A: Network routes",
+              "B: Queue manager",
+              "C: Data encryption",
+              "D: File storage",
+              "E: CPU metrics"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for a local queue?",
+            "options": [
+              "A: File compression",
+              "B: Message storage",
+              "C: Network routing",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does STRMQM do?",
+            "options": [
+              "A: Stops queue manager",
+              "B: Starts queue manager",
+              "C: Deletes queue manager",
+              "D: Configures channels",
+              "E: Monitors CPU"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of SSL in IBM MQ?",
+            "options": [
+              "A: Increases latency",
+              "B: Secures transmission",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a sender-receiver channel connect?",
+            "options": [
+              "A: File systems",
+              "B: Queue managers",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command verifies IBM MQ installation?",
+            "options": [
+              "A: DSPMQVER",
+              "B: CRTMQM",
+              "C: STRMQM",
+              "D: ENDMQM",
+              "E: RSTLICPGM"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does object authority control?",
+            "options": [
+              "A: Network traffic",
+              "B: Queue access",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for a remote queue?",
+            "options": [
+              "A: Local storage",
+              "B: Cross-system messaging",
+              "C: CPU monitoring",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does RSTLICPGM install?",
+            "options": [
+              "A: Network routes",
+              "B: IBM MQ software",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of queue managers?",
+            "options": [
+              "A: Increases complexity",
+              "B: Manages messages",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a channel facilitate?",
+            "options": [
+              "A: Code execution",
+              "B: Message transfer",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What command starts a queue manager?",
+            "options": [
+              "A: CRTMQM",
+              "B: STRMQM",
+              "C: ENDMQM",
+              "D: DSPMQM",
+              "E: RSTLICPGM"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSL secure in IBM MQ?",
+            "options": [
+              "A: File storage",
+              "B: Data transmission",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for queue configuration?",
+            "options": [
+              "A: File compression",
+              "B: Message routing",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DSPMQVER display?",
+            "options": [
+              "A: Network routes",
+              "B: MQ version",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of object authority?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a local queue store?",
+            "options": [
+              "A: Network traffic",
+              "B: Messages",
+              "C: CPU metrics",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for channels?",
+            "options": [
+              "A: File storage",
+              "B: System connectivity",
+              "C: CPU monitoring",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CRTMQM configure?",
+            "options": [
+              "A: Code performance",
+              "B: Queue manager",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Queue and Channel Management",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module focuses on managing queues and channels on IBM MQ for iSeries, including configuration, monitoring, and optimization.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Queue Administration",
+            "overview": "Manage queue properties like depth and persistence using IBM i commands.",
+            "examples": [
+              "CHGMQM: Modify queue settings.",
+              "DSPMQMQ: Display queue status."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Channel Administration",
+            "overview": "Configure and monitor channels for reliable message transfer.",
+            "examples": [
+              "CHGMQCHL: Update channel parameters.",
+              "STRMQCHL: Start channel."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Message Handling",
+            "overview": "Manage message flow, including browsing and moving messages.",
+            "examples": [
+              "Browse: View queue messages.",
+              "Move: Transfer messages."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Performance Tuning",
+            "overview": "Optimize queue and channel performance for high throughput.",
+            "examples": [
+              "Depth: Adjust queue limits.",
+              "Batching: Improve channel efficiency."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What command modifies queue settings?",
+            "options": [
+              "A: STRMQM",
+              "B: CHGMQM",
+              "C: ENDMQM",
+              "D: DSPMQMQ",
+              "E: CRTMQM"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DSPMQMQ display?",
+            "options": [
+              "A: Network routes",
+              "B: Queue status",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for channel administration?",
+            "options": [
+              "A: File compression",
+              "B: Message transfer",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does STRMQCHL do?",
+            "options": [
+              "A: Stops channel",
+              "B: Starts channel",
+              "C: Deletes channel",
+              "D: Configures queues",
+              "E: Monitors CPU"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of performance tuning?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances throughput",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does message browsing allow?",
+            "options": [
+              "A: Network routing",
+              "B: View messages",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CHGMQCHL update?",
+            "options": [
+              "A: File storage",
+              "B: Channel parameters",
+              "C: CPU metrics",
+              "D: Network routes",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for message moving?",
+            "options": [
+              "A: File compression",
+              "B: Queue management",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does batching improve?",
+            "options": [
+              "A: File uploads",
+              "B: Channel efficiency",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does queue depth control?",
+            "options": [
+              "A: Code execution",
+              "B: Message capacity",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of queue administration?",
+            "options": [
+              "A: Increases complexity",
+              "B: Optimizes messaging",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CHGMQM configure?",
+            "options": [
+              "A: Network routes",
+              "B: Queue properties",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for performance tuning?",
+            "options": [
+              "A: File storage",
+              "B: High throughput",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does message browsing prevent?",
+            "options": [
+              "A: Message deletion",
+              "B: Message viewing",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a use case for channels?",
+            "options": [
+              "A: File compression",
+              "B: Reliable transfer",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DSPMQMQ monitor?",
+            "options": [
+              "A: Code execution",
+              "B: Queue status",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of batching?",
+            "options": [
+              "A: Increases latency",
+              "B: Reduces overhead",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does message moving enable?",
+            "options": [
+              "A: Network routing",
+              "B: Queue reorganization",
+              "C: CPU monitoring",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for queue properties?",
+            "options": [
+              "A: File storage",
+              "B: Message control",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does channel administration ensure?",
+            "options": [
+              "A: Code performance",
+              "B: Reliable messaging",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Security and Access Control",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers securing IBM MQ on iSeries, including user authentication, SSL/TLS configuration, and compliance with enterprise standards.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "User Authentication",
+            "overview": "Configure IBM i user profiles for MQ access control.",
+            "examples": [
+              "Profile: Grant MQ access.",
+              "Group: Assign permissions."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "SSL/TLS Configuration",
+            "overview": "Implement SSL/TLS for secure message transmission on iSeries.",
+            "examples": [
+              "SSL: Configure channel security.",
+              "Certificates: Use DCM for keys."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Object Authority Management",
+            "overview": "Use IBM i object authority to secure MQ objects.",
+            "examples": [
+              "GRTOBJAUT: Restrict queue access.",
+              "CHGMQMAUT: Set permissions."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Compliance Requirements",
+            "overview": "Address compliance needs like SOX and PCI-DSS on iSeries.",
+            "examples": [
+              "SOX: Audit MQ access.",
+              "PCI-DSS: Secure transactions."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does GRTOBJAUT control in IBM MQ?",
+            "options": [
+              "A: Network traffic",
+              "B: Object access",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSL/TLS secure?",
+            "options": [
+              "A: File storage",
+              "B: Message transmission",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for user profiles?",
+            "options": [
+              "A: File compression",
+              "B: MQ access control",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DCM manage on iSeries?",
+            "options": [
+              "A: Network routes",
+              "B: SSL certificates",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of SSL/TLS?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CHGMQMAUT configure?",
+            "options": [
+              "A: File storage",
+              "B: MQ permissions",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for PCI-DSS compliance?",
+            "options": [
+              "A: File uploads",
+              "B: Transaction security",
+              "C: Network monitoring",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SOX compliance require?",
+            "options": [
+              "A: Code execution",
+              "B: Access auditing",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of object authority?",
+            "options": [
+              "A: Increases complexity",
+              "B: Restricts access",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSL/TLS use on iSeries?",
+            "options": [
+              "A: File storage",
+              "B: DCM certificates",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for group profiles?",
+            "options": [
+              "A: File compression",
+              "B: Permission assignment",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does GRTOBJAUT restrict?",
+            "options": [
+              "A: Network routes",
+              "B: Queue access",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of compliance auditing?",
+            "options": [
+              "A: Increases latency",
+              "B: Ensures adherence",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SSL/TLS prevent?",
+            "options": [
+              "A: Network routing",
+              "B: Eavesdropping",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for CHGMQMAUT?",
+            "options": [
+              "A: File storage",
+              "B: Access control",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does PCI-DSS protect?",
+            "options": [
+              "A: Code execution",
+              "B: Financial transactions",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of user profiles?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DCM configure?",
+            "options": [
+              "A: File uploads",
+              "B: SSL security",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for SOX compliance?",
+            "options": [
+              "A: File compression",
+              "B: Audit trails",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does object authority enhance?",
+            "options": [
+              "A: Code performance",
+              "B: Security control",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Monitoring and Troubleshooting",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers monitoring IBM MQ on iSeries and troubleshooting common operational issues using IBM i tools and logs.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "Monitoring with IBM Navigator",
+            "overview": "Use IBM Navigator for i to monitor queue managers and channels.",
+            "examples": [
+              "Navigator: Check queue status.",
+              "Alerts: Monitor queue depth."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Log Analysis",
+            "overview": "Analyze IBM MQ and iSeries logs for issue diagnosis.",
+            "examples": [
+              "AMQERR: Review error logs.",
+              "Job Logs: Check MQ jobs."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Troubleshooting Channels",
+            "overview": "Diagnose and resolve channel connectivity issues.",
+            "examples": [
+              "Channel Failure: Debug connection.",
+              "PINGMQCHL: Test channel."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Performance Monitoring",
+            "overview": "Monitor MQ performance metrics like throughput and latency.",
+            "examples": [
+              "DSPMQMQ: Track queue metrics.",
+              "WRKACTJOB: Monitor MQ jobs."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What tool monitors IBM MQ on iSeries?",
+            "options": [
+              "A: CloudWatch",
+              "B: IBM Navigator",
+              "C: Route 53",
+              "D: S3",
+              "E: DynamoDB"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AMQERR log contain?",
+            "options": [
+              "A: Network routes",
+              "B: Error messages",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for PINGMQCHL?",
+            "options": [
+              "A: File compression",
+              "B: Channel testing",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does WRKACTJOB monitor?",
+            "options": [
+              "A: File storage",
+              "B: MQ jobs",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IBM Navigator?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies monitoring",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DSPMQMQ track?",
+            "options": [
+              "A: File uploads",
+              "B: Queue metrics",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for log analysis?",
+            "options": [
+              "A: File compression",
+              "B: Issue diagnosis",
+              "C: Network routing",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does PINGMQCHL diagnose?",
+            "options": [
+              "A: Code execution",
+              "B: Channel connectivity",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of performance monitoring?",
+            "options": [
+              "A: Increases latency",
+              "B: Optimizes throughput",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM Navigator monitor?",
+            "options": [
+              "A: File storage",
+              "B: Queue managers",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for AMQERR logs?",
+            "options": [
+              "A: File compression",
+              "B: Error troubleshooting",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does WRKACTJOB display?",
+            "options": [
+              "A: Network routes",
+              "B: Active jobs",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of channel troubleshooting?",
+            "options": [
+              "A: Increases complexity",
+              "B: Restores connectivity",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DSPMQMQ measure?",
+            "options": [
+              "A: File uploads",
+              "B: Queue performance",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for IBM Navigator?",
+            "options": [
+              "A: File compression",
+              "B: Queue monitoring",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does log analysis improve?",
+            "options": [
+              "A: Code execution",
+              "B: Issue resolution",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of performance metrics?",
+            "options": [
+              "A: Increases latency",
+              "B: Optimizes system",
+              "C: Reduces reliability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does PINGMQCHL verify?",
+            "options": [
+              "A: Network routes",
+              "B: Channel status",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for job logs?",
+            "options": [
+              "A: File storage",
+              "B: MQ job analysis",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM Navigator enhance?",
+            "options": [
+              "A: Code performance",
+              "B: System monitoring",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Automation and Integration",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers automating IBM MQ operations on iSeries using CL scripts, Python, and integration with enterprise systems.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "CL Script Automation",
+            "overview": "Automate IBM MQ tasks using IBM i CL scripts.",
+            "examples": [
+              "CL Script: Automate queue setup.",
+              "Job Schedule: Run MQ tasks."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Python Automation",
+            "overview": "Use Python and pymqi for programmatic MQ management.",
+            "examples": [
+              "pymqi: Manage queues.",
+              "Script: Monitor channels."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Integration with DB2",
+            "overview": "Integrate IBM MQ with DB2 on iSeries for transactional messaging.",
+            "examples": [
+              "DB2 Trigger: Send MQ messages.",
+              "MQI: Interface with DB2."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Ansible for MQ Automation",
+            "overview": "Use Ansible to automate IBM MQ configuration and deployment.",
+            "examples": [
+              "Playbook: Configure queue managers.",
+              "Ansible: Deploy channels."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does a CL script automate in IBM MQ?",
+            "options": [
+              "A: Network traffic",
+              "B: Queue setup",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What Python library manages IBM MQ?",
+            "options": [
+              "A: NumPy",
+              "B: pymqi",
+              "C: Pandas",
+              "D: Matplotlib",
+              "E: Requests"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for DB2 integration?",
+            "options": [
+              "A: File compression",
+              "B: Transactional messaging",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Ansible configure in IBM MQ?",
+            "options": [
+              "A: File storage",
+              "B: Queue managers",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of CL scripts?",
+            "options": [
+              "A: Increases complexity",
+              "B: Automates tasks",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pymqi manage?",
+            "options": [
+              "A: File uploads",
+              "B: MQ objects",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Ansible playbooks?",
+            "options": [
+              "A: File compression",
+              "B: Channel deployment",
+              "C: Network routing",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DB2 trigger send?",
+            "options": [
+              "A: Network routes",
+              "B: MQ messages",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Python automation?",
+            "options": [
+              "A: Increases latency",
+              "B: Simplifies management",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a job schedule automate?",
+            "options": [
+              "A: File storage",
+              "B: MQ tasks",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for pymqi?",
+            "options": [
+              "A: File compression",
+              "B: Queue management",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Ansible automate?",
+            "options": [
+              "A: Network routes",
+              "B: MQ configuration",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of DB2 integration?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances transactions",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a CL script execute?",
+            "options": [
+              "A: File uploads",
+              "B: MQ commands",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for MQI?",
+            "options": [
+              "A: File storage",
+              "B: DB2 integration",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Ansible deploy?",
+            "options": [
+              "A: Code execution",
+              "B: MQ channels",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of automation?",
+            "options": [
+              "A: Increases latency",
+              "B: Reduces manual effort",
+              "C: Reduces reliability",
+              "D: Limits security",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pymqi enable?",
+            "options": [
+              "A: Network routing",
+              "B: Programmatic control",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for job schedules?",
+            "options": [
+              "A: File compression",
+              "B: Task automation",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DB2 integration improve?",
+            "options": [
+              "A: Code performance",
+              "B: Transaction reliability",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Install IBM MQ on iSeries and create a queue manager using CRTMQM.",
+        "Configure a sender-receiver channel with SSL using IBM i CL commands.",
+        "Monitor queue depth and channel status using IBM Navigator for i.",
+        "Write a CL script to automate queue manager startup and queue creation.",
+        "Use pymqi to write a Python script for monitoring queue messages."
+      ],
+      "resources": [
+        "IBM MQ for IBM i Documentation (ibm.com).",
+        "IBM iSeries Navigator for i User Guide.",
+        "IBM Redbooks: IBM MQ for iSeries Administration.",
+        "pymqi Documentation for Python MQ Integration.",
+        "IBM i CL Reference Manual."
+      ],
+      "environment": "IBM iSeries (V7R3 or later) with IBM MQ 9.2+ installed, IBM Navigator for i, access to Digital Certificate Manager (DCM) for SSL, and Python 3.8+ with pymqi for automation. Ansible installed for configuration management is recommended."
+    }
+  }
+}

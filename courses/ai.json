@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "Advanced Artificial Intelligence",
+    "duration": "10 hours",
+    "audience": [
+      "Senior Computer Science majors",
+      "Graduate students in AI or related fields",
+      "Professional data scientists seeking advanced AI expertise"
+    ],
+    "prerequisites": "Proficiency in Python (equivalent to MIT’s 6.0001/6.0002), strong foundation in machine learning (equivalent to MIT’s 6.036 or 6.867), linear algebra, probability, and calculus. Familiarity with deep learning frameworks (e.g., PyTorch, TensorFlow) and basic software engineering is recommended.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Advanced Neural Networks",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module explores advanced neural network architectures and optimization techniques for complex tasks in computer vision and natural language processing.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Convolutional Neural Networks (CNNs)",
+            "overview": "Implement and optimize CNNs for image processing tasks using PyTorch.",
+            "examples": [
+              "CNN: Image classification on CIFAR-10.",
+              "Transfer Learning: Fine-tuning ResNet for custom datasets."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Recurrent Neural Networks (RNNs)",
+            "overview": "Use RNNs and LSTMs for sequential data processing.",
+            "examples": [
+              "LSTM: Sentiment analysis on text data.",
+              "GRU: Time-series forecasting."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Optimization Techniques",
+            "overview": "Apply advanced optimization methods like AdamW and learning rate scheduling.",
+            "examples": [
+              "AdamW: Stabilizes training of deep networks.",
+              "Cosine Annealing: Improves convergence speed."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Attention Mechanisms",
+            "overview": "Implement attention-based models for enhanced sequence modeling.",
+            "examples": [
+              "Self-Attention: Transformer for machine translation.",
+              "Multi-Head Attention: Improves context understanding."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a use case for CNNs?",
+            "options": [
+              "A: Time-series prediction",
+              "B: Image classification",
+              "C: Text generation",
+              "D: Graph processing",
+              "E: Audio synthesis"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an LSTM handle effectively?",
+            "options": [
+              "A: Image processing",
+              "B: Sequential data",
+              "C: Graph traversal",
+              "D: Matrix factorization",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What optimizer improves training stability?",
+            "options": [
+              "A: SGD",
+              "B: AdamW",
+              "C: RMSprop",
+              "D: Adagrad",
+              "E: Momentum"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does self-attention improve?",
+            "options": [
+              "A: Image resolution",
+              "B: Context understanding",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of transfer learning?",
+            "options": [
+              "A: Increases training time",
+              "B: Reduces training data needs",
+              "C: Limits model scalability",
+              "D: Decreases accuracy",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does cosine annealing adjust?",
+            "options": [
+              "A: Batch size",
+              "B: Learning rate",
+              "C: Model architecture",
+              "D: Loss function",
+              "E: Data preprocessing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for GRUs?",
+            "options": [
+              "A: Image segmentation",
+              "B: Time-series forecasting",
+              "C: Graph analysis",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does multi-head attention enable?",
+            "options": [
+              "A: Faster gradient descent",
+              "B: Multiple context focuses",
+              "C: Data compression",
+              "D: Image enhancement",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What framework is commonly used for CNNs?",
+            "options": [
+              "A: NumPy",
+              "B: PyTorch",
+              "C: Pandas",
+              "D: Scikit-learn",
+              "E: Matplotlib"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of LSTMs?",
+            "options": [
+              "A: Reduces memory usage",
+              "B: Handles long-term dependencies",
+              "C: Enhances image resolution",
+              "D: Simplifies optimization",
+              "E: Limits scalability"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AdamW prevent?",
+            "options": [
+              "A: Overfitting",
+              "B: Weight decay issues",
+              "C: Data imbalance",
+              "D: Gradient explosion",
+              "E: Model underfitting"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for transformers?",
+            "options": [
+              "A: Image denoising",
+              "B: Machine translation",
+              "C: Graph traversal",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does attention focus on?",
+            "options": [
+              "A: Data compression",
+              "B: Relevant input parts",
+              "C: Model optimization",
+              "D: Image preprocessing",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of learning rate scheduling?",
+            "options": [
+              "A: Increases complexity",
+              "B: Improves convergence",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ResNet improve?",
+            "options": [
+              "A: Text generation",
+              "B: Deep network training",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What handles sequential data in RNNs?",
+            "options": [
+              "A: Convolutional layers",
+              "B: Recurrent layers",
+              "C: Pooling layers",
+              "D: Dense layers",
+              "E: Dropout layers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of PyTorch?",
+            "options": [
+              "A: Data visualization",
+              "B: Deep learning",
+              "C: Data cleaning",
+              "D: File compression",
+              "E: Database management"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does fine-tuning achieve?",
+            "options": [
+              "A: Data compression",
+              "B: Model adaptation",
+              "C: Network routing",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does attention replace in transformers?",
+            "options": [
+              "A: Convolutional layers",
+              "B: Recurrent layers",
+              "C: Pooling layers",
+              "D: Dense layers",
+              "E: Dropout layers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of CNNs?",
+            "options": [
+              "A: Increases complexity",
+              "B: Efficient image processing",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Reinforcement Learning",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers advanced reinforcement learning techniques, including deep Q-learning, policy gradients, and multi-agent systems.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Deep Q-Learning",
+            "overview": "Implement DQN for complex environments using experience replay.",
+            "examples": [
+              "DQN: Atari game playing.",
+              "Experience Replay: Stabilizes training."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Policy Gradients",
+            "overview": "Use policy gradient methods for continuous action spaces.",
+            "examples": [
+              "REINFORCE: Robot control tasks.",
+              "Actor-Critic: Balances value and policy."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Multi-Agent RL",
+            "overview": "Explore multi-agent reinforcement learning for cooperative tasks.",
+            "examples": [
+              "MADDPG: Multi-agent coordination.",
+              "Game Theory: Competitive strategies."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Exploration Strategies",
+            "overview": "Apply exploration techniques like epsilon-greedy and UCB.",
+            "examples": [
+              "Epsilon-Greedy: Balances exploration-exploitation.",
+              "UCB: Optimizes action selection."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a use case for DQN?",
+            "options": [
+              "A: Image classification",
+              "B: Game playing",
+              "C: Text generation",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What stabilizes DQN training?",
+            "options": [
+              "A: Batch normalization",
+              "B: Experience replay",
+              "C: Dropout",
+              "D: Gradient clipping",
+              "E: Weight decay"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does REINFORCE optimize?",
+            "options": [
+              "A: Image resolution",
+              "B: Policy gradients",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of actor-critic methods?",
+            "options": [
+              "A: Increases variance",
+              "B: Balances value and policy",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does MADDPG handle?",
+            "options": [
+              "A: Image processing",
+              "B: Multi-agent coordination",
+              "C: Text generation",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for epsilon-greedy?",
+            "options": [
+              "A: Data compression",
+              "B: Exploration-exploitation balance",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does UCB optimize?",
+            "options": [
+              "A: Image resolution",
+              "B: Action selection",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common RL environment?",
+            "options": [
+              "A: Pandas",
+              "B: OpenAI Gym",
+              "C: NumPy",
+              "D: Matplotlib",
+              "E: Scikit-learn"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does policy gradient handle?",
+            "options": [
+              "A: Discrete actions",
+              "B: Continuous actions",
+              "C: Image processing",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of experience replay?",
+            "options": [
+              "A: Increases memory usage",
+              "B: Stabilizes training",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for multi-agent RL?",
+            "options": [
+              "A: Image classification",
+              "B: Cooperative tasks",
+              "C: Text generation",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does actor-critic combine?",
+            "options": [
+              "A: Value and policy",
+              "B: Image and text",
+              "C: Compression and clustering",
+              "D: Gradient and loss",
+              "E: Exploration and exploitation"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does epsilon-greedy adjust?",
+            "options": [
+              "A: Learning rate",
+              "B: Exploration rate",
+              "C: Batch size",
+              "D: Loss function",
+              "E: Model architecture"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of UCB?",
+            "options": [
+              "A: Increases complexity",
+              "B: Optimizes action selection",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DQN use for learning?",
+            "options": [
+              "A: Supervised learning",
+              "B: Q-values",
+              "C: Clustering",
+              "D: Data compression",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What handles continuous action spaces?",
+            "options": [
+              "A: DQN",
+              "B: Policy gradients",
+              "C: CNNs",
+              "D: LSTMs",
+              "E: Transformers"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use of OpenAI Gym?",
+            "options": [
+              "A: Data visualization",
+              "B: RL environments",
+              "C: Data cleaning",
+              "D: File compression",
+              "E: Database management"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does multi-agent RL enable?",
+            "options": [
+              "A: Data compression",
+              "B: Agent coordination",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does experience replay store?",
+            "options": [
+              "A: Model weights",
+              "B: State transitions",
+              "C: Image data",
+              "D: Text corpora",
+              "E: Loss values"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of policy gradients?",
+            "options": [
+              "A: Increases complexity",
+              "B: Handles continuous actions",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Generative Models",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module delves into generative AI models, including GANs, VAEs, and diffusion models for creating realistic data.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "Generative Adversarial Networks (GANs)",
+            "overview": "Implement GANs for generating realistic images.",
+            "examples": [
+              "GAN: Synthetic face generation.",
+              "DCGAN: Improves image quality."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "Variational Autoencoders (VAEs)",
+            "overview": "Use VAEs for latent space modeling and data generation.",
+            "examples": [
+              "VAE: Image denoising.",
+              "Latent Space: Interpolates data points."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Diffusion Models",
+            "overview": "Explore diffusion models for high-quality data synthesis.",
+            "examples": [
+              "DDPM: Generates photorealistic images.",
+              "Score-Based: Refines generation process."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Evaluation Metrics",
+            "overview": "Evaluate generative models using FID and IS metrics.",
+            "examples": [
+              "FID: Measures image similarity.",
+              "Inception Score: Assesses image diversity."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a use case for GANs?",
+            "options": [
+              "A: Time-series prediction",
+              "B: Image generation",
+              "C: Text classification",
+              "D: Graph processing",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a VAE model?",
+            "options": [
+              "A: Image resolution",
+              "B: Latent space",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does FID measure?",
+            "options": [
+              "A: Model accuracy",
+              "B: Image similarity",
+              "C: Text coherence",
+              "D: Data compression",
+              "E: Clustering quality"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of diffusion models?",
+            "options": [
+              "A: Increases training time",
+              "B: High-quality generation",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Simplifies debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does DCGAN improve?",
+            "options": [
+              "A: Text generation",
+              "B: Image quality",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for VAEs?",
+            "options": [
+              "A: Game playing",
+              "B: Image denoising",
+              "C: Text classification",
+              "D: Graph processing",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Inception Score assess?",
+            "options": [
+              "A: Model accuracy",
+              "B: Image diversity",
+              "C: Text coherence",
+              "D: Data compression",
+              "E: Clustering quality"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What framework is used for GANs?",
+            "options": [
+              "A: NumPy",
+              "B: TensorFlow",
+              "C: Pandas",
+              "D: Scikit-learn",
+              "E: Matplotlib"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a latent space enable?",
+            "options": [
+              "A: Data compression",
+              "B: Data interpolation",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of DDPM?",
+            "options": [
+              "A: Reduces image quality",
+              "B: Generates photorealistic images",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for diffusion models?",
+            "options": [
+              "A: Time-series prediction",
+              "B: Image synthesis",
+              "C: Text classification",
+              "D: Graph processing",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does score-based modeling refine?",
+            "options": [
+              "A: Data compression",
+              "B: Generation process",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common generative model task?",
+            "options": [
+              "A: File compression",
+              "B: Synthetic data creation",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a GAN consist of?",
+            "options": [
+              "A: Encoder-decoder",
+              "B: Generator-discriminator",
+              "C: Actor-critic",
+              "D: Policy-value",
+              "E: Transformer-attention"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of VAEs?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enables latent space modeling",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does FID compare?",
+            "options": [
+              "A: Model weights",
+              "B: Generated vs real images",
+              "C: Text corpora",
+              "D: Loss values",
+              "E: State transitions"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for generative models?",
+            "options": [
+              "A: File compression",
+              "B: Data augmentation",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a discriminator evaluate?",
+            "options": [
+              "A: Data compression",
+              "B: Data authenticity",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of diffusion models?",
+            "options": [
+              "A: Reduces image quality",
+              "B: High-fidelity outputs",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a VAE optimize?",
+            "options": [
+              "A: Image resolution",
+              "B: Reconstruction and KL divergence",
+              "C: Data compression",
+              "D: Clustering accuracy",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "AI Ethics and Fairness",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module focuses on ethical considerations in AI, including bias mitigation, fairness metrics, and responsible AI deployment.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "Bias in AI Models",
+            "overview": "Identify and mitigate bias in machine learning models.",
+            "examples": [
+              "Bias Detection: Gender bias in NLP models.",
+              "Mitigation: Reweighting datasets."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Fairness Metrics",
+            "overview": "Use fairness metrics like demographic parity and equal opportunity.",
+            "examples": [
+              "Demographic Parity: Ensures equal selection rates.",
+              "Equal Opportunity: Balances true positive rates."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Explainability",
+            "overview": "Implement explainable AI using SHAP and LIME.",
+            "examples": [
+              "SHAP: Feature importance for predictions.",
+              "LIME: Local model explanations."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Responsible AI",
+            "overview": "Develop guidelines for ethical AI deployment.",
+            "examples": [
+              "Audit Trails: Tracks model decisions.",
+              "Privacy: Differential privacy techniques."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is a common source of AI bias?",
+            "options": [
+              "A: Model architecture",
+              "B: Training data",
+              "C: Loss function",
+              "D: Optimizer",
+              "E: Hardware"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does demographic parity ensure?",
+            "options": [
+              "A: Model accuracy",
+              "B: Equal selection rates",
+              "C: Data compression",
+              "D: Clustering quality",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SHAP provide?",
+            "options": [
+              "A: Data compression",
+              "B: Feature importance",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of explainable AI?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances transparency",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does equal opportunity balance?",
+            "options": [
+              "A: Model weights",
+              "B: True positive rates",
+              "C: Image data",
+              "D: Text corpora",
+              "E: Loss values"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for LIME?",
+            "options": [
+              "A: Image generation",
+              "B: Local explanations",
+              "C: Text classification",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does differential privacy protect?",
+            "options": [
+              "A: Model accuracy",
+              "B: Individual data",
+              "C: Image quality",
+              "D: Clustering quality",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What library supports fairness metrics?",
+            "options": [
+              "A: NumPy",
+              "B: Fairlearn",
+              "C: Pandas",
+              "D: Matplotlib",
+              "E: Scikit-learn"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does bias mitigation reduce?",
+            "options": [
+              "A: Model accuracy",
+              "B: Unfair outcomes",
+              "C: Data compression",
+              "D: Clustering quality",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of audit trails?",
+            "options": [
+              "A: Increases latency",
+              "B: Tracks decisions",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for fairness metrics?",
+            "options": [
+              "A: Image generation",
+              "B: Model evaluation",
+              "C: Text classification",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does LIME explain?",
+            "options": [
+              "A: Model architecture",
+              "B: Individual predictions",
+              "C: Data compression",
+              "D: Clustering quality",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common ethical AI task?",
+            "options": [
+              "A: File compression",
+              "B: Bias mitigation",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SHAP quantify?",
+            "options": [
+              "A: Data compression",
+              "B: Feature contributions",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of differential privacy?",
+            "options": [
+              "A: Increases complexity",
+              "B: Protects individual data",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Fairlearn provide?",
+            "options": [
+              "A: Image generation",
+              "B: Fairness metrics",
+              "C: Text classification",
+              "D: Data compression",
+              "E: Clustering"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for explainable AI?",
+            "options": [
+              "A: File compression",
+              "B: Model transparency",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does bias detection identify?",
+            "options": [
+              "A: Model accuracy",
+              "B: Unfair patterns",
+              "C: Image quality",
+              "D: Clustering quality",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of fairness metrics?",
+            "options": [
+              "A: Increases latency",
+              "B: Ensures equitable outcomes",
+              "C: Limits scalability",
+              "D: Reduces accuracy",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does responsible AI emphasize?",
+            "options": [
+              "A: Performance optimization",
+              "B: Ethical deployment",
+              "C: Data compression",
+              "D: Clustering quality",
+              "E: Gradient descent"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "AI Deployment and Scalability",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers deploying AI models in production, including model serving, scalability, and monitoring using Python-based tools.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "Model Serving",
+            "overview": "Deploy models using FastAPI and ONNX for inference.",
+            "examples": [
+              "FastAPI: RESTful model endpoint.",
+              "ONNX: Cross-platform inference."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Scalability",
+            "overview": "Scale AI models using containerization and orchestration.",
+            "examples": [
+              "Docker: Containerizes model services.",
+              "Kubernetes: Manages model deployment."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Monitoring and Logging",
+            "overview": "Monitor model performance and log predictions.",
+            "examples": [
+              "Prometheus: Tracks inference metrics.",
+              "Logging: Records prediction errors."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Optimization for Inference",
+            "overview": "Optimize models for low-latency inference.",
+            "examples": [
+              "Quantization: Reduces model size.",
+              "Pruning: Improves inference speed."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What library serves AI models via REST?",
+            "options": [
+              "A: NumPy",
+              "B: FastAPI",
+              "C: Pandas",
+              "D: Matplotlib",
+              "E: Scikit-learn"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ONNX enable?",
+            "options": [
+              "A: Data compression",
+              "B: Cross-platform inference",
+              "C: Image enhancement",
+              "D: Clustering",
+              "E: Gradient clipping"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What containerizes AI models?",
+            "options": [
+              "A: File compression",
+              "B: Docker",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for FastAPI?",
+            "options": [
+              "A: File compression",
+              "B: Model serving",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What orchestrates model deployment?",
+            "options": [
+              "A: File systems",
+              "B: Kubernetes",
+              "C: Network routers",
+              "D: Databases",
+              "E: Memory blocks"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What handles inference errors?",
+            "options": [
+              "A: try-except",
+              "B: collections",
+              "C: timeit",
+              "D: cProfile",
+              "E: sys"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What monitors inference metrics?",
+            "options": [
+              "A: requests",
+              "B: Prometheus",
+              "C: NumPy",
+              "D: asyncio",
+              "E: cProfile"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of logging in deployment?",
+            "options": [
+              "A: Increases complexity",
+              "B: Tracks errors",
+              "C: Limits scalability",
+              "D: Reduces performance",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Kubernetes manage?",
+            "options": [
+              "A: File sizes",
+              "B: Model deployment",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common deployment task?",
+            "options": [
+              "A: File compression",
+              "B: Model serving",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does ONNX optimize?",
+            "options": [
+              "A: File systems",
+              "B: Model inference",
+              "C: Network routers",
+              "D: Databases",
+              "E: Memory blocks"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Docker?",
+            "options": [
+              "A: File compression",
+              "B: Model containerization",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does logging track in deployment?",
+            "options": [
+              "A: File sizes",
+              "B: Prediction errors",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Prometheus monitor?",
+            "options": [
+              "A: File sizes",
+              "B: Inference metrics",
+              "C: Network traffic",
+              "D: Memory usage",
+              "E: CPU cycles"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of try-except in deployment?",
+            "options": [
+              "A: Increases complexity",
+              "B: Handles errors robustly",
+              "C: Limits scalability",
+              "D: Reduces performance",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does quantization reduce?",
+            "options": [
+              "A: File compression",
+              "B: Model size",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common scalability task?",
+            "options": [
+              "A: File compression",
+              "B: Model orchestration",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does FastAPI enable?",
+            "options": [
+              "A: File compression",
+              "B: RESTful endpoints",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What optimizes inference speed?",
+            "options": [
+              "A: requests",
+              "B: Pruning",
+              "C: NumPy",
+              "D: asyncio",
+              "E: cProfile"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of model deployment?",
+            "options": [
+              "A: Reduces connectivity",
+              "B: Enables real-world use",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Implement a CNN for image classification using PyTorch.",
+        "Develop a DQN agent for an OpenAI Gym environment.",
+        "Create a GAN for synthetic image generation.",
+        "Apply fairness metrics to evaluate a classifier using Fairlearn.",
+        "Deploy a model using FastAPI and Docker."
+      ],
+      "resources": [
+        "Python 3.10+ official documentation.",
+        "Deep Learning with Python by François Chollet (2nd Edition).",
+        "Reinforcement Learning: An Introduction by Sutton and Barto (2nd Edition).",
+        "PyTorch and TensorFlow documentation for deep learning.",
+        "MIT OpenCourseWare for AI and machine learning (6.036, 6.867)."
+      ],
+      "environment": "Python 3.10+ environment with PyTorch, TensorFlow, Fairlearn, FastAPI, Docker, and ONNX installed. Access to GPU hardware is recommended for deep learning labs."
+    }
+  }
+}

@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "Advanced Python Lambda Functions for AWS",
+    "duration": "10 hours",
+    "audience": [
+      "Senior Computer Science majors",
+      "Cloud developers and DevOps engineers",
+      "Professional programmers seeking expertise in serverless Python applications"
+    ],
+    "prerequisites": "Proficiency in Python (equivalent to MIT’s 6.0001/6.0002), familiarity with AWS core services (Lambda, S3, DynamoDB, API Gateway), and basic experience with serverless concepts. Knowledge of AWS CLI, boto3, and CI/CD pipelines is recommended.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Lambda Function Fundamentals and Setup",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers the core concepts of AWS Lambda functions using Python, including setup, configuration, and deployment for enterprise use.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "Lambda Function Basics",
+            "overview": "Understand AWS Lambda architecture and create basic Python Lambda functions.",
+            "examples": [
+              "Hello World: Simple Lambda function.",
+              "Handler: Process event and context."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Environment Setup",
+            "overview": "Configure Python development environment with AWS CLI and boto3.",
+            "examples": [
+              "AWS CLI: Authenticate with IAM credentials.",
+              "boto3: Install and configure SDK."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Deployment with SAM",
+            "overview": "Use AWS Serverless Application Model (SAM) to deploy Lambda functions.",
+            "examples": [
+              "SAM Template: Define Lambda resources.",
+              "Deploy: Package and deploy function."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Event Sources",
+            "overview": "Integrate Lambda with event sources like S3 and SNS.",
+            "examples": [
+              "S3 Trigger: Respond to file uploads.",
+              "SNS Trigger: Process notifications."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the main purpose of an AWS Lambda function?",
+            "options": [
+              "A: Persistent storage",
+              "B: Event-driven compute",
+              "C: Network routing",
+              "D: Database management",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What Python library interacts with AWS services?",
+            "options": [
+              "A: NumPy",
+              "B: boto3",
+              "C: Pandas",
+              "D: Matplotlib",
+              "E: Requests"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Lambda handler process?",
+            "options": [
+              "A: Disk storage",
+              "B: Event and context",
+              "C: CPU metrics",
+              "D: Network traffic",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What tool deploys Lambda functions?",
+            "options": [
+              "A: Terraform",
+              "B: AWS SAM",
+              "C: Ansible",
+              "D: Docker",
+              "E: Kubernetes"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What triggers a Lambda function?",
+            "options": [
+              "A: Manual execution",
+              "B: Event sources",
+              "C: Local scripts",
+              "D: Database queries",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of serverless architecture?",
+            "options": [
+              "A: Increases complexity",
+              "B: Reduces management overhead",
+              "C: Limits scalability",
+              "D: Increases latency",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AWS CLI configure?",
+            "options": [
+              "A: Python libraries",
+              "B: IAM credentials",
+              "C: Network routes",
+              "D: Data encryption",
+              "E: File storage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for S3 triggers?",
+            "options": [
+              "A: Network routing",
+              "B: File upload processing",
+              "C: CPU monitoring",
+              "D: Database queries",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a SAM template define?",
+            "options": [
+              "A: Database schemas",
+              "B: Lambda resources",
+              "C: Network protocols",
+              "D: Hardware specs",
+              "E: File formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of boto3?",
+            "options": [
+              "A: Increases latency",
+              "B: Simplifies AWS interaction",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an SNS trigger process?",
+            "options": [
+              "A: Disk storage",
+              "B: Notifications",
+              "C: CPU metrics",
+              "D: Network traffic",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Lambda functions?",
+            "options": [
+              "A: Persistent storage",
+              "B: Serverless processing",
+              "C: Network routing",
+              "D: Database management",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does AWS SAM simplify?",
+            "options": [
+              "A: Code debugging",
+              "B: Serverless deployment",
+              "C: Data encryption",
+              "D: Network configuration",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Lambda event contain?",
+            "options": [
+              "A: System logs",
+              "B: Trigger data",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of event-driven compute?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances scalability",
+              "C: Reduces performance",
+              "D: Limits automation",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does boto3 enable?",
+            "options": [
+              "A: Data visualization",
+              "B: AWS service interaction",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for SNS triggers?",
+            "options": [
+              "A: File storage",
+              "B: Message processing",
+              "C: CPU monitoring",
+              "D: Network routing",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Lambda context provide?",
+            "options": [
+              "A: Network routes",
+              "B: Runtime information",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of AWS SAM?",
+            "options": [
+              "A: Increases latency",
+              "B: Streamlines deployment",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an S3 event trigger?",
+            "options": [
+              "A: Code execution",
+              "B: File operations",
+              "C: Network routing",
+              "D: Database queries",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Event-Driven Programming with Lambda",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module explores advanced event-driven programming techniques for AWS Lambda, focusing on integrating with AWS services like DynamoDB and SQS.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "DynamoDB Integration",
+            "overview": "Process DynamoDB streams and triggers with Python Lambda functions.",
+            "examples": [
+              "Stream: Process table updates.",
+              "Trigger: Handle data changes."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "SQS Queues",
+            "overview": "Use Lambda to process messages from SQS queues.",
+            "examples": [
+              "SQS Trigger: Process queue messages.",
+              "Batch: Handle multiple messages."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Event Mapping",
+            "overview": "Map complex event structures to Python logic.",
+            "examples": [
+              "Event Parsing: Extract S3 event data.",
+              "Validation: Ensure event integrity."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Error Handling",
+            "overview": "Implement robust error handling for event-driven Lambda functions.",
+            "examples": [
+              "Try-Except: Catch runtime errors.",
+              "Dead Letter Queue: Handle failures."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does a DynamoDB stream process?",
+            "options": [
+              "A: Network traffic",
+              "B: Table updates",
+              "C: CPU metrics",
+              "D: File uploads",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for SQS triggers?",
+            "options": [
+              "A: File storage",
+              "B: Message processing",
+              "C: Network routing",
+              "D: Database queries",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does event parsing extract?",
+            "options": [
+              "A: System logs",
+              "B: Event data",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What handles Lambda function failures?",
+            "options": [
+              "A: S3 bucket",
+              "B: Dead Letter Queue",
+              "C: Route table",
+              "D: Security group",
+              "E: IAM role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of error handling?",
+            "options": [
+              "A: Increases complexity",
+              "B: Improves reliability",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a DynamoDB trigger respond to?",
+            "options": [
+              "A: File uploads",
+              "B: Data changes",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for SQS batch processing?",
+            "options": [
+              "A: File compression",
+              "B: Multiple messages",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does event validation ensure?",
+            "options": [
+              "A: Code performance",
+              "B: Data integrity",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of DynamoDB streams?",
+            "options": [
+              "A: Increases latency",
+              "B: Real-time processing",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a try-except block handle?",
+            "options": [
+              "A: Network routes",
+              "B: Runtime errors",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for event mapping?",
+            "options": [
+              "A: File storage",
+              "B: Data extraction",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an SQS queue manage?",
+            "options": [
+              "A: Persistent storage",
+              "B: Message delivery",
+              "C: Network traffic",
+              "D: Database queries",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Dead Letter Queues?",
+            "options": [
+              "A: Increases complexity",
+              "B: Handles failures",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a DynamoDB stream enable?",
+            "options": [
+              "A: File uploads",
+              "B: Change tracking",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for error handling?",
+            "options": [
+              "A: Data visualization",
+              "B: System reliability",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does event parsing improve?",
+            "options": [
+              "A: Code execution",
+              "B: Data processing",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of SQS queues?",
+            "options": [
+              "A: Increases latency",
+              "B: Decouples systems",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a try-except block improve?",
+            "options": [
+              "A: Network speed",
+              "B: Function robustness",
+              "C: Data storage",
+              "D: CPU usage",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for DynamoDB triggers?",
+            "options": [
+              "A: File storage",
+              "B: Data processing",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Dead Letter Queue store?",
+            "options": [
+              "A: Successful messages",
+              "B: Failed messages",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "API Gateway and Lambda Integration",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers integrating AWS Lambda with API Gateway to build scalable RESTful APIs using Python for enterprise applications.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "API Gateway Setup",
+            "overview": "Configure API Gateway to expose Lambda functions as REST endpoints.",
+            "examples": [
+              "REST API: Create HTTP endpoint.",
+              "Resource: Define API routes."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "Request Handling",
+            "overview": "Process HTTP requests in Lambda using Python.",
+            "examples": [
+              "GET Request: Retrieve data.",
+              "POST Request: Submit data."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Response Formatting",
+            "overview": "Format Lambda responses for API Gateway compatibility.",
+            "examples": [
+              "JSON Response: Return structured data.",
+              "Status Code: Set HTTP responses."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Security and Authentication",
+            "overview": "Secure APIs with IAM roles and API keys.",
+            "examples": [
+              "IAM Auth: Restrict endpoint access.",
+              "API Key: Authenticate requests."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does API Gateway expose?",
+            "options": [
+              "A: Database schemas",
+              "B: Lambda endpoints",
+              "C: Network protocols",
+              "D: Hardware specs",
+              "E: File formats"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for a GET request?",
+            "options": [
+              "A: File upload",
+              "B: Data retrieval",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a JSON response return?",
+            "options": [
+              "A: Network routes",
+              "B: Structured data",
+              "C: CPU metrics",
+              "D: File compression",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What secures an API Gateway endpoint?",
+            "options": [
+              "A: S3 bucket",
+              "B: IAM role",
+              "C: Route table",
+              "D: Security group",
+              "E: DynamoDB table"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of API Gateway?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies API management",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a POST request submit?",
+            "options": [
+              "A: Network traffic",
+              "B: User data",
+              "C: CPU metrics",
+              "D: File compression",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for API keys?",
+            "options": [
+              "A: File storage",
+              "B: Request authentication",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a status code indicate?",
+            "options": [
+              "A: Code performance",
+              "B: HTTP response",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IAM authentication?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does API Gateway manage?",
+            "options": [
+              "A: Persistent storage",
+              "B: RESTful APIs",
+              "C: Network traffic",
+              "D: Database queries",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for a REST API?",
+            "options": [
+              "A: File compression",
+              "B: Client interaction",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a JSON response ensure?",
+            "options": [
+              "A: Code execution",
+              "B: Data compatibility",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of request handling?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enables dynamic APIs",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does an IAM role restrict?",
+            "options": [
+              "A: File uploads",
+              "B: Endpoint access",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for response formatting?",
+            "options": [
+              "A: File storage",
+              "B: Client compatibility",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does API Gateway integrate with?",
+            "options": [
+              "A: EBS volumes",
+              "B: Lambda functions",
+              "C: Route tables",
+              "D: Security groups",
+              "E: DynamoDB tables"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of API keys?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a GET request retrieve?",
+            "options": [
+              "A: Network routes",
+              "B: Resource data",
+              "C: CPU metrics",
+              "D: File compression",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for API Gateway?",
+            "options": [
+              "A: File compression",
+              "B: API exposure",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does response formatting improve?",
+            "options": [
+              "A: Code performance",
+              "B: Client interaction",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Performance Optimization for Lambda",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module focuses on optimizing Python Lambda functions for performance, cost, and scalability in enterprise environments.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "Memory and Timeout Tuning",
+            "overview": "Optimize Lambda performance by adjusting memory and timeout settings.",
+            "examples": [
+              "Memory: Allocate 512MB for efficiency.",
+              "Timeout: Set execution limits."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "Cold Start Mitigation",
+            "overview": "Reduce cold start latency using provisioning and warm-up techniques.",
+            "examples": [
+              "Provisioned Concurrency: Pre-warm Lambda.",
+              "Keep-Alive: Maintain warm instances."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Dependency Management",
+            "overview": "Minimize package size for faster Lambda execution.",
+            "examples": [
+              "Layers: Use Lambda layers for dependencies.",
+              "Pruning: Remove unused libraries."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Monitoring and Logging",
+            "overview": "Monitor Lambda performance with CloudWatch and X-Ray.",
+            "examples": [
+              "CloudWatch: Track execution metrics.",
+              "X-Ray: Trace function performance."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does memory tuning optimize?",
+            "options": [
+              "A: Network traffic",
+              "B: Lambda performance",
+              "C: File compression",
+              "D: Database queries",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What reduces Lambda cold start latency?",
+            "options": [
+              "A: S3 bucket",
+              "B: Provisioned Concurrency",
+              "C: Route table",
+              "D: Security group",
+              "E: IAM role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Lambda layers?",
+            "options": [
+              "A: File storage",
+              "B: Dependency management",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch track?",
+            "options": [
+              "A: Network routes",
+              "B: Execution metrics",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of timeout tuning?",
+            "options": [
+              "A: Increases costs",
+              "B: Prevents overruns",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does X-Ray provide?",
+            "options": [
+              "A: File storage",
+              "B: Performance tracing",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for dependency pruning?",
+            "options": [
+              "A: Data visualization",
+              "B: Faster execution",
+              "C: Network monitoring",
+              "D: File compression",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does provisioned concurrency maintain?",
+            "options": [
+              "A: Network routes",
+              "B: Warm instances",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Lambda layers?",
+            "options": [
+              "A: Increases package size",
+              "B: Simplifies dependencies",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does memory allocation affect?",
+            "options": [
+              "A: Code performance",
+              "B: Execution speed",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for CloudWatch?",
+            "options": [
+              "A: File compression",
+              "B: Performance monitoring",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a keep-alive strategy reduce?",
+            "options": [
+              "A: File uploads",
+              "B: Cold start latency",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of dependency management?",
+            "options": [
+              "A: Increases latency",
+              "B: Improves performance",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does X-Ray trace?",
+            "options": [
+              "A: Network routes",
+              "B: Function execution",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for timeout settings?",
+            "options": [
+              "A: File storage",
+              "B: Execution control",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a Lambda layer store?",
+            "options": [
+              "A: Network routes",
+              "B: Shared dependencies",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of CloudWatch?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances monitoring",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does memory tuning improve?",
+            "options": [
+              "A: Code execution",
+              "B: Function efficiency",
+              "C: Data encryption",
+              "D: Network routing",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for provisioned concurrency?",
+            "options": [
+              "A: File compression",
+              "B: Latency reduction",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does dependency pruning reduce?",
+            "options": [
+              "A: Network traffic",
+              "B: Package size",
+              "C: CPU metrics",
+              "D: File compression",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "CI/CD and Advanced Lambda Workflows",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers integrating Python Lambda functions with CI/CD pipelines and advanced workflows for enterprise-grade automation.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "CI/CD with CodePipeline",
+            "overview": "Automate Lambda deployments using AWS CodePipeline.",
+            "examples": [
+              "Pipeline: Deploy Lambda via SAM.",
+              "CodeCommit: Store Lambda code."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "Multi-Environment Deployments",
+            "overview": "Manage Lambda deployments across dev, test, and prod environments.",
+            "examples": [
+              "Environment Vars: Configure stage-specific settings.",
+              "SAM Template: Define environment configs."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Testing Lambda Functions",
+            "overview": "Implement unit and integration tests for Lambda functions.",
+            "examples": [
+              "Unit Test: Test handler logic with pytest.",
+              "Integration Test: Validate API Gateway."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Troubleshooting and Debugging",
+            "overview": "Diagnose and resolve common Lambda issues in production.",
+            "examples": [
+              "CloudWatch Logs: Debug runtime errors.",
+              "X-Ray: Trace performance issues."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What service automates Lambda deployments?",
+            "options": [
+              "A: CloudWatch",
+              "B: CodePipeline",
+              "C: Route 53",
+              "D: S3 bucket",
+              "E: IAM role"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CodeCommit store?",
+            "options": [
+              "A: Network routes",
+              "B: Lambda code",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for environment variables?",
+            "options": [
+              "A: File storage",
+              "B: Stage-specific settings",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does pytest test in Lambda?",
+            "options": [
+              "A: Network traffic",
+              "B: Handler logic",
+              "C: CPU metrics",
+              "D: File compression",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of CI/CD pipelines?",
+            "options": [
+              "A: Increases complexity",
+              "B: Automates deployments",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch Logs debug?",
+            "options": [
+              "A: File uploads",
+              "B: Runtime errors",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for integration tests?",
+            "options": [
+              "A: File compression",
+              "B: API Gateway validation",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a SAM template configure?",
+            "options": [
+              "A: Network routes",
+              "B: Environment settings",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of multi-environment deployments?",
+            "options": [
+              "A: Increases latency",
+              "B: Isolates stages",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does X-Ray trace in Lambda?",
+            "options": [
+              "A: File storage",
+              "B: Performance issues",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for CodePipeline?",
+            "options": [
+              "A: File compression",
+              "B: CI/CD automation",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a unit test validate?",
+            "options": [
+              "A: Network routes",
+              "B: Function logic",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of debugging with CloudWatch?",
+            "options": [
+              "A: Increases complexity",
+              "B: Identifies errors",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a multi-environment deployment separate?",
+            "options": [
+              "A: File uploads",
+              "B: Development stages",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for integration tests?",
+            "options": [
+              "A: File storage",
+              "B: System interactions",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CodeCommit integrate with?",
+            "options": [
+              "A: EBS volumes",
+              "B: CodePipeline",
+              "C: Route tables",
+              "D: Security groups",
+              "E: DynamoDB tables"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of unit tests?",
+            "options": [
+              "A: Increases latency",
+              "B: Ensures code quality",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch Logs provide?",
+            "options": [
+              "A: Network routes",
+              "B: Error details",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for SAM templates?",
+            "options": [
+              "A: File compression",
+              "B: Environment configuration",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does debugging improve?",
+            "options": [
+              "A: Code performance",
+              "B: Function reliability",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Create a Python Lambda function triggered by an S3 file upload.",
+        "Deploy a REST API with API Gateway and Lambda using SAM.",
+        "Implement a DynamoDB stream processor with error handling.",
+        "Optimize a Lambda function with memory tuning and layers.",
+        "Set up a CI/CD pipeline for Lambda using CodePipeline and CodeCommit."
+      ],
+      "resources": [
+        "AWS Lambda Developer Guide (docs.aws.amazon.com).",
+        "AWS Serverless Application Model (SAM) Documentation.",
+        "Python 3.10+ official documentation.",
+        "boto3 Documentation for AWS SDK.",
+        "AWS Certified Developer – Associate Study Guide."
+      ],
+      "environment": "Python 3.10+ installed, AWS CLI configured, AWS SAM CLI installed, and an AWS account with permissions for Lambda, S3, DynamoDB, SQS, API Gateway, CodePipeline, and CodeCommit. A local development environment with pytest and boto3 is recommended."
+    }
+  }
+}

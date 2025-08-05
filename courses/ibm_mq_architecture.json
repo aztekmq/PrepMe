@@ -1,0 +1,1366 @@
+{
+  "course": {
+    "title": "IBM MQ Architectures",
+    "duration": "10 hours",
+    "audience": [
+      "Senior IT professionals and system architects",
+      "Middleware administrators and developers",
+      "Enterprise integration specialists working with IBM MQ"
+    ],
+    "prerequisites": "Proficiency in IBM MQ administration (equivalent to IBM MQ Certified Administrator), familiarity with enterprise messaging concepts, and experience with z/OS, Linux, or Windows environments. Knowledge of Python, Ansible, and AWS integration is recommended.",
+    "modules": [
+      {
+        "id": 1,
+        "title": "Fundamentals of IBM MQ Architecture",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module introduces IBM MQ architecture, its components, and its role in enterprise messaging across industries like finance and retail in corporate America.",
+        "sections": [
+          {
+            "id": "1.1",
+            "title": "IBM MQ Core Components",
+            "overview": "Explore queue managers, queues, channels, and message types in IBM MQ architecture.",
+            "examples": [
+              "Queue Manager: Manage message flow.",
+              "Channels: Connect distributed systems."
+            ]
+          },
+          {
+            "id": "1.2",
+            "title": "Messaging Patterns",
+            "overview": "Understand point-to-point and publish/subscribe messaging in enterprise contexts.",
+            "examples": [
+              "Point-to-Point: Transaction processing.",
+              "Pub/Sub: Real-time notifications."
+            ]
+          },
+          {
+            "id": "1.3",
+            "title": "Enterprise Use Cases",
+            "overview": "Examine IBM MQ deployments in finance, retail, and healthcare sectors.",
+            "examples": [
+              "Finance: Secure transaction messaging.",
+              "Retail: Inventory updates."
+            ]
+          },
+          {
+            "id": "1.4",
+            "title": "Integration with SOA",
+            "overview": "Learn how IBM MQ supports service-oriented architectures in enterprises.",
+            "examples": [
+              "SOA: Legacy system integration.",
+              "API: Web service connectivity."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What is the primary role of a queue manager in IBM MQ?",
+            "options": [
+              "A: Network routing",
+              "B: Message management",
+              "C: Data encryption",
+              "D: File storage",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What messaging pattern is used for transaction processing?",
+            "options": [
+              "A: Publish/subscribe",
+              "B: Point-to-point",
+              "C: Request/reply",
+              "D: Datagram",
+              "E: Report"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a common use case for IBM MQ in finance?",
+            "options": [
+              "A: File compression",
+              "B: Secure transactions",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM MQ enable in SOA?",
+            "options": [
+              "A: Hardware optimization",
+              "B: Legacy integration",
+              "C: CPU allocation",
+              "D: File compression",
+              "E: Network routing"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of channels in IBM MQ?",
+            "options": [
+              "A: Increases latency",
+              "B: Connects queue managers",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for pub/sub messaging?",
+            "options": [
+              "A: File storage",
+              "B: Real-time notifications",
+              "C: CPU monitoring",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a queue store in IBM MQ?",
+            "options": [
+              "A: Network routes",
+              "B: Messages",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What industry uses IBM MQ for inventory updates?",
+            "options": [
+              "A: Healthcare",
+              "B: Retail",
+              "C: Telecom",
+              "D: Government",
+              "E: Education"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IBM MQ in enterprises?",
+            "options": [
+              "A: Increases complexity",
+              "B: Ensures reliability",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does SOA facilitate in IBM MQ?",
+            "options": [
+              "A: Network routing",
+              "B: System integration",
+              "C: Data encryption",
+              "D: File compression",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for point-to-point messaging?",
+            "options": [
+              "A: Real-time alerts",
+              "B: Transaction processing",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What connects applications in IBM MQ?",
+            "options": [
+              "A: EBS volumes",
+              "B: Queue managers",
+              "C: Route tables",
+              "D: Security groups",
+              "E: DynamoDB tables"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of pub/sub messaging?",
+            "options": [
+              "A: Increases latency",
+              "B: Scalable notifications",
+              "C: Reduces reliability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM MQ ensure for messages?",
+            "options": [
+              "A: Message loss",
+              "B: Once-only delivery",
+              "C: Data corruption",
+              "D: Network routing",
+              "E: File compression"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for IBM MQ in healthcare?",
+            "options": [
+              "A: File storage",
+              "B: Data exchange",
+              "C: CPU monitoring",
+              "D: Network routing",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a channel facilitate?",
+            "options": [
+              "A: Code execution",
+              "B: Message transfer",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IBM MQ in retail?",
+            "options": [
+              "A: Increases complexity",
+              "B: Real-time updates",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a queue manager control?",
+            "options": [
+              "A: Network traffic",
+              "B: Message queues",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for SOA with IBM MQ?",
+            "options": [
+              "A: File compression",
+              "B: Legacy connectivity",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does IBM MQ support across platforms?",
+            "options": [
+              "A: Code debugging",
+              "B: Message delivery",
+              "C: Data visualization",
+              "D: Network routing",
+              "E: File compression"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "High Availability and Clustering",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers IBM MQ high availability (HA) and clustering strategies used in corporate America for fault tolerance and scalability.",
+        "sections": [
+          {
+            "id": "2.1",
+            "title": "Native HA Architecture",
+            "overview": "Understand IBM MQ Native HA for seamless failover in enterprise environments.",
+            "examples": [
+              "Native HA: Replicated queue managers.",
+              "Failover: Active-passive setup."
+            ]
+          },
+          {
+            "id": "2.2",
+            "title": "Queue Manager Clusters",
+            "overview": "Configure clusters for load balancing and redundancy across data centers.",
+            "examples": [
+              "Cluster: Distribute message load.",
+              "Redundancy: Multi-queue manager."
+            ]
+          },
+          {
+            "id": "2.3",
+            "title": "Multi-Instance Queue Managers",
+            "overview": "Implement multi-instance setups for high availability on z/OS and distributed systems.",
+            "examples": [
+              "Multi-Instance: Active-standby.",
+              "Shared Storage: Failover support."
+            ]
+          },
+          {
+            "id": "2.4",
+            "title": "Global Load Balancing",
+            "overview": "Use global server load balancing (GSLB) for cross-data center resilience.",
+            "examples": [
+              "GSLB: Route traffic by proximity.",
+              "Disaster Recovery: Failover routing."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does IBM MQ Native HA provide?",
+            "options": [
+              "A: File storage",
+              "B: Seamless failover",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of queue manager clusters?",
+            "options": [
+              "A: Increases latency",
+              "B: Load balancing",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a multi-instance queue manager use?",
+            "options": [
+              "A: Shared storage",
+              "B: Local disk",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What does GSLB optimize?",
+            "options": [
+              "A: File compression",
+              "B: Traffic routing",
+              "C: Data encryption",
+              "D: Database queries",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Native HA?",
+            "options": [
+              "A: File storage",
+              "B: Fault tolerance",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a cluster provide in IBM MQ?",
+            "options": [
+              "A: Code execution",
+              "B: Message redundancy",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of multi-instance setups?",
+            "options": [
+              "A: Increases complexity",
+              "B: High availability",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does GSLB ensure?",
+            "options": [
+              "A: File uploads",
+              "B: Disaster recovery",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Native HA replicate?",
+            "options": [
+              "A: Network routes",
+              "B: Queue managers",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for clusters?",
+            "options": [
+              "A: File compression",
+              "B: Scalable messaging",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does shared storage support?",
+            "options": [
+              "A: Network routing",
+              "B: Failover",
+              "C: CPU monitoring",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of GSLB?",
+            "options": [
+              "A: Increases latency",
+              "B: Optimizes routing",
+              "C: Reduces reliability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a cluster distribute?",
+            "options": [
+              "A: File uploads",
+              "B: Message load",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for multi-instance setups?",
+            "options": [
+              "A: File storage",
+              "B: High availability",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Native HA ensure?",
+            "options": [
+              "A: Code execution",
+              "B: Data integrity",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does GSLB route based on?",
+            "options": [
+              "A: Network routes",
+              "B: Proximity",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of clustering?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances redundancy",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does a multi-instance setup provide?",
+            "options": [
+              "A: File compression",
+              "B: Active-standby",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for GSLB?",
+            "options": [
+              "A: File storage",
+              "B: Cross-data center",
+              "C: CPU monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Native HA improve?",
+            "options": [
+              "A: Code performance",
+              "B: System resilience",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Security and Compliance in IBM MQ",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module explores IBM MQ security features and compliance requirements in regulated industries like finance and healthcare.",
+        "sections": [
+          {
+            "id": "3.1",
+            "title": "TLS and Encryption",
+            "overview": "Implement Transport Layer Security (TLS) for secure data transmission.",
+            "examples": [
+              "TLS: Encrypt message channels.",
+              "Certificates: Use RACF on z/OS."
+            ]
+          },
+          {
+            "id": "3.2",
+            "title": "Object Authority Manager (OAM)",
+            "overview": "Configure OAM for access control to MQ objects.",
+            "examples": [
+              "OAM: Restrict queue access.",
+              "ACL: Group-based permissions."
+            ]
+          },
+          {
+            "id": "3.3",
+            "title": "Compliance in Regulated Industries",
+            "overview": "Address compliance needs for HIPAA, PCI-DSS, and GDPR.",
+            "examples": [
+              "HIPAA: Secure patient data.",
+              "PCI-DSS: Protect transactions."
+            ]
+          },
+          {
+            "id": "3.4",
+            "title": "Monitoring Security Events",
+            "overview": "Use tools like Infrared360 for security monitoring and auditing.",
+            "examples": [
+              "Infrared360: Track access violations.",
+              "CloudWatch: Log security events."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does TLS secure in IBM MQ?",
+            "options": [
+              "A: File storage",
+              "B: Data transmission",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does OAM control in IBM MQ?",
+            "options": [
+              "A: Network traffic",
+              "B: Object access",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for HIPAA compliance?",
+            "options": [
+              "A: File uploads",
+              "B: Patient data security",
+              "C: Network monitoring",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Infrared360 monitor?",
+            "options": [
+              "A: Code execution",
+              "B: Security events",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of TLS?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances security",
+              "C: Reduces scalability",
+              "D: Limits automation",
+              "E: Disables debugging"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does OAM use for permissions?",
+            "options": [
+              "A: Network routes",
+              "B: Access control lists",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for PCI-DSS?",
+            "options": [
+              "A: File compression",
+              "B: Transaction protection",
+              "C: Network routing",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch log in IBM MQ?",
+            "options": [
+              "A: File uploads",
+              "B: Security events",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of OAM?",
+            "options": [
+              "A: Increases complexity",
+              "B: Restricts access",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does TLS use on z/OS?",
+            "options": [
+              "A: File storage",
+              "B: RACF certificates",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for GDPR compliance?",
+            "options": [
+              "A: File compression",
+              "B: Data protection",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Infrared360 provide?",
+            "options": [
+              "A: Code execution",
+              "B: Monitoring dashboards",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of security monitoring?",
+            "options": [
+              "A: Increases latency",
+              "B: Detects violations",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does TLS prevent?",
+            "options": [
+              "A: Network routing",
+              "B: Eavesdropping",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for OAM?",
+            "options": [
+              "A: File storage",
+              "B: Access control",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does PCI-DSS ensure?",
+            "options": [
+              "A: Code execution",
+              "B: Transaction security",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of CloudWatch?",
+            "options": [
+              "A: Increases complexity",
+              "B: Enhances monitoring",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does OAM restrict in IBM MQ?",
+            "options": [
+              "A: File uploads",
+              "B: Queue access",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for TLS?",
+            "options": [
+              "A: File compression",
+              "B: Secure channels",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does HIPAA protect in IBM MQ?",
+            "options": [
+              "A: Code performance",
+              "B: Patient data",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Integration with Enterprise Systems",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module focuses on integrating IBM MQ with enterprise systems like AWS, CICS, and microservices in corporate America.",
+        "sections": [
+          {
+            "id": "4.1",
+            "title": "AWS Integration",
+            "overview": "Integrate IBM MQ with AWS services like Amazon MQ and S3.",
+            "examples": [
+              "Amazon MQ: Migrate IBM MQ.",
+              "S3: Store message data."
+            ]
+          },
+          {
+            "id": "4.2",
+            "title": "CICS Integration",
+            "overview": "Connect IBM MQ with CICS for transaction processing on z/OS.",
+            "examples": [
+              "CICS: Trigger transactions.",
+              "MQI: Interface with MQ."
+            ]
+          },
+          {
+            "id": "4.3",
+            "title": "Microservices Architecture",
+            "overview": "Use IBM MQ in microservices for decoupled communication.",
+            "examples": [
+              "Microservices: Async messaging.",
+              "Kafka: Complement MQ."
+            ]
+          },
+          {
+            "id": "4.4",
+            "title": "Automation with Ansible",
+            "overview": "Automate IBM MQ configuration and deployment using Ansible.",
+            "examples": [
+              "Ansible: Automate queue setup.",
+              "Playbooks: Deploy clusters."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What AWS service migrates IBM MQ?",
+            "options": [
+              "A: S3",
+              "B: Amazon MQ",
+              "C: Route 53",
+              "D: EBS",
+              "E: DynamoDB"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CICS integrate with IBM MQ for?",
+            "options": [
+              "A: File storage",
+              "B: Transaction processing",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for microservices with MQ?",
+            "options": [
+              "A: File compression",
+              "B: Async messaging",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Ansible automate in IBM MQ?",
+            "options": [
+              "A: Code execution",
+              "B: Configuration",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Amazon MQ?",
+            "options": [
+              "A: Increases complexity",
+              "B: Simplifies migration",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CICS trigger with IBM MQ?",
+            "options": [
+              "A: File uploads",
+              "B: Transactions",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Ansible playbooks?",
+            "options": [
+              "A: File storage",
+              "B: Cluster deployment",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does microservices architecture decouple?",
+            "options": [
+              "A: Network routes",
+              "B: Application components",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of IBM MQ in microservices?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances decoupling",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Amazon MQ support?",
+            "options": [
+              "A: File compression",
+              "B: IBM MQ migration",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CICS use with IBM MQ?",
+            "options": [
+              "A: Network routes",
+              "B: MQI interface",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for S3 with IBM MQ?",
+            "options": [
+              "A: Message storage",
+              "B: Code execution",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "A"
+          },
+          {
+            "question": "What is a benefit of Ansible in IBM MQ?",
+            "options": [
+              "A: Increases complexity",
+              "B: Automates deployment",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does microservices architecture improve?",
+            "options": [
+              "A: File uploads",
+              "B: System flexibility",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Amazon MQ?",
+            "options": [
+              "A: File compression",
+              "B: Queue migration",
+              "C: Network monitoring",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CICS enable with IBM MQ?",
+            "options": [
+              "A: Code execution",
+              "B: Transaction triggers",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of microservices with MQ?",
+            "options": [
+              "A: Increases latency",
+              "B: Scalable communication",
+              "C: Reduces reliability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Ansible configure in IBM MQ?",
+            "options": [
+              "A: Network routes",
+              "B: Queue managers",
+              "C: CPU metrics",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for MQI?",
+            "options": [
+              "A: File storage",
+              "B: System integration",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Amazon MQ simplify?",
+            "options": [
+              "A: Code performance",
+              "B: Broker management",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Monitoring and Performance Tuning",
+        "enabled": true,
+        "duration": "2 hours",
+        "description": "This module covers monitoring and performance optimization techniques for IBM MQ in enterprise environments, including tools and best practices.",
+        "sections": [
+          {
+            "id": "5.1",
+            "title": "Monitoring with Infrared360",
+            "overview": "Use Infrared360 for real-time monitoring of IBM MQ performance.",
+            "examples": [
+              "Infrared360: Track queue depth.",
+              "Dashboards: Visualize metrics."
+            ]
+          },
+          {
+            "id": "5.2",
+            "title": "CloudWatch Integration",
+            "overview": "Integrate IBM MQ with AWS CloudWatch for logging and metrics.",
+            "examples": [
+              "CloudWatch: Log message throughput.",
+              "Metrics: Monitor latency."
+            ]
+          },
+          {
+            "id": "5.3",
+            "title": "Performance Optimization",
+            "overview": "Tune IBM MQ for high throughput and low latency.",
+            "examples": [
+              "Batching: Improve message processing.",
+              "Persistence: Optimize storage."
+            ]
+          },
+          {
+            "id": "5.4",
+            "title": "Troubleshooting Common Issues",
+            "overview": "Diagnose and resolve IBM MQ performance and connectivity issues.",
+            "examples": [
+              "Queue Full: Adjust depth.",
+              "Channel Failure: Debug connections."
+            ]
+          }
+        ],
+        "knowledge_check": [
+          {
+            "question": "What does Infrared360 monitor in IBM MQ?",
+            "options": [
+              "A: File storage",
+              "B: Queue depth",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: CPU monitoring"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch track in IBM MQ?",
+            "options": [
+              "A: File uploads",
+              "B: Message throughput",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for performance tuning?",
+            "options": [
+              "A: File compression",
+              "B: Low latency",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does batching improve in IBM MQ?",
+            "options": [
+              "A: Code execution",
+              "B: Message processing",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of Infrared360?",
+            "options": [
+              "A: Increases complexity",
+              "B: Real-time monitoring",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch provide?",
+            "options": [
+              "A: Network routes",
+              "B: Performance metrics",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for persistence tuning?",
+            "options": [
+              "A: File storage",
+              "B: Storage optimization",
+              "C: Network routing",
+              "D: CPU monitoring",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does troubleshooting resolve?",
+            "options": [
+              "A: File uploads",
+              "B: Connectivity issues",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of performance tuning?",
+            "options": [
+              "A: Increases latency",
+              "B: Enhances throughput",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Infrared360 visualize?",
+            "options": [
+              "A: File formats",
+              "B: Performance dashboards",
+              "C: Network routes",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for CloudWatch?",
+            "options": [
+              "A: File compression",
+              "B: Latency monitoring",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does batching reduce?",
+            "options": [
+              "A: File uploads",
+              "B: Processing latency",
+              "C: Network traffic",
+              "D: CPU metrics",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of troubleshooting?",
+            "options": [
+              "A: Increases complexity",
+              "B: Resolves issues",
+              "C: Reduces scalability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does persistence affect in IBM MQ?",
+            "options": [
+              "A: Network routing",
+              "B: Message storage",
+              "C: CPU monitoring",
+              "D: File formats",
+              "E: Memory allocation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for Infrared360?",
+            "options": [
+              "A: File storage",
+              "B: Queue monitoring",
+              "C: Network routing",
+              "D: Data encryption",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does CloudWatch enhance?",
+            "options": [
+              "A: Code execution",
+              "B: System monitoring",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a benefit of batching?",
+            "options": [
+              "A: Increases latency",
+              "B: Improves throughput",
+              "C: Reduces reliability",
+              "D: Limits security",
+              "E: Disables automation"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does troubleshooting diagnose?",
+            "options": [
+              "A: Network routes",
+              "B: Queue issues",
+              "C: Data encryption",
+              "D: File compression",
+              "E: Database queries"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What is a use case for performance tuning?",
+            "options": [
+              "A: File compression",
+              "B: High throughput",
+              "C: Network monitoring",
+              "D: Data visualization",
+              "E: Database access"
+            ],
+            "answer": "B"
+          },
+          {
+            "question": "What does Infrared360 track?",
+            "options": [
+              "A: Code performance",
+              "B: Message metrics",
+              "C: Network speed",
+              "D: Data storage",
+              "E: CPU usage"
+            ],
+            "answer": "B"
+          }
+        ]
+      }
+    ],
+    "additional_notes": {
+      "hands_on_labs": [
+        "Configure a queue manager cluster for load balancing across two data centers.",
+        "Set up IBM MQ Native HA with replicated queue managers on z/OS.",
+        "Implement TLS and OAM for secure messaging in a financial application.",
+        "Integrate IBM MQ with Amazon MQ and S3 for cloud-based messaging.",
+        "Use Infrared360 to monitor queue depth and troubleshoot channel failures."
+      ],
+      "resources": [
+        "IBM MQ Documentation (ibm.com).",
+        "IBM MQ Native HA Guide (avadasoftware.com).",
+        "AWS MQ Architecture for IBM MQ Migration (docs.aws.amazon.com).",
+        "Infrared360 Monitoring for IBM MQ (avadasoftware.com).",
+        "IBM Redbooks: IBM MQ for z/OS Administration."
+      ],
+      "environment": "IBM MQ 9.2+ installed, access to z/OS or Linux environment, AWS account with Amazon MQ and CloudWatch, Ansible installed, and Infrared360 for monitoring. Familiarity with RACF and Python scripting is recommended."
+    }
+  }
+}
