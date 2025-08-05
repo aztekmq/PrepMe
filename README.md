@@ -23,7 +23,8 @@ PrepMe is a full-stack web application implemented in Python using the Flask mic
 
 
 * [Features](#-features)
-* [Demo](#-demo)
+* [Screens](#-screens)
+* [Courses](#-courses)
 * [Tech Stack](#-tech-stack)
 * [Architecture](#-architecture)
 * [Getting Started](#-getting-started)
@@ -45,12 +46,43 @@ PrepMe is a full-stack web application implemented in Python using the Flask mic
 
 ---
 
-## 📸 Demo
+## 📸 Screens
 
 ![PrepMe Screenshot](static/home.png)
 ![Select Module Screenshot](static/module-select.png)
 ![Select Course Screenshot](static/select-course.png)
 ![Manage Modules Screenshot](static/manage-modules.png)
+
+---
+
+## Courses
+
+## IBM MQ
+- **IBM MQ Operations and Administration for iSeries**: Focuses on setup, configuration, and management of IBM MQ on iSeries (AS/400) systems.
+- **IBM MQ Operations and Administration for Distributed Environments**: Covers administration and operations of IBM MQ in distributed systems (e.g., Linux, Windows).
+- **IBM MQ Operations and Administration for z/OS**: Addresses IBM MQ administration specific to z/OS mainframe environments.
+- **IBM MQ Architectures**: Explores IBM MQ architecture, high availability, security, and integration in enterprise settings.
+- **Advanced IBM MQ Troubleshooting**: Provides advanced techniques for diagnosing and resolving IBM MQ issues, including performance and security.
+
+## AWS
+- **Advanced Terraform for AWS Infrastructure in Enterprise Environments**: Teaches Terraform for managing AWS infrastructure, covering networking, compute, and CI/CD.
+- **Advanced Python Lambda Functions for AWS**: Focuses on developing and optimizing AWS Lambda functions using Python for serverless applications.
+
+## IBM App Connect Enterprise
+- **IBM App Connect Enterprise**: Covers message flows, connectors, administration, and advanced features for IBM App Connect Enterprise integration.
+
+## Python
+- **Advanced Python**: Explores advanced Python programming, including data structures, concurrency, metaprogramming, and integration with IBM MQ/ACE.
+
+## Security
+- **CompTIA Security+**: Provides comprehensive training on threats, network security, IAM, cryptography, and compliance for IT security professionals.
+
+## Artificial Intelligence
+- **Advanced Artificial Intelligence**: Covers advanced AI topics like neural networks, reinforcement learning, generative models, and AI ethics.
+
+## IT Communication
+- **Advanced English Comprehension for IT Corporate Environments**: Focuses on technical writing, presentations, and professional communication in IT settings.
+
 
 ---
 
